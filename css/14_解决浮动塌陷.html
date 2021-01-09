@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div0{
+            background: hotpink;
+            /* height:202px; */
+            /* 溢出隐藏的  */
+            /* overflow: hidden; */
+        }
+        .aa{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            float: left;
+            border:1px solid #000
+        }
+        h2{
+            background: indigo;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        解决子元素浮动  ->父元素高度塌陷
+        1 父元素添加高度
+        2 父元素添加overflow:hidden   //BFC
+        3 在浮动元素的下边添加块级元素  clear:both 
+        =>
+            
+     -->
+    <div id="div0">
+        <div class="aa"></div>
+        <div class="aa"></div>
+        <!-- 块级元素   clear:both-->
+        <div style="clear:both"></div>
+    </div>
+    <h2></h2>
+
+    <!-- <div style="width:100px; height:100px; border: 1px solid #000; overflow: hidden;">
+        哈哈哈呵呵呵呵呵呵呵呵呵呵哈哈哈呵呵呵呵呵呵呵呵呵呵哈哈哈呵呵呵呵呵呵呵呵呵呵哈哈哈呵呵呵呵呵呵呵呵呵呵
+    </div> -->
+</body>
+</html>

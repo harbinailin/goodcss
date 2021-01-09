@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标签选择器 */
+        div{
+            background:red;
+        }
+        #div1{
+            background:blue;
+        }
+        /* class选择器 */
+        .a{
+            background: green;
+        }
+        /* 群组选择器 */
+        /* 后代选择器 */
+        #ul1 li{
+            background:red;
+
+        }
+        /* 子代选择器 */
+        #ul1 > li{
+            border:1px ;
+        }
+    </style>
+</head>
+<body>
+    <!-- id属性 一个页面中id是唯一的 -->
+    <div id="div1">111</div>
+    <!-- 类 -->
+    <dic class="a">222</dic>
+    <div>111</div>
+    <div>222</div>
+    <ul id="ul1">
+        <li>
+            cccc;
+        </li>
+    </ul>
+</body>
+</html>

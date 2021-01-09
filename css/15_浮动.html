@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div0{
+            background: #ccc;
+            /* height: 200px; */
+            /* overflow: hidden; */
+        }
+        #div1{
+            background: red;
+            width: 200px;
+            height: 200px;
+            /* display: inline-block; */
+
+            float: left;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: blue;
+            float: right;
+            /* display: inline-block; */
+        }
+        #div5{
+            height: 100px;
+            background: chartreuse;
+        }
+        /* 伪元素  内部的后边添加一个伪元素 */
+        .clearfix::after{
+            content:"";
+            /* 变成块元素 */
+            display: block;
+            /* 清楚浮动 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        浮动 浮动的元素会脱离文档流 空间释放 left right none
+            1 父元素设置高度
+            2 父元素添加overflow:hidden (溢出隐藏)
+            3 浮动的元素后边添加一个块 元素  clear:both|left|rihgt
+            4 .clearfix
+     -->
+    <div id="div0" class="clearfix">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <!--  -->
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+    <ul class="clearfix">
+        <li></li>
+    </ul>
+
+    <div id="div5"></div>
+
+</body>
+</html>

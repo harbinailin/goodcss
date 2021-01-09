@@ -1,0 +1,17 @@
+.banner{
+    height: 120px;
+    /* background:red ; */
+    background-image: url(../images/head.jpg);
+    /* 背景图片水平居中 */
+    background-position: center top;
+    /* 设置背景图片大小 */
+    background-size: auto 120px;
+}
+.nav{
+    height: 40px;
+    background-color: #333;
+}
+.nav-content{
+    height: 40px;
+
+}

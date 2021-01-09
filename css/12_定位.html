@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #Ccc;
+        }
+        .list{
+            background: white;
+            width: 236px;
+            height: 300px;
+            /* 继承 */
+            text-align: center;
+            /* 相对于自己初始位置  空间不释放 */
+            position: relative;
+        }
+        .list span{
+            position: absolute;
+            right:0;
+            top:0;
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="list">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9eb0178e3bfeb7d170edd641fb4be4bc.jpg?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+        <p>高速无线充套装</p>
+        <span>hot</span>
+    </div>
+</body>
+</html>

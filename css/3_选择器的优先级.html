@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #div1{
+            background: red;
+        } */
+        /* div{
+            background: green;
+        } */
+        /* 
+          style 1000> #id 100> class 10 >元素选择器 1
+          选择器优先级相同的时候  写在后边的会把前边的覆盖
+        */
+        /*100+ 10 */
+        /*#ul1 .bb{ 
+            background: red;
+        }
+        .aa{
+            background: indigo;
+        } 
+        .bb{
+        }*/
+        .a .b .c .d .e .f .g .h .i .j .k{
+            color: red;
+        }
+        #div1{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="div1"  class="aa bb cc">1111</div> -->
+    <div class="a">
+        <div class="b">
+            <div class="c">
+                <div class="d">
+                    <div class="e">
+                        <div class="f">
+                            <div class="g">
+                                <div class="h">
+                                    <div class="i">
+                                        <div class="j">
+                                            <div class="k" id="div1">哈哈哈</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
