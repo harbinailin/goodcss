@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 作用域
+        1.全局作用域 全局变量
+        2.函数作用域 局部变量
+    */
+    var x= 100;
+    console.log(x);
+
+    function fn (){
+        var y=10;//函数作用域 只在函数中生效
+        //定义变量的时候没有写var 全局变量
+        console.log(y);
+    }
+    fn();
+    console.log(y);//undefined
+
+    if(true)
+    {
+        var num=20;
+    }
+    console.log(num);
+    </script>
+</body>
+</html>
