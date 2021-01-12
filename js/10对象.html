@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        内置对象
+        自定义对象  属性和方法
+        dom对象
+        */
+        var obj = {
+            name:"liuailin",
+            age:20,
+            eat : function(){
+                console.log('正在吃');
+           }
+        }
+        console.log(obj);
+        console.log(obj.name);
+        //console.log(o);
+        obj.eat();
+        var obj2 =new Object();
+        obj2.name="list";
+        obj2.coding=function(){
+            console.log('I love coding');
+        }
+        console.log(obj2.name);
+        obj2.coding();
+    </script> 
+</body>
+</html>
