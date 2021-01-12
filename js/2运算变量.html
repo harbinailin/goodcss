@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //加法字符串+ ==字符串拼接
+        //- * / 先隐式计算 如果计算不了返回NaN (not a number)
+        //++ --自增 自减
+        var str1="hello";
+        console.log(str1+"world");//"helloworld"
+
+        var num1=1,num2=2;
+        console.log(num1+num2);//"3"
+     
+        var str2="abc";
+        var num3=123;
+        console.log(str2+num3);//"abc123"
+        
+        var num4="1";
+        var num5=3;
+        console.log(num4+num5);//"13"
+
+        var num6=100;
+        var num7='5';
+        var num8="abc";
+        console.log(num6/num7);
+        console.log(num6/num8);
+        console.log(num6-num7);
+        console.log(num6-num8);
+        console.log(num6*num7);
+        console.log(num6*num8);
+
+        var s1="hello";
+        s1+="!!!";
+        console.log(s1);
+        //s1=s1+"!!!";
+        /* 先++ 先+1再参与运算
+        后++  先参与运算 后++ */
+        var c=100;
+        console.log(c++);//100
+        var d=100;
+        console.log(++d);//102
+
+        alert(2>4);//结果从网页弹出一个界面显示
+        /* 逻辑运算符 &&与（一假即假） ||或（一真即真） ！非 */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
