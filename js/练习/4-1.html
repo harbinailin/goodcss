@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //求1-10的阶乘之和
+        //求n的阶乘  1*2*3*4*....*n
+        function fn(n){
+            var result = 1;
+            for(var i=1;i<=n;i++){
+                result *=i;
+            }
+            return result;
+        }
+        var sum=0;
+        for(var i=1;i<=10;i++){
+             sum+=fn(i);
+        }
+        console.log(sum);
+
+    </script>
+</body>
+</html>

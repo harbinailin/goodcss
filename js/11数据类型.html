@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var a = 10;
+        var b = a;
+
+        console.log(a, b);
+
+        b = 100;
+        console.log(a, b);
+
+
+        var arr1 = [1, 2, 3];
+        var arr2 = arr1;
+        arr2[0] = 8;
+        console.log(arr1, arr2);
+
+
+        var person1 = {
+            name: 'zs',
+            age: 18
+        }
+
+        // var person2 = person1;
+
+        // person2.name = "lisi";
+        // console.log(person1,person2);
+
+        var person3 = {
+
+        }
+        person3.name = person1.name;
+        person3.age = person1.age;
+
+        console.log(person3, person1);
+        person3.name = "lisi";
+        console.log(person3, person1);
+
+
+        /* 
+        判断数据类型typeof 
+            判断数组和对象？
+                1 constructor
+                2 Array.isArray()
+        */
+        console.log(typeof 123)  //   "number"
+        console.log(typeof '123')//  "string"
+        console.log(typeof true)//  "boolean"
+        console.log(typeof undefined)// "undefined"
+        console.log(typeof null)//  "object"  //空对象
+        console.log(typeof [1, 2, 3])//  "object"
+        console.log(typeof { name: 'zs' })//   "object"
+        console.log(typeof function fn() { })//    "function"
+
+
+        var arr = [1, 2, 3]; //new Array()
+        var obj = { name: 'zs' }  //new Object()
+        console.log(arr.constructor == Array)  //数组的constructor属性 ->Array
+        console.log(obj.constructor == Object)  //对象constructor ->Object
+
+        console.log( Array.isArray(arr) );  //判断obj参数 是否是数组
+
+
+ 
+    </script>
+</body>
+</html>

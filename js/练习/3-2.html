@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 2．如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，那么这一
+        年就是闰年。请编制一个页面，该页面显示当天是否处于闰年。
+        提示：使用以下语句，可使变量year的值就是当天所属的年份值。
+        vartoday=newDate();//获取当天日期
+        varyear=today.getFullYear();//获取当天年份 */
+        function fn(year) {
+            /* if((year%4==0&&year%100!=0)||year%400==0){
+                return true;
+            }
+            else{
+                return false;
+            } */
+            return (year % 4 == 0 && year % 100 == 0) || year % 400 == 0
+        }
+        var date = new Date();
+        var fullYear=date.getFullYear();
+        console.log(fn(fullYear));
+        document.write("今年"+(fn(fullYear)?'是':'不是')+"闰年");
+    </script>
+</body>
+
+</html>

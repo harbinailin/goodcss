@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*数组下的方法
+        concat()	连接两个或更多的数组，并返回结果。
+        join()	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔
+        pop()	删除并返回数组的最后一个元素
+        push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+        reverse()	颠倒数组中元素的顺序。
+        shift()	删除并返回数组的第一个元素
+        slice()	从某个已有的数组返回选定的元素
+        sort() 方法用于对数组的元素进行排序。
+        splice()	删除元素，并向数组添加新元素。
+        */
+
+        var arr1 = [1,2,3];
+        var arr2 = [4,5,6];
+
+        console.log(  arr1.concat(arr2)  );
+
+        var arr3 = ['a','b','c','d'];
+        console.log(  arr3.join('-') );  //a,b,c,d
+
+        var arr4 = [1,2,3];
+        console.log(  arr4.push(5)  );
+
+        console.log(arr4);
+
+        var arr5 = [1,2,3,4,5,6,7];
+        // 添加|删除|替换    开始索引 删除个数 替换元素
+        //arr5.splice(1,0,'x') ;  // [1, "x", 2, 3, 4, 5, 6, 7]  添加
+        // arr5.splice(1,2);  //[1, 4, 5, 6, 7]  删除
+        arr5.splice(1,2,'x','y')  //[1, "x", "y", 4, 5, 6, 7]
+        console.log(arr5);
+    </script>
+</body>
+</html>
