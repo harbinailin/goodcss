@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        利用全局变量和函数，设计模拟幸运数字机游戏。设卒运数字为8，每次由计算机随
+        机产生3个1-9之间(包括1和9）的随机数，当这3个随机数中有一个数字为8时，就算
+        赢了一次，要求利用函数计算获胜率。 
+        */
+       var wincount=0;
+       var count=0;
+       function play(){
+           var str=""
+           var x=Math.floor(Math.random()*9)+1;
+           var y =Math.floor(Math.random()*9)+1;
+           var z=Math.floor(Math.random()*9)+1;
+           str+=x;
+           str+=y;
+           str+=z;
+           if(x==8||y==8||z==8)
+           {
+               str+="赢";
+               wincount++;
+           }else{
+               str+="输";
+           }
+           count++;
+           str+="获胜率是"+wincount/count*100+"%";
+           return str;
+           
+       }
+       do{
+           var result=play();
+           var isConfirm=confirm(result);
+       }while(isConfirm);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 编制一个从字符串中收集数字字符（"0"',"1"，…"9"）的函数CollectDigits(s)，它
+从字符串s中顺序取出数字，并且合并为一个独立的字符串作为函数的返回值。例如函数调
+用CollectDigits("1abc23def4"）的返回值是字符串"1234"。 -->
+    <script>
+        function CollectDigits(str) {
+            var result = ""
+            for (var i = 0; i < str.length; i++) {
+                var x = str.charAt(i);
+                if (x >= 0 && x <= 9) {
+                    result += x;
+                }
+            }
+            return result;
+
+        }
+        console.log(CollectDigits('lalisabeautifulgirl620620'))
+    </script>
+</body>
+
+</html>
