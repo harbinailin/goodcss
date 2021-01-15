@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="stop">stop</button>
+    <script>
+        //XXms后执行 回调函数；参数 第一个参数回调函数 第二个参数是时间间隔ms
+        var timer = setTimeout(function(){
+            console.log( Math.random() )
+        },3000);
+
+
+        // 1 选中元素 (通过id获取元素)
+        var btn = document.getElementById('stop');
+
+        btn.onclick = function(){
+            // console.log('点我')
+            // 清楚定时器
+            clearTimeout(timer);
+            console.log('定时器已清除')
+        }
+    </script>
+</body>
+</html>

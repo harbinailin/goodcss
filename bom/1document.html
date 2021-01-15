@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="2test.html">mytest</a>
+    <button onclick="history.forward()">下一页</button>
+    <script>
+        /*BOM (浏览器对象模型)
+        window对象：
+            * scrollTo(x,y)——在窗体中如果有滚动条，将横向滚动条移动到相对于窗体宽度为x个像素的位置，将纵向滚动条移动到相对于窗体高度为y个像素的位置
+            alert(str)—— 弹出消息对话框（对话框中有一个“确定”按钮）
+            confirm(str)—— 弹出消息对话框（对话框中包含一个“确定”按钮与“取消”按钮）
+            prompt(str,defaultValue)——弹出消息对话框（对话框中包含一个“确定”按钮、“取消”按钮与一个文本输入框），由于各个浏览器实现的不同，若没有第二个参数（文本框中的默认值）时也最好提供一个空字符串
+            *setTimeout()—— 暂停指定的毫秒数后执行指定的代码
+            *clearTimeout()——取消指定的setTimeout函数将要执行的代码
+            *setInterval()——间隔指定的毫秒数不停地执行指定的代码
+            *clearInterval()——取消指定的setInterval函数将要执行的代码
+                document对象：   ->DOM (document object model)
+                history 对象 ：  
+                    *back() 加载 history 列表中的前一个 URL
+                    *forward() 加载 history 列表中的下一个 URL
+                    *go(num) 加载 history 列表中的某个具体页面
+                Location 对象:
+                    http://www.xinhuanet.com/politics/leaders/2021-01/13/c_1126979813.htm?w=xx
+                    hash 设置或返回从井号 (#) 开始的 URL（锚）
+                    host 设置或返回主机名和当前 URL 的端口号
+                    hostname 设置或返回当前 URL 的主机名
+                    href 设置或返回完整的 URL
+                    pathname 设置或返回当前 URL 的路径部分
+                    port 设置或返回当前 URL 的端口号
+                    protocol 设置或返回当前 URL 的协议
+                    search 设置或返回从问号 (?) 开始的 URL（查询部分）
+                Navigator对象
+                    userAgent 返回由客户机发送服务器的 user-agent 头部的值
+        */
+        document.write('abcdegf');
+        console.log(location.protocol)
+    </script>
+</body>
+
+</html>
