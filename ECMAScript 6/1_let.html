@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-       //var ->variable可变的
-       var a=4;
-       console.log(a);
-       b=5;;
-       console.log(b);
+        //var ->variable可变的
+        /* var a=4;
+        console.log(a);
+        b=5;;
+        console.log(b);
+ 
+        function foo(){
+            var a=5;
+            console.log('1=='+a);
+        }
+        foo();
+        console.log('2=='+a); */
+
+        let a = 5;
+        let a = 6;
+        console.log(a);//Uncaught SyntaxError: Identifier 'a' has already been declared
+
+        console.log(a);
+        let a = 5;
+        //两种方法相同
+        var a;
+        console.log(a);
+        a = 5;
+
     </script>
 </body>
+
 </html>

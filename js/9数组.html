@@ -7,6 +7,21 @@
 </head>
 <body>
     <script>
+        //定义一个空数组
+        var arr=[];
+        console.log(arr);
+
+        //创建一个空数组
+        var arr4=new Array();
+        console.log(arr4);
+
+        //定义一个数组并赋值
+        var arr2=[1,2,3];
+        console.log(arr2);//[1,2,3]
+        var arr3=new Array(2,3,4,5);
+        console.log(arr3);//[2,3,4,5]
+
+
         var arr1 = [1,2,3,4];
         console.log(arr1[0]);
         for (var i=0;i<arr1.length;i++)
@@ -16,10 +31,29 @@
         alert(arr1);
         alert(arr1[0]);
         alert(arr1.length);
-        var arr2 = new Array(1,2,3);
-        console.log(arr2);
-        var arr3 = new Array(3);
-        console.log(arr3);
+
+
+        //定义了一个数组，并初始化
+        var arr6 = new Array(1,2,3);
+        console.log(arr6);
+
+
+        //定义了长度为3的空数组
+        var arr7 = new Array(3);
+        console.log(arr7);
+        
+        var c=['lal',true,false,null,undefined];
+        console.log(c);
+
+        //concat 拼接两个或多个数组，并返回一个新数组，原数组不会改变
+        var d1=[1,2]
+        var d2=[3,4];
+        var d3=d1.concat(d2);
+        console.log('d1',d1);
+        console.log('d2',d2);
+        console.log('d3',d3);
+
+
     </script>
 </body>
 </html>

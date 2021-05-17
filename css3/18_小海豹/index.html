@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            margin:0 auto;
+            background: #ccc;
+            text-align: center;
+            line-height: 100px;
+            margin:20px auto;
+        }
+        .img-box img{
+            display: none;
+            width:100%;
+        }
+        .img-box .big-img{
+            display: block;
+        }
+        .img-box{
+            width: 960px;
+            margin:0 auto;
+        }
+        .text-box{
+            width:960px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .text-box .left{
+            width:630px;
+            height: 300px;
+            background: #ff0000;
+            float: left;
+        }
+        .text-box .right{
+            width: 300px;
+            height: 300px;
+            background: #0000ff;
+            float: right;
+        }
+        @media screen and (max-width:960px){
+            h3{
+                width:100%;
+            }
+            .img-box .big-img{
+                display: none;
+            }
+            .img-box .middle-img{
+                display: block;
+            }
+            .img-box{
+                width:100%;
+            }
+
+            .text-box{
+                width:100%;
+            }
+            /* left right的宽度百分比计算 （相对于父元素宽度的百分比） */
+            .text-box .left{
+                width:66%;
+            }
+            .text-box .right{
+                width:31%;
+            }
+        }
+        @media screen and (max-width:480px){
+            .img-box .middle-img{
+                display: none;
+            }
+            .img-box .small-img{
+                display: block;
+            }
+            .text-box .left, .text-box .right{
+                width:100%;
+                float: none;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>页头</h3>
+    <h3>标题</h3>
+    <div class="img-box">
+        <img class="big-img" src="img/01.jpg" alt="">
+        <img class="middle-img" src="img/01_s_2x.jpg" alt="">
+        <img class="small-img" src="img/01_s.jpg" alt="">
+    </div>
+    <div class="text-box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <h3>页尾</h3>
+    
+    
+</body>
+</html>

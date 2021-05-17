@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 宽度 = 设备宽度  初始缩放比例1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* #div1{
+            width:375px;
+            height: 200px;
+            background: #ff0000;
+        } */
+        #div1{
+            height: 200px;
+        }
+        /* 当屏幕宽度>980显示红色 */
+        /* >=980 red */
+        @media (min-width: 980px) {
+            #div1 {
+                background: #f00;
+            }
+        }
+        /* 768-979 green */
+        @media (min-width:768px) and (max-width:979px){
+            #div1 {
+                background: green;
+            }
+        }
+        @media screen and (max-width:767px){
+            #div1{
+                background: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">哈哈哈</div>
+</body>
+
+</html>

@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /* id选择器  */
-        #div1{
+        #div1 {
             background: red;
         }
+
         /* class 选择器 */
         /* .aa{
             background: blue;
-        } */ 
+        } */
         /* 分组选择器  */
         /* #div1 .aa都red */
-        #div1,.aa{
+        #div1,
+        .aa {
             background: chartreuse;
         }
+
         /* 后代选择器  */
-        #ul1 li{
-            background:darkorchid;
+        #ul1 li {
+            background: darkorchid;
         }
+
         /* 后代 子代 */
-        #ul3 li{
-            border:1px solid #000 ;
-        } 
-        /* 子代选择器 */
-        #ul3 > li{
-            border:1px solid #000 ;  
+        #ul3 li {
+            border: 1px solid #000;
         }
+
+        /* 子代选择器 */
+        #ul3>li {
+            border: 1px solid #000;
+        }
+
         /* 标签选择器 */
-        a{
+        a {
             background: red;
         }
+
         /* 伪类选择器  hover鼠标划入*/
-        a:hover{
+        a:hover {
             background: green;
         }
+
         /* 伪元素选择器 */
-        
-        #div3::before{
+
+        #div3::before {
             content: "11";
         }
-        #div3::after{
+
+        #div3::after {
             content: "11";
         }
     </style>
 </head>
+
 <body>
     <!-- class 类 .-->
     <div class="aa">哈哈</div>
@@ -79,8 +90,9 @@
     </ul>
     <a href="#">百度</a>
     <div id="div3">哈哈</div>
-    
+
 
 
 </body>
+
 </html>

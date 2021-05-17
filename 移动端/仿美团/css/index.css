@@ -1,0 +1,130 @@
+body{
+    background: #f0efed;
+}
+.header{
+    display: flex;
+    background: #FFBD00;
+
+    /* css3前缀 */
+    /* 
+    -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-raduis:5px;
+    border-radius: 5px; 
+    */
+}
+.header .city{
+    width:180px;
+    height:101px;
+    text-align: center;
+    line-height: 101px;
+}
+.header .mine{
+    width:94px;
+    height:101px;
+    text-align: center;
+    line-height: 101px;
+}
+.mine .icon-wode{
+    /* 相对于根元素的字体大小 */
+    font-size: 0.28rem;
+}
+.header .search-box{
+    flex:1;
+    border-radius:0.18rem;
+    opacity: 0.9;
+    background: #FFFFFF;
+    height:0.64rem;
+    margin-top:.2rem;
+    line-height: 0.64rem;
+    color:#999999;
+    padding: 0 0.13rem 0 0.27rem;
+    /* 当行文本溢出隐藏 */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.search-box img{
+    vertical-align: middle;
+}
+.search-box span{
+    vertical-align: middle;
+}
+.banner{
+    display: flex;
+    height: 1.04rem;
+    background: #000;
+}
+.banner .logo{
+    width: 72px;
+    height: 72px;
+    margin:0.16rem 0.2rem 0 0.3rem;
+}
+.banner .btn{
+    width:110px;
+    height:60px;
+    background: #FFBD00;
+    border-radius: 0.14rem;
+    text-align: center;
+    line-height: 60px;
+    color:#000;
+    margin:0.22rem 0.29rem 0 0;
+}
+.banner .text-box{
+    flex:1;
+}
+.text-box p:nth-child(1){
+    font-size: 0.26rem;
+    color: #fff;
+    padding-top:0.17rem;
+}
+.text-box p:nth-child(2){
+    font-size: 0.22rem;
+    font-weight: 300;
+    color:#fff;
+}
+.list-box{
+    display: flex;
+    flex-wrap:wrap;
+    background: #fff;
+}
+.list-box .list{
+    height: 162px;
+    width:20%;
+}
+.list .iconfont{
+    font-size: 0.4rem;
+    color: #fff;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height:.8rem;
+    margin:0 auto;
+}
+.list .icon-canju{
+    background: #fd9d21;
+}
+.list p{
+    text-align: center;
+}
+.pro-list-box{
+    margin-top:.3rem;
+    padding-left:.2rem;
+    background: #fff;
+}
+.pro-list{
+    display: flex;
+    padding: 0.2rem 0;
+    border-top:1px solid #DDD8CE;
+}
+.pro-list img{
+    width: 1.8rem;
+    height: 1.64rem;
+}
+
+.pro-list-info{
+    flex:1;
+}

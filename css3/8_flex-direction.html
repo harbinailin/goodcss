@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        ul{
+            height: 500px;
+            list-style: none;
+            background: #ccc;
+            display: flex;
+            /* 方向 row row-reverse column column-reverse*/
+            /* 列对齐方式 */
+            /* align-items：flex-start | flex-end | center | baseline | stretch; */
+            flex-direction: row;
+            /* align-items: stretch; */
+            /* 行对齐方式 */
+            justify-content: space-around;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            background: #ff0000;
+            border:1px solid #000;
+        }
+ 
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+</body>
+</html>

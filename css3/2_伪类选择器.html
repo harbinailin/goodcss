@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: #f00;
+        }
+
+        a:visited {
+            color: seagreen;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        a:active {
+            color: #00f;
+        }
+        /* li:first-child{
+            background: #f00;
+        }
+        li:last-child{
+            background: #0f0;
+        } */
+        li:nth-child(2n){color:#f00;} /* 偶数 */
+        li:nth-child(2n+1){
+            color: #0f0;
+        }
+        /* li:nth-child(2){
+            background: #f00;
+        } */
+        #div3::after{
+            content:"哈哈"
+        }
+        #div3::before{
+            content: "hehe";
+        }
+        #div3::first-letter{
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="http://www.baidu.com">baidu</a>
+
+    <ul>
+        <li>11</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <button disabled>按钮</button>
+    <div id="div3">div1
+        
+    </div>
+</body>
+
+</html>

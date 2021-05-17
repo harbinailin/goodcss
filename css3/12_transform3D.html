@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            border:1px dashed #000;
+            width: 200px;
+            height: 200px;
+            margin:100px auto;
+            /* 父元素 视角*/
+            perspective: 800px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            /* transform 3D变换 */
+            /* transform:rotateX(-30deg); */
+            /* transform: rotateY(30deg); */
+            /* transform: rotateZ(30deg); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+            transform: translateZ(-100px);
+            
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <div id="div2">222</div>
+    </div>
+</body>
+</html>
