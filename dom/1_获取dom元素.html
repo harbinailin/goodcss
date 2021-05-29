@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" >
+        111
+    </div>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+    <ul>
+        <li>aaaa</li>
+        <li class="list">bbbb</li>
+        <li class="list">cccc</li>
+    </ul>
+    <p>
+        111
+    </p>
+    <p name="aa">2222</p>
+    <div id="div2"  class="xx" style="background: red;">qqewer</div>
+    <script>
+        
+        // DOM  （document object model）
+        // 通过id获取元素 id唯一的 ，返回的是dom对象,没取到返回null
+        var oDiv = document.getElementById('divxx'); 
+        console.log(oDiv);
+        // oDiv.onclick = function(){
+        //     console.log('haha')
+        // }
+        // 通过标签名获取元素 返回数组,没取到返回[]
+        var aLi = document.getElementsByTagName('li');
+        console.log(aLi);
+        for(var i=0; i<aLi.length ;i++){
+            aLi[i].onclick = function(){
+                console.log('hahah');
+            }
+        }
+        // 通过class类名获取元素  返回的是数组 ,没取到返回[]
+        var aLi2 = document.getElementsByClassName('list');
+        console.log(aLi2);
+        // 添加背景颜色
+        for(var i=0; i<aLi2.length ; i++){
+            // 改变li的背景色
+            aLi2[i].style.background = "red";
+        }
+        // 通过name获取元素  返回的是数组,没取到返回[]
+        var arr = document.getElementsByName('aa');
+
+        console.log(arr[0])
+
+        // DOM对象 ->属性|方法
+
+        
+        var oDiv2 = document.getElementById('div2');
+        // oDiv2.class ="yy";
+        // js修改class -> className 
+        oDiv2.className = "yy";
+
+
+    </script>
+</body>
+</html>

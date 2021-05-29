@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 注释 -->
+    <p>11</p>
+    <div id="div1">111</div>
+    <ul id="ul1">
+        <li id="li1">11</li>
+        <li>222</li>
+    </ul>
+    <script>
+        /*
+            节点类型的12个常量
+            nodeType   元素1 属性 2 文本3  注释8
+            遍历: 
+                下一个兄弟 nextSibling（标准浏览器会找到非元素节点 ↵  ） | nextElementSibling(标准浏览器找到元素，但是ie不支持)
+                下一个兄弟 previousSibling 标准浏览器会找到非元素节点 ↵  ） | previousElementSibling   (标准浏览器找到元素，但是ie不支持)
+                第一个孩子 firstChild 
+                第一个孩子 lastChild 
+                所有孩子 children 没有兼容性，所有浏览器支持
+        */ 
+        var oDiv = document.getElementById('div1');
+        // console.log( oDiv.nodeType,oDiv.nodeName );
+        // console.log( oDiv.firstChild.nodeType,oDiv.firstChild.nodeName );
+
+        // console.log(oDiv.nextSibling);  //标准浏览器↵   ie中 <p>11</p>
+        // console.log(oDiv.nextElementSibling);// <p>11</p>
+
+        function next(elem){ //返回下一个元素节点 如果没找到返回null
+            do{
+                elem = elem.nextSibling ;
+            }while( elem && elem.nodeType!= 1) //如果有下一个兄弟 并且 下一个元素不是元素节点循环继续
+            return elem;
+        }
+        console.log( next(oDiv)  )
+        var oLi= document.getElementById('li1');
+        console.log( next(oLi) ); 
+        
+        
+        function prev(elem){
+            do{
+                elem = elem.previousSibling;
+            }while(elem && elem.nodeType !=1)
+            return elem;
+        }
+
+        console.log( prev(oDiv))
+
+        // 找第一个孩子
+        function first(elem){
+            elem = elem.firstChild;
+            if(elem.nodeType !=1){
+                elem = next(elem);
+            };
+            return elem;
+        }
+
+        var oUl = document.getElementById('ul1');
+        console.log( first(oUl)  );
+        
+
+
+        
+
+
+
+    </script>
+
+    
+</body>
+</html>

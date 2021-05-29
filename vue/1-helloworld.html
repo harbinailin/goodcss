@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app" >
+        {{str}}{{num}}
+        <div>{{str1}}</div>
+        <!-- <div v-text="str1"></div> -->
+        <div v-html="str1"></div>
+        
+    </div>
+    <script>
+       var vm = new Vue({
+           el:"#app",
+           data:{
+               str:"hello world",
+               num:10,
+               str1:"<h1>你好</h1>"
+           }
+       }) 
+       console.log(vm);
+    </script>
+</body>
+</html>

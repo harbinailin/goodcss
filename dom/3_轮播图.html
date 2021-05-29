@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #container {
+            width: 750px;
+            height: 291px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #img-box img {
+            display: none;
+        }
+
+        #img-box .active {
+            display: block;
+        }
+
+        #btn-box {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #btn-box li,
+        #arrow-box li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #btn-box .btn-active {
+            background: #ff0036;
+        }
+
+        #arrow-box {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 图片的容器 -->
+        <div id="img-box">
+            <img class="active" src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+        </div>
+        <ul id="btn-box">
+            <li class="btn-active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="arrow-box">
+            <li>&lt;</li>
+            <li id="next">&gt;</li>
+        </ul>
+    </div>
+
+    <script>
+        var btnBox = document.getElementById('btn-box');
+        var aBtn = btnBox.getElementsByTagName('li'); //存放所有按钮的数组
+        var imgBox = document.getElementById('img-box');
+        var aImg = imgBox.getElementsByTagName('img'); //存放所有图片的数组
+        var next = document.getElementById('next');
+        var container = document.getElementById('container');
+        var iNow = 0; //记录当前显示的索引
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].index = i; //给每一个btn按钮添加索引
+            aBtn[i].onclick = function () {
+                // 将所有li的className移除
+                // for(var j=0;j<aBtn.length; j++){
+                //     aBtn[j].className = "";
+                //     aImg[j].className = "";
+                // }
+                // // 自己添加active
+                // // this.className = "btn-active";
+                // aBtn[this.index].className = "btn-active"
+                // // this.index
+                // aImg[this.index].className = "active";
+                change(this.index);
+                iNow = this.index;
+            }
+        }
+        // 下一个按钮
+        next.onclick = function () {
+            iNow++;
+            if (iNow == 5) {
+                iNow = 0;
+            }
+            // for(var j=0; j<aBtn.length; j++){
+            //     aBtn[j].className = "";
+            //     aImg[j].className = "";
+            // }
+            // // 让索引是iNow的按钮变色，让索引是iNow的图片出来
+            // aBtn[iNow].className = "btn-active";
+            // aImg[iNow].className = "active"
+            change(iNow);
+        }
+
+        function change(idx) {
+            for (var j = 0; j < aBtn.length; j++) {
+                aBtn[j].className = "";
+                aImg[j].className = "";
+            }
+            aBtn[idx].className = "btn-active";
+            aImg[idx].className = "active"
+        }
+        // 每个2000ms 调用下一个按钮的点击事件 ->显示下一个
+        var timer = setInterval(function () {
+            // 显示下一个 调用下一个按钮的点击事件
+            next.onclick();
+        }, 2000);
+
+        // 鼠标划入事件 清楚定时器
+        container.onmouseover = function () {
+            clearInterval(timer);
+        }
+        // 鼠标划出事件 重新开启定时器
+        container.onmouseout = function () {
+            // timer不要用var => 会产生局部变量
+            timer = setInterval(function () {
+                // 显示下一个 调用下一个按钮的点击事件
+                next.onclick();
+            }, 2000);
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

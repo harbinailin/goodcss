@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+       <test-temp v-on:phandle="fHandle"></test-temp>
+    </div>
+    <template id="tem1">
+        <div>
+            <button @click="customHandle"> emit </button>
+        </div>
+    </template>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+               
+            },
+            components:{
+                testTemp:{
+                    data() {
+                        return {
+                            msg:"hello123"
+                        }
+                    },
+                    methods: {
+                        customHandle(){
+                            this.$emit("phandle",this.msg)
+                        }
+                    },
+                    template:"#tem1"
+                }
+            },
+            methods: {
+                fHandle(str){
+                    // console.log("11");
+                    console.log(str)
+                }
+            },
+            
+        })
+    </script>
+</body>
+
+</html>

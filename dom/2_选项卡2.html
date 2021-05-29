@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #btn-box{
+            overflow: hidden;
+        }
+        #btn-box li{
+            float: left;
+            width: 50px;
+            height: 30px;
+            background: #cccccc;
+            text-align: center;
+            line-height: 30px;
+            border:1px solid #000;
+            margin-right: 3px;
+        }
+        #btn-box .active{
+            background: #f00;
+            color: #fff;
+        }
+        #content-box{
+            width: 350px;
+            height: 100px;
+            border:1px solid #000;
+        }
+        #content-box div{
+            display: none;
+        }
+        #content-box .c-active{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="btn-box">
+            <li class="active">实事</li>
+            <li >体育</li>
+            <li>娱乐</li>
+        </ul>
+        <div id="content-box">
+            <div class="c-active">实事内容。。。。</div>
+            <div>体育内容。。。。</div>
+            <div>娱乐内容。。。。</div>
+        </div>
+    </div>
+    
+    <script>
+        var aLi = document.getElementsByTagName('li');
+        var contentBox = document.getElementById('content-box');
+        var aDiv = contentBox.getElementsByTagName('div');
+
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i; //a[0].index = 0 aLi[1].index = 1 aLi[2].index = 2
+            aLi[i].onclick = function(){
+                // console.log(111)
+                // XXX  console.log( aLi[i],i ); //i = 3 undefined
+                // console.log(this,this.index)//对当前对象的引用
+                for(var j=0; j<aLi.length; j++){
+                    aLi[j].className = "";  // 所有li的active去掉
+                    aDiv[j].className = ""; // 所有div的隐藏
+                }
+                // 2.点击的元素添加active
+                this.className = "active";
+                // aDiv中索引跟this.index对应的元素 ->显示
+                aDiv[this.index].className = "c-active";
+            }
+        }
+
+
+
+        console.log(i); //3
+
+
+
+
+    </script>
+</body>
+</html>

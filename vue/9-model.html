@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input @keyup.13="keyHandle" v-model="val" type="text">
+        <input type="radio" name="sex" value="0" v-model="sexr">男
+        <input type="radio" name="sex" value="1" v-model="sexr">女 
+        <div>
+            <input name="hobby" type="checkbox" value="0" v-model="hobbys">篮球
+            <input name="hobby" type="checkbox" value="1" v-model="hobbys">足球
+            <input name="hobby" type="checkbox" value="2" v-model="hobbys">网球
+            <input name="hobby" type="checkbox" value="3" v-model="hobbys">棒球
+        </div>
+        
+        
+        <button @click="submitHandle">提交</button>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                val:"",
+                sexr:1,
+                hobbys:[]
+            },
+            methods: {
+                keyHandle(){
+                    console.log(this.val)
+                },
+                submitHandle(){
+                    console.log(this.hobbys);
+                }
+            },
+        })
+    </script>
+</body>
+</html>

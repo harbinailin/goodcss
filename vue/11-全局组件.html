@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <vip2></vip2>
+        <p>start</p>
+        <vip2></vip2>
+        <p>end</p>
+        <vip2></vip2> -->
+        <h1>{{num}}</h1>
+        <vip2></vip2>
+    </div>
+    <div id="box">
+        {{num}}
+        <vip2></vip2>
+    </div>
+    <script>
+        Vue.component("vip2",{
+            template:"<div><h1>hello world</h1><h2>你好</h2></div>"
+        })
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                num:0
+            }
+
+        })
+        new Vue({
+            el:"#box",
+            data:{
+                num:100
+            }
+        })
+    </script>
+</body>
+
+</html>

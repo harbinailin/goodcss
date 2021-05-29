@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        #small-box{
+            position: relative;
+            border:1px solid #ccc;
+            width: 400px;
+            height: 400px;
+        }
+        #small-box img{
+            width: 400px;
+            height: 400px;
+        }
+        #drag{
+            width: 200px;
+            height: 200px;
+            background: rgba(0,0,0,0.7);
+            position: absolute;
+            left:0;
+            top:0;
+            display: none;
+            cursor: pointer;
+        }
+        #big-box{
+            border:1px solid #ccc;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left:410px;
+            top:0;
+            overflow: hidden;
+            display: none;
+        }
+        #big-img{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="small-box">
+            <img src="images/1.jpg" alt="">
+            <span id="drag"></span>
+        </div>
+        <div id="big-box">
+            <img id="big-img" src="images/2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var smallBox = document.getElementById("small-box");
+        var drag = document.getElementById('drag');
+        var bigImg = document.getElementById('big-img');
+        var bigBox = document.getElementById('big-box');
+        smallBox.onmouseover = function(){
+            drag.style.display = "inline";
+            bigBox.style.display ="block";
+        }
+
+        smallBox.onmousemove = function(e){
+
+            var iLeft = e.clientX - drag.offsetWidth/2 ;
+            var iTop = e.clientY - drag.offsetWidth/2;
+            var xMax = smallBox.offsetWidth - drag.offsetWidth;
+            var yMax = smallBox.offsetHeight - drag.offsetHeight;
+            // 判断临界点
+            if(iLeft < 0){
+                iLeft = 0;
+            }
+            if(iTop < 0){
+                iTop = 0;
+            }
+            if(iLeft > xMax){
+                iLeft = xMax;
+            }
+            if(iTop > yMax){
+                iTop = yMax;
+            }
+
+            // 给drag元素定位
+            drag.style.left = iLeft +"px";
+            drag.style.top = iTop +"px";
+
+            // 计算左侧drag 能走的最大距离 xMax
+
+            // 右边大图能走的最大距离大图宽度-容器宽度
+            var xBigMax = bigImg.offsetWidth - bigBox.offsetWidth;
+            var yBigMax = bigImg.offsetHeight - bigBox.offsetHeight;
+            // 大图应该定位的left 
+            var bigLeft = iLeft/xMax * xBigMax;
+            var bigTop = iTop/yMax * yBigMax;
+            bigImg.style.left = -bigLeft+"px";
+            bigImg.style.top = -bigTop+"px";
+        }
+        smallBox.onmouseout = function(){
+            drag.style.display = "none";
+            bigBox.style.display = "none";
+        }
+        
+    </script>
+</body>
+</html>

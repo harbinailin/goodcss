@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            border:1px solid #000;
+            display: none;
+        }
+        h2{
+            background: #000;
+            color: #fff;
+        }
+        #container{
+            width:300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h2>管理区</h2>
+            <ul>
+                <li>1111</li>
+                <li>22</li>
+                <li>333</li>
+            </ul>
+        </div>
+        <div>
+            <h2>交流区</h2>
+            <ul>
+                <li>1111</li>
+                <li>22</li>
+                <li>333</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        var aH2 = document.getElementsByTagName('h2');
+        var aUl = document.getElementsByTagName('ul');
+
+        for(var i=0; i<aH2.length; i++){
+            aH2[i].index = i;
+            aH2[i].onclick = function(){
+                // 找到跟this索引对应的ul
+                var oUl = aUl[this.index];
+                // 只能取到内联样式 只有第一次取不到内联样式
+                console.log(oUl.style.display)
+                if(oUl.style.display == "block"){
+                    oUl.style.display = "none";
+                }else if(oUl.style.display == "none" || oUl.style.display == ""){
+                    oUl.style.display = "block"; //通过js修改元素的样式 写在内联样式中
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

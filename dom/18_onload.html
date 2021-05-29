@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        代码从上往下执行 
+        */
+        // window绑定onload事件 ，等页面中所有资源加载完再执行
+        window.onload = function () {
+            var oDiv = document.getElementById('div1'); //null
+            console.log(oDiv.innerHTML);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="div1">111</div>
+    <img src="../images2/2.jpg" alt="">
+    
+
+</body>
+
+</html>

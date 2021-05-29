@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        this 对当前对象的引用
+        1 事件中 ->谁的事件this->谁
+        2 定时器 ->window
+        3 对象中 ->谁.方法this->谁
+        4 构造函数中 ->实例化对象
+        5 普通函数中 ->window
+     -->
+    <script>
+        // oDiv.onclick = function(){
+        //     console.log(this);
+        // }
+
+        // window.setInterval(function(){
+        //     console.log(this)
+        // }, 200);
+
+        // var obj = {
+        //     name:'zs',
+        //     eat:function(){
+        //         console.log(this);
+        //     }
+        // }
+        // obj.eat();
+
+        // 构造函数
+        // function Person(name){
+        //     this.name = name;
+        // }
+        // // 实例化对象
+        // var p1 = new Person('lisi');
+
+        function fn(){
+            console.log(this);
+        }
+        fn();
+        
+
+
+
+    </script>
+    
+</body>
+</html>

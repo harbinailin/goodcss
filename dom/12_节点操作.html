@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <button id="btn2">delete</button>
+    <button id="btn3">replace</button>
+    <button id="btn4">insert</button>
+    <button id="btn5">clone</button>
+    <div id="div1">
+        11
+    </div>
+    <!-- 
+        节点操作 （节点增删改查）
+            1 createElement() 创建元素
+            2 appendChild() 插入元素(内部的后边插入元素)
+            3 removeChild() 删除元素 (父元素.removeChild(子元素))
+            4 replaceChild(newNode,oldNode) 替换(父元素.replaceChild)
+            5 insertBefore(newNode,oldNode) 插入（父元素.insertBefore()在某个节点的前边插入）
+            6 cloneNode(true) 克隆节点  使用参数true，表示克隆节点时包含子节点
+     -->
+
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oDiv = document.getElementById('div1');
+        var oBtn2 = document.getElementById('btn2');
+        var oBtn3 = document.getElementById('btn3');
+        var oBtn4 = document.getElementById('btn4');
+        var oBtn5 = document.getElementById('btn5');
+        oBtn.onclick = function () {
+            var oH2 = document.createElement('h2');
+            oH2.innerHTML = "hahah"
+            console.log(oH2);
+            oDiv.appendChild(oH2) ;
+        }
+
+        oBtn2.onclick = function(){
+            // 删除div 父元素.removeChild(子元素)
+            document.body.removeChild(oDiv);
+
+        }
+        oBtn3.onclick = function(){
+            var oH3 = document.createElement('h3');
+            oH3.innerHTML = "hehehe"
+            document.body.replaceChild(oH3,oDiv);
+        }
+
+        oBtn4.onclick = function(){
+            var oH1 = document.createElement('h1');
+            oH1.innerHTML = "xixixixi"
+            document.body.insertBefore(oH1,oDiv);
+        }
+
+        oBtn5.onclick = function(){
+            var div2 = oDiv.cloneNode(true);
+            document.body.appendChild(div2);
+        }
+    </script>
+
+</body>
+
+</html>

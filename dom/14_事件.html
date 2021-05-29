@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1111</div>
+    <div id="div2">222</div>
+
+    <script>
+        /* 事件 事件源 事件处理函数 
+
+        事件类型 
+            onblur	元素失去焦点。
+            onchange	域的内容被改变。
+            onclick	当用户点击某个对象时调用的事件句柄。
+            ondblclick	当用户双击某个对象时调用的事件句柄。
+            onfocus	元素获得焦点。
+            onkeydown	某个键盘按键被按下。
+            onkeypress	某个键盘按键被按下并松开。
+            onkeyup	某个键盘按键被松开。
+            onload	一张页面或一幅图像完成加载。
+            onmousedown	鼠标按钮被按下。
+            onmousemove	鼠标被移动。
+            onmouseout	鼠标从某元素移开。
+            onmouseover	鼠标移到某元素之上。
+            onmouseup	鼠标按键被松开。
+        事件属性
+            clientX	返回当事件被触发时，鼠标指针的水平坐标。
+            clientY	返回当事件被触发时，鼠标指针的垂直坐标。
+            keyCode 键盘码
+            e.stopPropagation(); //标准浏览器阻止事件冒泡
+            e.cancelBubble = true;//ie浏览器阻止事件冒泡
+
+            // 阻止默认行为
+            // e.preventDefault(); //标准浏览器阻止默认行为
+            // e.returnValue = false;//ie阻止默认行为
+
+            return false; //没有兼容性 阻止默认行为
+
+            console.log("事件源",e.target)//事件源 有谁导致的这个事件谁就是事件源
+            console.log("this",this); //对当前对象的引用  触发的是谁的事件this就是谁
+        */
+       
+        /*
+        绑定事件的方式 
+            1. <div onclick="">1111</div>
+
+            2. oDiv2.onclick = function(){
+                console.log('22')
+            }
+            3. oDiv2.addEventListener('click',function(){
+                    console.log('div222')
+                },false);
+            可以重复绑相同事件
+        */ 
+       var oDiv2 = document.getElementById('div2');
+
+    //    oDiv2.onclick = function(){
+    //        console.log('22');
+    //    }
+
+    //    oDiv2.onclick = function(){
+    //        console.log('200');
+    //    }
+      //  addEventListener添加事件监听（事件名,回调函数,false冒泡|true捕获）
+       oDiv2.addEventListener('click',function(){
+           console.log('div22')
+       },false);
+       oDiv2.addEventListener('click',function(){
+           console.log('div200')
+       },false);
+
+
+
+
+
+       
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1"></div>
+
+
+    <script>
+        
+        var oDiv = document.getElementById('div1');
+        // 鼠标按下
+        oDiv.onmousedown = function(e){
+            // oDiv距离浏览器左边
+            console.log(oDiv.offsetLeft)
+            // 求鼠标距离oDiv的x距离
+            var disX = e.clientX - oDiv.offsetLeft ;
+            var disY = e.clientY - oDiv.offsetTop;
+            document.onmousemove = function(e){
+                /*e 
+                    事件对象 
+                    e.clientX 获取鼠标距离浏览器左边的距离
+                    e.clientY
+                */
+                // 让div跟着鼠标走。。。
+                console.log(e.clientX,e.clientY);
+                oDiv.style.left = e.clientX - disX +"px";
+                oDiv.style.top = e.clientY - disY +"px";
+            }
+            oDiv.onmouseup = function(){
+                // 鼠标抬起 清楚onmousemove
+                document.onmousemove = null;
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

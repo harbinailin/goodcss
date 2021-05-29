@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // 获取屏幕宽度
+        var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+        function Leaf() {
+            // 叶子的宽100 -150像素
+            this.width = Math.random() * 50 + 100;
+            // 叶子位置 0 - (屏幕宽度-叶子宽度)
+            this.left = Math.random() * (screenWidth - this.width);
+            // 叶子形状 1 2 3 4  0-1 0-4 0-3+1
+            this.shape = Math.floor(Math.random() * 4) + 1;
+            // 叶子的dom元素（图片）
+            this.img = "";
+        }
+        // 生成叶子到页面中
+        Leaf.prototype.init = function () {
+            // this ->leaf1
+            // 1创建图片 2插入页面中
+            // var oImg = document.createElement('img');
+            // 1创建图片
+            var oImg = new Image();
+            oImg.src = "img/" + this.shape + ".png";
+            oImg.style.width = this.width + "px";
+            oImg.style.top = 0;
+            oImg.style.left = this.left + "px";
+            this.img = oImg;  //给每一个叶子对象添加一个img属性
+            // 2插入页面中
+            document.body.appendChild(oImg);
+        }
+        Leaf.prototype.fall = function () {
+            var that = this; //叶子对象
+            setTimeout(function () { //延迟 只执行一次 500ms后执行
+                that.timer = setInterval(function () { //在定时器中this 指向window
+                    console.log(that)  //因为this指向window 所以我们用that中存的this
+                    if (that.img.offsetTop >= screenHeight - that.img.offsetHeight) {//叶子到底了  不下落
+                        clearInterval(that.timer);
+                    } else {
+                        /*  .style.top只能取到内联样式的值 赋值
+                            offsetTop取值 不能赋值 */
+                        that.img.style.top = that.img.offsetTop + 5 + "px";
+                    }
+                }, Math.random()*20);
+
+            }, Math.random()*500);
+        }
+
+        var leafArr = [];
+        for (var i = 0; i < 10; i++) {
+            var leaf = new Leaf();
+            leaf.init();
+            leafArr.push(leaf);
+        }
+
+        document.onclick = function () {
+            for (var j = 0; j < leafArr.length; j++) {
+                leafArr[j].fall();
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

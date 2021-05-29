@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 750px;
+            height: 291px;
+            background: #f00;
+            margin:50px auto;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            position: relative;
+        }
+        .img-box{
+            width:3750px;
+            /* 清楚浮动塌陷 */
+            overflow: hidden;
+            position: absolute;
+            left:0;
+            top:0;
+            /* 设置过渡效果 过渡属性 过渡执行时间 运动方式*/
+            transition: left 1s linear;
+        }
+        .img-box li{
+            float: left;
+        }
+        /* 按钮和箭头 */
+        #btn-box {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #btn-box li,
+        #arrow-box li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #btn-box .btn-active {
+            background: #ff0036;
+        }
+
+        #arrow-box {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul class="img-box">
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+        </ul>
+        <ul id="btn-box">
+            <li class="btn-active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="arrow-box">
+            <li>&lt;</li>
+            <li id="next">&gt;</li>
+        </ul>
+    </div>
+    <script>
+        var btnBox = document.getElementById('btn-box');
+        var aLi = btnBox.getElementsByTagName('li');
+        // class返回的是数组[0]取到数组中索引是0
+        var imgBox =  document.getElementsByClassName('img-box')[0];
+
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+
+                change(this.index);
+            }
+        }
+
+        function change(idx){
+            for(var i=0;i<aLi.length; i++){
+                aLi[i].className = ""
+            }
+            aLi[idx].className = "btn-active";
+            //    按钮索引  ul left
+            //     0       0
+            //     1       -1*750
+            //     2       -2*750
+            //     n       -n*750;
+            // 2图片滑到对应索引的位置  -ul定位
+            imgBox.style.left = -idx * 750 +"px";
+
+        }
+
+    </script>
+
+</body>
+</html>

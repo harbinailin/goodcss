@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            border:1px solid #000;
+            display: none;
+        }
+        h2{
+            background: #000;
+            color: #fff;
+        }
+        #container{
+            width:300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h2>管理区</h2>
+            <ul>
+                <li>1111</li>
+                <li>22</li>
+                <li>333</li>
+            </ul>
+        </div>
+        <div>
+            <h2>交流区</h2>
+            <ul>
+                <li>1111</li>
+                <li>22</li>
+                <li>333</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        var aH2 = document.getElementsByTagName('h2');
+
+        for(var i=0; i<aH2.length; i++){
+            aH2[i].isShow = false; //记录当前状态 如果false代表他隐藏 true代表显示
+            aH2[i].onclick = function(){
+                // 找下一个元素ul
+                var oUl = next(this);
+                if(this.isShow){ //true代表显示 如果显示->none
+                    oUl.style.display = "none";
+                    // this.isShow = false;
+                }else{ // 否则-> block
+                    oUl.style.display = "block";
+                    // this.isShow = true;
+                }
+                this.isShow = !this.isShow;
+            }
+        }
+
+        function next(elem){ //返回下一个元素节点 如果没找到返回null
+            do{
+                elem = elem.nextSibling ;
+            }while( elem && elem.nodeType!= 1) //如果有下一个兄弟 并且 下一个元素不是元素节点循环继续
+            return elem;
+        }
+
+    </script>
+</body>
+</html>

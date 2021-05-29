@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onchange="fn()" >
+    <input type="text" id="ipt2">
+    <input type="text" id="ipt3">
+
+    <script>
+        function fn(){
+            console.log(Math.random())
+        }
+
+        var ipt2 = document.getElementById('ipt2');
+        var ipt3 = document.getElementById('ipt3');
+        ipt2.onfocus = function(){
+            console.log('focus')
+        }
+        ipt2.onblur = function(){
+            console.log('blur')
+        }
+
+        // ipt3.onkeydown = function(){
+        //     console.log(this.value);
+        // }
+
+        ipt3.onkeyup = function(){
+            console.log(this.value);
+        }
+
+        document.onkeyup = function(e){
+            // console.log(e)
+            e = e || window.event;  //e标准浏览器 window.event ie浏览器
+            console.log(e.which); //键盘码
+            if(e.keyCode == 13){
+                alert('登陆成功')
+            }
+        }
+
+        
+    </script>
+    
+</body>
+</html>

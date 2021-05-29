@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // var p1 = {
+        //     name:'zs',
+        //     age:18
+        // }
+        // var p2 = {
+        //     name:'lisi',
+        //     age:20
+        // }
+
+        // 类 具有相同属性和方法的集合， 定义类的时候属性写在构造函数中，方法定义在原型对象下；
+        // 构造函数 
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            // this.eat = function(){
+            //     console.log(this.name+',正在吃')
+            // }
+        }
+        /* 
+            所有的构造函数下都有一个propotype属性 ,指向他的原型对象，
+            定义在原型对象下的属性和方法可以被实例化对象所共享
+         */
+        // console.log(Person.prototype)
+        Person.prototype.eat = function(){
+            console.log(this.name +",正在吃")
+        }
+        
+        // 实例化对象
+        var p1 = new Person('zs',18); //new 实例化对象p1的时候  在Perons类中this指向p1
+        console.log(p1);
+        p1.eat();
+
+        // 实例化对象
+        var p2 = new Person('lisi',20);
+        console.log(p2);
+        p2.eat();
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

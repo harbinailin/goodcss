@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background: red;
+        }
+        li{
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <ul id="ul1">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+
+    <script>
+        var btn = document.getElementById('btn');
+        var oUl = document.getElementById('ul1');
+        var aLi = oUl.getElementsByTagName('li');
+        // 点击li输出li的内容 
+        // for(var i=0; i<aLi.length; i++){
+        //     aLi[i].onclick = function(){
+        //         console.log(this.innerHTML);
+        //     }
+        // }
+        /* 事件委托 给父元素绑定事件，点击子元素的时候，通过事件冒泡，会触发父元素的点击事件，通过判断事件源判断是不是要绑定事件的子元素
+            1、后生成元素的事件绑定问题
+            2、减少绑定事件的个数
+        */ 
+
+        oUl.onclick = function(e){
+            // console.log(11)
+            // 判断点击li触发的这个事件
+            // console.log(e.target.tagName); //事件源 由谁导致的这个事件 谁就是事件源
+            if(e.target.tagName == "LI"){
+                console.log(e.target.innerHTML);
+            }
+        }
+
+        btn.onclick = function(){
+            // 创建li
+            var oLi = document.createElement('li');
+            oLi.innerHTML = Math.random();
+            oUl.appendChild(oLi);
+        }
+
+       
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

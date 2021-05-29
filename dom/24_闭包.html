@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    闭包
+    什么是闭包:闭包的一大特性就是内部函数总是可以访问其所在的外部函数中声明 的参数和变量
+        函数嵌套函数 
+        内部函数引用外部函数的局部变量
+    闭包的作用:
+        实现函数外部访问私有变量 
+        避免全局变量的污染 
+        实现封装 
+        希望一个变量⻓期驻扎在内存中
+    缺点: 容易产生内存泄漏
+    -->
+    <script>
+
+        function fn(){
+            var a = 20;
+            console.log(a);
+            return function(){
+                a++;
+                console.log(a);
+            }
+        }
+        
+        // 内部函数引用外部函数的局部变量，变量不释放 
+        var f1 = fn();
+        f1();
+        f1();
+        f1();
+
+
+
+    </script>
+
+</body>
+</html>

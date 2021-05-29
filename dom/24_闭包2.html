@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+    <script>
+        var aLi = document.getElementsByTagName('li');
+
+        for(var i=0; i<aLi.length; i++){ //i=3
+            (function(i){
+                // console.log(i)
+                aLi[i].onclick = function(){
+                    console.log(i);
+                }
+            })(i);
+            // aLi[i].onclick = function(){
+            //     console.log(i);
+            // }
+        }
+        // // 先声明 
+        // var f1 = function(){
+
+        // }
+        // // 再调用
+        // f1()
+        // // 函数立即调用
+        // (function(){})()
+
+    </script>
+    
+</body>
+</html>

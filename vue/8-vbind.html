@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <style>
+        .box{
+            color: red;
+            font-size: 30px;
+        }
+        .box2{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-text="url"></div>
+        <img v-bind:src="url" >
+        <div v-bind:class="a">hello world</div>
+        <div v-bind:style="{fontSize:fsize}">你好</div> -->
+        <!-- <div v-bind:class="{box:isRed}">文字</div> -->
+        <div :class="['box',c]">文字</div>
+
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                url:"./images/1.png",
+                a:"box",
+                colors:"red",
+                fsize:"30px",
+                isRed:false,
+                c:"box2"
+            },
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+</html>

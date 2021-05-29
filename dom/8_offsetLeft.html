@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 300px;
+            height: 300px;
+            background: #ff0000;
+            margin:100px;
+            padding-left:50px;
+            position: relative;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #0000ff;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <script>
+
+        var oDiv1  = document.getElementById('div1');
+        var oDiv2  = document.getElementById('div2');
+        /*
+            offsetLeft   相对于最近已定位的祖先元素的X轴距离 
+            offsetTop   相对于最近已定位的祖先元素的Y轴距离 
+        */ 
+        console.log(oDiv1.offsetLeft)
+        console.log(oDiv2.offsetLeft)
+
+
+    </script>
+</body>
+</html>
