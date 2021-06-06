@@ -6,3 +6,214 @@
 #banner img{
   width: 100%;
 }
+
+/* nav */
+#nav{
+  padding: 0 0.3rem 0.15rem;
+  position: relative;
+}
+#nav::after{
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#nav-wrapper{
+  /* flex布局默认元素一行展示 */
+  display: flex;
+  /* flex布局里子元素内容超出父元素后换行排列  */
+  flex-wrap: wrap;
+}
+.nav-list{
+  width: 20%;
+  margin-top: 0.26rem;
+  text-align: center;
+}
+.nav-list > img {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+}
+.nav-list > h4 {
+  font-size: 12px;
+}
+#nav-btn{
+  text-align: center;
+}
+#nav-btn > span {
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  border-radius: 2px;
+  background: #C5C5C5;
+}
+/* span.active 表示这个元素同时满足这个条件 */
+#nav-btn > span.active{
+  background: #FE4845;
+}
+
+/* ad */
+#ad{
+  display: flex;
+  position: relative;
+}
+#ad::after{
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.ad-list{
+  width: 25%;
+  height: 2.14rem;
+  text-align: center;
+  line-height: 1.0;
+  position: relative;
+}
+.ad-list h3 {
+  margin-top: 0.2rem;
+  font-size: 13px;
+  /* font-weight: bold; */
+}
+.ad-list p {
+  margin-top: 0.07rem;
+  font-size: 11px;
+  color: #808080;
+}
+.ad-list::after{
+  content: '';
+  display: block;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+  transform: scaleX(0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ad-list:last-child::after{
+  display: none;
+}
+.ad-list:nth-child(1) img{
+  width: 0.95rem;
+  margin-top: 0.36rem;
+}
+.ad-list:nth-child(2) img{
+  width: 1.06rem;
+  margin-top: 0.39rem;
+}
+.ad-list:nth-child(3) img{
+  width: 0.95rem;
+  margin-top: 0.21rem;
+}
+.ad-list:nth-child(4) img{
+  width: 0.91rem;
+  margin-top: 0.26rem;
+}
+
+/* sale */
+#sale{
+  /* padding: 0 0.3rem; */
+}
+#sale-head{
+  display: flex;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  padding: 0 0.3rem;
+  position: relative;
+}
+#sale-head::after{
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#sale-head h2{
+  font-size: 14px;
+}
+#sale-time{
+  display: flex;
+  flex: 1;
+  margin-left: 0.23rem;
+}
+#sale-time span{
+  display: inline-block;
+  width: 0.24rem;
+  height: 0.24rem;
+  margin-top: 0.2rem;
+  text-align: center;
+  line-height: 0.24rem;
+  font-size: 10px;
+  color: #fff;
+  background: #333333;
+}
+#sale-time p {
+  margin-left: 0.2rem;
+  font-size: 11px;
+  color: #7E7E7E;
+}
+#sale-more{
+  font-size: 12px;
+  color: #7E7E7E;
+}
+
+#sale-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+  position: relative;
+}
+#sale-content::after{
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.sale-list{
+  width: 1.67rem;
+  margin-top: 0.19rem;
+  padding-bottom: 0.33rem;
+}
+.sale-img{
+  width: 100%;
+  position: relative;
+}
+.sale-img img{
+  width: 100%;
+}
+.sale-img span{
+  width: 0.98rem;
+  height: 0.28rem;
+  text-align: center;
+  line-height: 0.28rem;
+  font-size: 10px;
+  color: #fff;
+  background: #FE4845;
+  position: absolute;
+  left: 0;
+  top: 0.14rem;
+}
+.sale-list h4{
+  font-size: 12px;
+}
+.sale-list p {
+  font-size: 10px;
+}
+
