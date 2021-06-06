@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{tabName}}
+        <div @mouseover="tabName='tab1">选项卡1</div>
+        <div @mouseover="tabName='tab2">选项卡2</div>
+        <div @mouseover="tabName='tab3">选项卡3</div>
+        <component :is="tabName" class="tabName"></component>
+        Vue.compentent('tab1',{
+        template: <img :src="../images2/1.png" alt="">
+    })
+    </div>
+    
+    <script>
+      new Vue({
+          el:'#app',
+          data:{
+              tabName:'tab1',
+          }
+          
+      })
+
+    </script>
+  
+    
+</body>
+</html>

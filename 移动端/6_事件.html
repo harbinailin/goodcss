@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background: pink;
+    }
+
+  </style>
+</head>
+<body>
+  <div></div>
+
+  <script>
+    var oDiv = document.querySelector('div')
+    // 手指按下触发
+    // oDiv.ontouchstart = function() {
+    //   console.log('ontouchstart')
+    // }
+    // 手指移动触发
+    // oDiv.ontouchmove = function() {
+    //   console.log('ontouchmove')
+    // }
+    // 手指抬起触发
+    // oDiv.ontouchend = function() {
+    //   console.log('ontouchend')
+    // }
+
+    // tap
+
+    /*
+      300ms延迟 默认情况下 页面在移动端访问会进行缩放
+      当用户点击两次时会将页面方法或缩小
+      因此绑定click事件时 会等待300ms看用户是否有第二次点击操作
+      如果没有 则认为是普通点击事件 执行事件处理函数
+      否则不执行click事件而是直接进行页面放大或缩小
+    */
+    oDiv.onclick = function(){
+      console.log('click')
+    }
+  </script>
+</body>
+</html>

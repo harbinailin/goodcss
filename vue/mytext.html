@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <!-- 使用cpn显示template内容 cpn几次输出几次 -->
+    <div id="app">
+        <cpn></cpn>
+    </div>
+    <div id="app2">
+        <cpn></cpn>
+    </div>
+    <script>
+        //创建组件构造器
+        var  myCpn = Vue.extend({
+            //template代表我们自定义的模板
+            template:`
+            <div>
+                <h1>我是标题</h1>
+            </div> `
+            /* ``支持跨行 */
+        });
+        //调用刚才的组件构造器，给刚才的组件构造器注册组件
+        Vue.component('cpn',myCpn)//全局注册
+        new Vue({
+            el:"#app",
+            data:{
+
+            },
+            //局部注册
+            components:{
+                'cpn':myCpn
+            }
+        })
+        new Vue({
+            el:"#app2",
+            data:{
+
+            }
+        })
+    </script>
+</body>
+</html>

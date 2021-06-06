@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 50px;
+}
+#container{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+header,
+nav,
+footer{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  background: #ccc;
+}
+
+#content{
+  width: 100%;
+  margin-bottom: 30px;
+}
+#content img{
+  width: 100%;
+}
+
+#content img:nth-child(1){
+  display: block;
+}
+#content img:nth-child(2){
+  display: none;
+}
+#content img:nth-child(3){
+  display: none;
+}
+
+#main{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+article{
+  width: 65%;
+  height: 200px;
+  background: pink;
+  position: relative;
+}
+article p{
+  text-align: center;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+aside{
+  /* 父元素的展示方式为table */
+  display: table;
+  width: 30%;
+  height: 200px;
+  background: aqua;
+}
+aside p {
+  /* 子元素设置为一个单元格 并且设置为文字垂直居中 */
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media screen and (min-width:480px) and (max-width:960px) {
+  #content img:nth-child(1){
+    display: none;
+  }
+  #content img:nth-child(2){
+    display: block;
+  }
+  #content img:nth-child(3){
+    display: none;
+  }
+}
+
+@media screen and (max-width:480px) {
+  #content img:nth-child(1){
+    display: none;
+  }
+  #content img:nth-child(2){
+    display: none;
+  }
+  #content img:nth-child(3){
+    display: block;
+  }
+
+  /* 第一种方式 */
+  /* #main{
+    display: block;
+  } */
+
+  #main{
+    flex-direction: column;
+  }
+  article{
+    width: 100%;
+  }
+  aside{
+    width: 100%;
+  }
+  
+}

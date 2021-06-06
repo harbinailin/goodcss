@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background: red;
+    }
+
+    /* 
+      @media screen 媒体查询适配彩色的屏幕
+      如果有多个查询条件 中间用 and 连接
+      max-width
+      min-width
+     */
+    @media screen and (max-width:980px) and (min-width: 500px) {
+      div{
+        background: pink;
+      }
+      p{
+        color: brown;
+      }
+    }
+
+    @media screen and (max-width:500px){
+      div{
+        background: blue;
+      }
+      p{
+        color: burlywood;
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <p>123</p>
+</body>
+</html>
