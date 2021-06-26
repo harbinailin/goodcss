@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="./js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>
+				用户名：
+				<input type="text" v-model.lazy="username"/>
+				{{notice}}
+			</p >
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					username:'',
+					notice:''
+				},
+				methods:{
+					changeUn(username){
+					    if(username=='admin'){
+					        this.notice='用户名已经存在，请更换一个'
+					    }else{
+					        this.notice='用户名可以使用'
+					        }
+					    }    
+					},
+				watch:{
+				    username:{
+				    	handler (val) {
+							this.changeUn(val)
+						}
+				    }
+				}
+			})
+		</script>
+	</body>
+</html>

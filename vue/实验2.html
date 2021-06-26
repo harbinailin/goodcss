@@ -2,34 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
     <script src="./js/vue.js"></script>
+    <style type="text/css">
+        .tab ul {
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tab ul li {
+            box-sizing: border-box;
+            padding: 0;
+            float: left;
+            width: 100px;
+            height: 45px;
+            line-height: 45px;
+            list-style: none;
+            text-align: center;
+            border-top: 1px solid blue;
+            border-right: 1px solid blue;
+            cursor: pointer;
+        }
+
+        .tab ul li:first-child {
+            border-left: 1px solid blue;
+        }
+
+        .tab ul li.active {
+            background-color: orange;
+        }
+
+        .tab div {
+            width: 500px;
+            height: 300px;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            line-height: 300px;
+            border: 1px solid blue;
+            border-top: 0px;
+        }
+        .tab div.current {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        {{tabName}}
-        <div @mouseover="tabName='tab1">选项卡1</div>
-        <div @mouseover="tabName='tab2">选项卡2</div>
-        <div @mouseover="tabName='tab3">选项卡3</div>
-        <component :is="tabName" class="tabName"></component>
-        Vue.compentent('tab1',{
-        template: <img :src="../images2/1.png" alt="">
-    })
-    </div>
-    
-    <script>
-      new Vue({
-          el:'#app',
-          data:{
-              tabName:'tab1',
-          }
-          
-      })
-
-    </script>
-  
-    
+<div id="app">
+        <div class="tab"> <!-- tab栏 -->
+            <ul>
+                <li v-on:click="change(index)" :class='currentIndex==index?"active":""':key="item.id" v-for="(item,index) in list">{{item.title}}</li>
+            </ul> <!-- 对应显示的图片 -->
+            <div :class='currentIndex==index?"current":""' :key="item.id" v-for="(item,index) in list">
+                <img :src="item.path">
+            </div>
+        </div>
+</div>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            currentIndex:0,   //选项卡当前索引
+            list:[{
+                    id:1,
+                    title:"apple",
+                    path:"images/apple.png"
+                },
+                {
+                    id:2,
+                    title:"orange",
+                    path:"images/orange.png"
+                },
+                {
+                    id:3,
+                    title:"lemon",
+                    path:"images/lemon.png"
+                }]
+        },
+        methods:{
+            change:function (index) {
+                // 在这里实现选项卡切换操作：本质就是操作类名
+                // 如何操作类名？就是通过currentIndex
+                this.currentIndex=index;
+            }
+        }
+    });
+</script>
 </body>
-</html>
+</html> 

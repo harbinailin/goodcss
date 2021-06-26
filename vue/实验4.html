@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>TODOS</h2>
+			<input type="text" placeholder=" add a todo" v-model.lazy="inputvalue" @keyup.enter="addNewTodo"/>
+			<ul>
+        		<li v-for="todo in todos">
+        			<label for="todo"><input type="radio" value="false" @click="add">{{todo}}</label>
+        		</li>
+    		</ul>
+    		<p>
+    			总计：{{todos.length}}&nbsp;&nbsp;&nbsp;已完成：{{num}}&nbsp;&nbsp;&nbsp;
+    			<button @click="remove">清空</button>
+    		</p >
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					inputvalue:'',
+					todos:[],
+					num:0
+				},
+				methods:{
+					addNewTodo(){
+                		this.todos.push(this.inputvalue);
+                		this.inputvalue = '';
+		            },
+					add(){
+						this.num=this.num+1
+					},
+					remove(){
+						this.todos = [];
+						this.num = 0
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
