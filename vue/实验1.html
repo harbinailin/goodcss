@@ -5,6 +5,7 @@
 	<title>简单的计算器</title>
 </head>
 <body>
+    <span>计算器</span>
 	<div id="counter">
 		<input v-model="num1" type="text">
 		<select v-model="sym">
@@ -16,7 +17,6 @@
 		<input v-model="num2" type="text">
 		<button v-on:click="calculate">=</button>
         <input v-model="num3" type="text">
-		<span>{{result}}</span>
 	</div>
 	<script src="./js/vue.js"></script>
 	<script>

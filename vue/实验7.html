@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <style type="text/css">
+        .grid {
+            margin: auto;
+            width: 530px;
+            text-align: center;
+        }
+
+        .grid table {
+            border-top: 1px solid #C2D89A;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grid th, td {
+            padding: 10;
+            border: 1px dashed orange;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .grid th {
+            background-color: #F3DCAB;
+        }
+
+        .grid .book {
+            padding-bottom: 10px;
+            padding-top: 5px;
+            background-color: #F3DCAB;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="grid">
+        <div>
+            <h1>图书管理</h1>
+            <div class="book">
+                <div>
+                    <label for="id">
+                        编号：
+                    </label>
+                    <input type="text" id="id" v-model='id' :disabled="flag">
+                    <label for="name">
+                        名称：
+                    </label>
+                    <input type="text" id="name" v-model='name'>
+                    <button @click='handle'>提交</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>名称</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr :key='item.id' v-for='item in books'>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.date}}</td>
+                    <td>
+                        <a href="" @click.prevent="edit(item.id)">修改</a>
+                        <span>|</span>
+                        <a href="" @click.prevent>删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+    /*
+      图书管理-图书列表展示功能
+      注意事项：<a href="" @click.prevent>修改</a>
+      事件绑定时，可以只添加修饰符，而不绑定事件函数
+    */
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            flag:false,
+            id: "",
+            name: "",
+            books: [{
+                id: 1,
+                name: '三国演义',
+                date: ''
+            }, {
+                id: 2,
+                name: '水浒传',
+                date: ''
+            }, {
+                id: 3,
+                name: '红楼梦',
+                date: ''
+            }, {
+                id: 4,
+                name: '西游记',
+                date: ''
+            }]
+        },
+        methods: {
+            handle: function () {
+                // 分支，这里是修改操作
+                // 业务逻辑：根据当前的id去更新对应的数据
+                if(this.flag) {
+                    // 这里需要注意，如果我们想要使用这个this的话 ，因为我们使用的是普通的js方法 ，所以这里的this实际指的是window，
+                    // 我们需要把这个方法修改为箭头函数，因为箭头函数中的this值的是定义这个函数的父级作用域的this，这里的父级作用域
+                    // 就是handle函数的作用域，也会是vue实例本身，这样我们就可以获得想要的参数了。
+                    this.books.some((item) =>{
+                        if (item.id == this.id) {
+                            item.name = this.name;
+                            // 完成更新操作之后，需要终止循环
+                            return true;
+                        }
+                    });
+                    // 修改成功后，disabled放开
+                    this.flag = false;
+
+                } else {
+                    // 添加图书
+                    // 业务逻辑：获取表单中的id和name，封装成一个对象，将对象添加到数组中。
+                    var book = {};
+                    book.id = this.id;
+                    book.name = this.name;
+                    book.date = "";
+                    // 表单内容为空时不允许添加
+                    if (book.id != "" && book.name != "") {
+                        this.books.push(book);
+                    }
+                    // 添加完成后清空表单
+                    this.id = "";
+                    this.name = "";
+                }
+                // 不管是添加还是修改，最终我们都将表单置空
+                this.id ="";
+                this.name="";
+            },
+            edit:function (id) {
+                // 禁止修改id,此处注意使用v-bind动态绑定数据
+                this.flag = true;
+                // 需要修改的数据的id可以传过来，下面要做的就是根据id查询出其他要编辑的数据
+                 var book =this.books.filter(function (item) {
+                  return  item.id == id;
+                });
+                // 将获取到的元素填充到表单
+                this.id =id;
+                this.name = book[0].name;
+            }
+        }
+    });
+</script>
+</body>
+</html>
+
