@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <style type="text/css">
+        .grid {
+            margin: auto;
+            width: 760px;
+            text-align: center;
+        }
+
+        .grid table {
+            border-top: 1px solid #C2D89A;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grid th,
+        td {
+            padding: 10;
+            border: 1px dashed orange;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .grid th {
+            background-color: #F3DCAB;
+        }
+
+        .grid .book {
+            padding-bottom: 10px;
+            padding-top: 5px;
+            background-color: #F3DCAB;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="grid">
+            <div>
+                <h1>图书管理</h1>
+                <div class="book">
+                    <div>
+                        <label for="id">
+                            编号：
+                        </label>
+                        <input type="text" id="id" v-model='id' :disabled="flag">
+                        <label for="name">
+                            名称：
+                        </label>
+                        <input type="text" id="name" v-model='name'>
+                        <label for="writer">
+                            作者：
+                        </label>
+                        <input type="text" id="writer" v-model='writer'>
+                        <button @click='handle'>提交</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>名称</th>
+                            <th>作者</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr :key='item.id' v-for='item in books'>
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.writer}}</td>
+                            <td>
+                                <a href="" @click.prevent="edit(item.id)">修改</a>
+                                <span>|</span>
+                                <a href="" @click.prevent="delHandle(item.id)">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                flag: false,
+                id: "",
+                name: "",
+                writer:"",
+                books: [{
+                    id: 1,
+                    name: '三国演义',
+                    writer: '罗贯中'
+                }, {
+                    id: 2,
+                    name: '水浒传',
+                    writer: '施耐庵'
+                }, {
+                    id: 3,
+                    name: '红楼梦',
+                    writer: '曹雪芹'
+                }, {
+                    id: 4,
+                    name: '西游记',
+                    writer: '吴承恩'
+                }]
+            },
+            methods: {
+                handle: function () {
+                    if (this.flag) {
+                        this.books.some((item) => {
+                            if (item.id == this.id) {
+                                item.name = this.name;
+                                item.writer = this.writer;
+                                return true;
+                            }
+                        });
+                        this.flag = false;
+                    }
+                    else {
+                        var book = {};
+                        book.id = this.id;
+                        book.name = this.name;
+                        book.writer = this.writer;
+                        if (book.id != "" && book.name != "" && book.writer != "") {
+                            this.books.push(book);
+                        }
+                        this.id = "";
+                        this.name = "";
+                        this.writer = "";
+                    }
+                    this.id = "";
+                    this.name = "";
+                    this.writer = "";
+                },
+                edit: function (id) {
+                    this.flag = true;
+                    var book = this.books.filter(function (item) {
+                        return item.id == id;
+                    });
+                    this.id = id;
+                    this.name = book[0].name;
+                    this.writer = book[0].writer;
+                },
+                delHandle: function (id) {
+                    let newList = this.books.filter((item) => {
+                        if (item.id != id) {
+                            return item
+                        }
+                    })
+                    this.books = newList;
+                    this.sumHandle();
+                }
+
+
+            }
+        });
+    </script>
+</body>
+
+</html>
