@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background: #000;
+
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 150px auto;
+            position: relative;
+        }
+        #container div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+            background-size: 100% 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 100px #5fbcff;
+            
+        }
+        #div1{
+            background: url(img/1.png);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        #div2{
+            background: url(img/2.png);
+            transform: translateZ(100px);
+            z-index: 1;
+        }
+        #div3{
+            background: url(img/3.png);
+            transform :rotateY(90deg) translateZ(100px);
+        }
+        #div4{
+            background: url(img/4.png);
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        #div5{
+            background: url(img/5.png);
+            transform :rotateY(-90deg) translateZ(100px);
+        }
+        #div6{
+            background: url(img/6.png);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
