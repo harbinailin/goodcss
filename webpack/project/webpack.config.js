@@ -18,7 +18,17 @@ module.exports = {
         rules:[{
             //正则表达式，匹配以css结尾的文件
             test:/\.css$/,
-            use:['style-loader','css-loader']
+            //use:['style-loader','css-loader'],
+            use:[
+              MiniCssExtractPlugin.loader,
+              'css-loader'
+            ]
+
+        },{
+          test:/\.scss$/,
+          use:[MiniCssExtractPlugin.loader,
+          'css-loader',
+        'sass-loader']
         }]
 
     },
