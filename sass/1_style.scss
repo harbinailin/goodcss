@@ -1,0 +1,208 @@
+// 引入外部的scss文件
+@import './reset.scss';
+
+// 单行注释 编译后的css文件不会保留
+// $定义变量
+$bgColor: #ff8907;
+$whiteColor: #fff;
+$keyname: color;
+
+/*
+  div 元素
+  多行注释 编译后，css文件会保留
+*/
+/*!
+  强制注释，压缩的文件会保留
+*/
+div{
+  // width: 100px;
+  width: 2rem;
+  // #{变量} 差值语句，属性名如果是变量可以使用这种方式书写
+  #{$keyname}: $bgColor;
+  background: $bgColor;
+}
+
+// 选择器的嵌套
+#list{
+  width: 100px;
+  height: 20px;
+
+  li{
+    font-size: 20px;
+
+    p{
+      // padding: 10px;
+      // padding-top: 30px;
+      // padding-left: 20px;
+      // 属性的嵌套（在编译器里熟悉的嵌套 ':' 和 '{' 之间要加一个空格）
+      padding: {
+        top: 40px;
+        bottom: 30px
+      };
+    }
+  }
+  // & 引用父选择器
+  &-inner{
+    color: $bgColor;
+  }
+}
+
+.link{
+  color: $bgColor;
+
+  &:hover{
+    color: #000;
+  }
+}
+
+// .login-btn{
+//   width: 100px;
+//   height: 40px;
+//   line-height: 40px;
+//   text-align: center;
+//   border-radius: 5px;
+//   color: $whiteColor;
+//   background: $bgColor;
+// }
+
+// .submit-btn{
+//   width: 50px;
+//   height: 20px;
+//   line-height: 20px;
+//   text-align: center;
+//   border-radius: 5px;
+//   color: $whiteColor;
+//   background: $bgColor;
+// }
+
+// 定一个混合宏 通过@minin name()定义
+// 定义时可以带有参数，参数可以设置默认值
+@mixin orange-btn($width:100px, $height:40px) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  border-radius: 5px;
+  color: $whiteColor;
+  background: $bgColor;
+}
+
+.login-btn{
+  // 调用混合宏 通过@include name() 调用
+  @include orange-btn();
+}
+.register-btn{
+  // 调用混合宏 传参 可以指定参数的名字和值（在不确定混合宏参数的顺序时）
+  @include orange-btn($height:10px,$width:30px);
+}
+.submit-btn{
+  // 调用混合宏 传参 
+  @include orange-btn(50px, 20px);
+}
+
+.wrapper{
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+
+  .inner{
+    // @extend 继承某一个选择器的样式
+    // 如果继承的选择器有子选择器会一并继承过来
+    // 编译时 会将相同的样式转换成分组选择器
+    @extend .wrapper;
+    padding: 20px;
+  }
+}
+
+#main{
+  @extend .wrapper;
+  margin: 20px;
+}
+
+$width: 5rem;
+
+.content{
+  // width: $width - 3;
+  width: percentage(30px/100px);
+  height: abs(-10px);
+}
+
+// @function 定义函数
+@function changeWidth($width) {
+  @return $width * 2;
+}
+
+// 列表(用空格分隔)
+$list: 1px solid #000;
+
+div{
+  // 调用函数
+  width: changeWidth(30px);
+  border-bottom: $list;
+}
+
+section{
+  border-bottom: 1px solid #000;
+}
+
+// 列表(用逗号分隔)
+$colorlist: red, blue, green, pink;
+
+p{
+  // nth($list,index)通过索引获取$list列表里的第index项 
+  color: nth($colorlist, 2);
+}
+
+$length: 22;
+// @if指令（与js中的if效果相同）
+// sass中的逻辑判断 and or not
+li{
+  @if $length < 0 {
+    font-size: 12px;
+  } @else if $length > 0 and $length <= 5 {
+    font-size: 14px;
+  } @else {
+    font-size: 16px;
+  }
+}
+
+// @for 类似于js中的for循环
+// from start through end 从start到end 包括end
+// from start to end 从start到end 不包括end
+@for $i from 1 through 3 {
+  .list-#{$i} {
+    width: $i * 100px;
+  }
+} 
+
+@for $i from 1 to 3 {
+  .text-#{$i} {
+    width: $i * 100px;
+  }
+}
+
+// $colorlist: red, blue, green, pink;
+// @each in 循环一个列表
+@each $var in $colorlist {
+  .content-#{$var} {
+    color: $var;
+  }
+}
+
+$i: 6;
+// @while 类似于 js中的while循环
+@while $i > 0 {
+  .item-#{$i} { 
+    width: 2em * $i; 
+  }
+  $i: $i - 2;
+}
+
+$imgname: 'xxx.png';
+div{
+  // to-upper-case($var) 将变量$var对应的值转换成大写
+  // to-lower-case($var) 将变量$var对应的值转换成小写
+  background: url('./images/#{to-upper-case($imgname)}');
+}
+
+

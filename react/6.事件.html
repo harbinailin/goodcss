@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 被挂载的元素 -->
+  <div id="app"></div>
+
+  <!-- 用来编译jsx语法 -->
+  <script src="./babel.min.js"></script>
+  <!-- react核心库，用来管理组件和状态 -->
+  <script src="./react.development.js"></script>
+  <!-- 依赖react.js 用来操作渲染dom的 ！！！必须放在react.js后面 -->
+  <script src="./react-dom.development.js"></script>
+
+  <!-- 
+      state状态
+        1.state只能定义在class组件中
+        2.需要在构造函数对state进行初始化（state是一个对象）
+        3.在html中引用通过this.state.xxx
+        4.如果需要修改state内容必须要调用setState方法 方法接收一个参数是一个obj
+
+
+   -->
+
+  <script type="text/babel">
+    class Com extends React.Component{
+      constructor() {
+        super()
+        // 可以在构造函数中定义普通的属性，但是普通属性值发生变化，页面中不会同更新
+        this.number = 1
+        // 需要在构造函数中定义state属性用来存储状态（state是一个对象）
+        // 可以类比为vue中的data属性
+        this.state = {
+          num: 2,
+          list: []
+        }
+        // 在构造函数内修改方法的this指向
+        this.fun = this.fun.bind(this)
+      }
+
+      add() {
+        // alert('loveding....')
+        // this.number++
+        // console.log(this.number)
+
+        // 通过setState来修改状态
+        this.setState({
+          num: this.state.num+1
+        })
+      }
+
+      fun() {
+        // event事件对象
+        // event.preventDefault() 阻止浏览器默认行为
+        console.log('11111')
+        // 在react中不能通过return false来阻止浏览器默认行为
+        // return false
+      }
+
+      render() {
+        console.log(this.number)
+       return (
+          <div>
+            {
+              // 给元素绑定事件，事件名称的书写方式是驼峰式书写 eg: onClick onFoucs onBlur
+              // 如果事件处理函数里逻辑特别简单，可以直接在标签上写事件处理函数
+            }
+            <button onClick={()=> {
+              console.log('hello')
+            }}>点击</button>
+            <p> number: {this.number} </p>
+            {
+              // 通过this.state.xxx 来获取state中的属性
+            }
+            <p> num: {this.state.num} </p>
+            <button onClick={this.add.bind(this)}>click</button>
+            <a href="https://www.baidu.com" onClick={this.fun}>百度</a>
+          </div>
+       )
+      }
+    }
+    ReactDOM.render(
+      <Com />,
+      document.getElementById('app')
+    )
+  
+  </script>
+
+</body>
+</html>

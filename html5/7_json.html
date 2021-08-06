@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var info = {
+      name: 'zs',
+      age: 18,
+      height: '183cm',
+      weight: '60kg'
+    }
+
+    var _info = "{name:'zs',age:18,height:'183cm',wight:'60kg'}"
+
+    // 将对象转成字符串格式
+    var str = JSON.stringify(info)
+    console.log(str)
+
+    // 把字符串转成对象
+    var obj = JSON.parse(str)
+    console.log(obj)
+
+    var obj1 = {
+      name: 'zs',
+      age: 18
+    }
+
+    var tmp = JSON.stringify(obj1)
+    var obj2 = tmp
+    console.log(obj2)
+    obj2 = JSON.parse(obj2)
+    console.log(obj2)
+    obj2.age = 30
+    console.log('obj2:', obj2)
+    console.log('obj1:', obj1)
+
+    /*
+      浅拷贝/浅克隆：将一个变量复制给另一个变量 修改其中一个，另外一个也跟着修改 （引用数据类型）
+      深拷贝/深克隆：将一个变量复制给另一个变量 修改其中一个，另外一个不会修改 （基本数据类型）
+    */
+
+    /*
+      实现对象深拷贝
+      可以利用JSON.stringify()先转换成字符串
+      然后进行字符串复制
+      最后将字符串再转换成对象 JSON.parse()
+    */
+  </script>
+</body>
+</html>

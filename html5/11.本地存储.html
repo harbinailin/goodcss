@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 页面加载dom元素 遇到js 停止加载dom 先加载js 并执行 最后在继续渲染加载dom -->
+  <script src="script.js"></script>
+  <!-- 页面加载dom 遇到js 同时加载js,加载完成js之后执行js, 同时继续渲染dom -->
+  <script async src="script.js"></script>
+  <!-- 页面加载dom 遇到js 同时加载js，并继续渲染dom，等待dom全部渲染完成之后，在执行js -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <script>
+    /*
+      localStorage 设置本地存储
+      存储的大小为5M 会一直存储在浏览器中
+      
+      sessionStorage 本地存储
+      存储大小为5M 在当前会话窗口内有效
+
+    */
+    localStorage.isLogin = true
+    localStorage.name = 'zs'
+    console.log(localStorage.name)
+
+    localStorage.setItem('channel',123)
+    console.log(localStorage.getItem('channel'))
+
+    sessionStorage.name = 'aaa'
+    console.log(sessionStorage.name)
+    sessionStorage.setItem('text','999')
+    console.log(sessionStorage.getItem('text'))
+
+  </script>
+</body>
+</html>

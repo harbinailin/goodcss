@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div data-name="123" data-first-name="bbbb">1224</div>
+  <!-- 
+    图片懒加载
+    给img标签增加一个自定义的属性data-src 存放图片真正的地址
+    src属性存放一张质量较小的公用的图片
+    当元素进入到可视区域或离可视区域一段距离内 把data-src里的地址设置给src
+  -->
+  <img data-src="aaa.png" src="demo.png" alt="">
+  <script>
+    /*
+      给元素设置自定义属性(第一种不能直接在html中看到，剩下的三种方式可以直接在html中看到)
+        1. oDiv.index（对象.属性） 
+        2. oDiv.setAttribute(属性名，属性值)
+        3. oDiv.dataset.属性名 （data-xxx）
+        4. <div data-xxx='xxx'></div>
+    */
+    var oDiv = document.querySelector('div')
+    oDiv.index = 1
+    console.log(oDiv.index)
+    oDiv.setAttribute('name','zs')
+    oDiv.dataset.age = 18 // data-age
+
+    /*
+      获取元素属性
+      1.oDiv.index (对象.属性)
+      2.getAttritube(属性名)
+      3.oDiv.dataset.xxx
+      (如果在HTML中属性名是连接符形式构成的，在js中需要转换成驼峰式的形式)
+    */
+    // data-xxx
+   console.log(oDiv.index)
+   console.log(oDiv.getAttribute('name'))
+   console.log(oDiv.dataset.age)
+   console.log(oDiv.dataset.name)
+   console.log(oDiv.dataset.firstName)
+
+  
+
+  </script>
+</body>
+</html>

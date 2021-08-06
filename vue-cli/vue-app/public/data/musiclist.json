@@ -1,0 +1,33 @@
+{
+  "albums": [{
+      "name": "飙升榜",
+      "id": 19723756,
+      "bg": "http://p2.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg?param=150y150"
+    },
+    {
+      "name": "新歌榜",
+      "id": 3779629,
+      "bg": "http://p1.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg?param=150y150"
+    },
+    {
+      "name": "原创榜",
+      "id": 2884035,
+      "bg": "http://p2.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg?param=150y150"
+    },
+    {
+      "name": "热歌榜",
+      "id": 21845217,
+      "bg": "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg?param=150y150"
+    },
+    {
+      "name": "黑胶VIP爱听榜",
+      "id": 4395559,
+      "bg": "http://p1.music.126.net/G91csin09maPrNgqcUKnBQ==/109951165698553069.jpg?param=150y150"
+    },
+    {
+      "name": "云音乐ACG榜",
+      "id": 98833242,
+      "bg": "http://p2.music.126.net/pAFaa_EVMj0ktkDo381dnw==/109951165611551680.jpg?param=150y150"
+    }
+  ]
+}

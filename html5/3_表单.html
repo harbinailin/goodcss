@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="height: 2000px;">
+  <form action="">
+    text:<input type="text" placeholder="please input a number"><br/>
+    <!-- 
+      type:email
+      会校验用户输入的内容是不是邮箱格式
+     -->
+    email:<input type="email"><br/>
+    <!-- 
+        type: url
+        校验用户输入的内容是不是完成的url 
+     -->
+    url: <input type="url"><br/>
+    color: <input type="color"><br/>
+    date: <input type="date"><br/>
+    time: <input type="time"><br/>
+    range: <input type="range"><br/>
+    <!-- 
+      type:range滑块类型
+      step:每次划动的步长
+     -->
+    range: <input type="range" step="10"><br/>
+    <!-- 
+      search 搜索框（提供了一个删除按钮可以清空输入框的内容）
+     -->
+    search: <input type="search"><br/>
+    <!-- 
+      number 数字类型
+      max 输入框的最大值
+      min 输入框的最小值
+
+     -->
+    number: <input type="number" max="50" min="1" step="4"><br/>
+    <!-- 
+      tel 拉起手机的拨号键盘（仅在手机上能看到效果）
+      maxlength 设置输入框输入内容的最大长度
+     -->
+    tel: <input type="tel" maxlength="11"><br/>
+    <!-- 
+      file 上传文件
+      accept 设置用户选择文件的类型
+     -->
+    file: <input type="file" accept="image/png"><br/>
+
+    <select>
+      <option value="">cherry</option>
+      <option value="">shirley</option>
+      <option value="">sherry</option>
+    </select>
+
+    <!-- <input type="text" list="name">
+    <datalist id="name">
+      <option value="">cherry</option>
+      <option value="">shirley</option>
+      <option value="">sherry</option>
+    </datalist> -->
+
+    <input type="text" list="name">
+    <datalist id="name">
+      <option value="shirley" label="aaa">shirley</option>
+      <option value="shirley" label="bbb">shirley</option>
+      <option value="cherry">cherry</option>
+      <option value="xiaoming">xiaoming</option>
+    </datalist>
+
+    <input type="submit">
+  </form>
+</body>
+</html>

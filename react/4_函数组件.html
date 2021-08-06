@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    /* 
+      函数组件（无状态组件）
+        组件名字首字母必须大写
+        函数组件内必须要有return
+        函数组件里没有状态/没有钩子函数 只能用于展示
+    */
+    function Com(props){
+      // 函数组件可以接收一个形参(props)，用来接收组件引用时传的参数
+      console.log(props)
+      return(
+        <div>
+          <h1>hello World</h1>
+          <p>姓名：{props.name}</p>
+          <p>年龄：{props.age}</p>
+          <p>年龄：{props.age1}</p>
+          <p>身高：{props.obj.height}</p>
+          <p>体重：{props.obj.weight}</p>
+        </div>
+      )
+    }
+
+    // ReactDOM.render(<Com></Com>,document.getElementById('app') )
+    /*
+      age属性表示传的参数是一个str
+      age1属性传的才是一个number类型的值
+    */
+    ReactDOM.render(<Com name="zs" age="18" age1={20} obj={{
+      height: '180cm',
+      weight: '70kg'
+    }} />,document.getElementById('app') )
+    
+  </script>
+</body>
+</html>

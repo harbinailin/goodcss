@@ -1,0 +1,25 @@
+{
+  "musicData": [
+    {
+      "name": "普通爱情故事",
+      "artist": "汪苏泷",
+      "url": "https://webfs.ali.kugou.com/202107262232/2fd5d68b7db4e78b84134221a87b2d4d/KGTX/CLTX001/547dbf790309a71626189674167e0d7f.mp3",
+      "cover": "https://imgessl.kugou.com/stdmusic/20210723/20210723100217753490.jpg",
+      "lrc": "http://m.kuwo.cn/newh5/singles/songinfoandlrc?musicId=186123418&httpsStatus=1&reqId=26ee7250-ee1f-11eb-ae81-b1a4afe4ab86"
+    },
+    {
+      "name": "落日与晚风",
+      "artist": "IN-K、王忻辰、苏星婕",
+      "url": "https://webfs.ali.kugou.com/202107262235/38b55caa4216821d5019f1cb7f5aa986/KGTX/CLTX001/06da02e23b7b67b1b9afba4b41845d6b.mp3",
+      "cover": "https://imgessl.kugou.com/stdmusic/20210715/20210715161542336453.jpg",
+      "lrc": "http://m.kuwo.cn/newh5/singles/songinfoandlrc?musicId=183981434&httpsStatus=1&reqId=7ddf5fc0-ee1f-11eb-9e42-335a47fc1c5c"
+    },
+    {
+      "name": "目及皆是你",
+      "artist": "小蓝背心",
+      "url": "https://webfs.ali.kugou.com/202107262237/56511321b8f24d05bc0975c3a0514dbc/KGTX/CLTX001/f9c76358f5169402f1e18260f083c5e0.mp3",
+      "cover": "https://imgessl.kugou.com/stdmusic/20210527/20210527130848988735.jpg",
+      "lrc": "http://m.kuwo.cn/newh5/singles/songinfoandlrc?musicId=179625036&httpsStatus=1&reqId=b03c97d0-ee1f-11eb-8b87-5323cf8beb50"
+    }
+  ]
+}

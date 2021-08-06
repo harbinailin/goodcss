@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+    
+  <script type="text/babel">
+    class Main extends React.Component{
+      constructor() {
+        super()
+
+        this.state = {
+          arr: [1,2,3]
+        }
+
+        // 修改自定义方法的this指向
+        this.changeArr = this.changeArr.bind(this)
+      }
+
+      // 向arr数组追加内容
+      changeArr(data) {
+        // 先对引用数据类型（数组/对象）深拷贝，然后进行修改
+        let _arr = [...this.state.arr]
+        _arr.push(data)
+        this.setState({
+          arr: _arr
+        })
+      }
+
+      render(){
+        return (
+          <div>
+            <h1>To Do List</h1>  
+            <Add changeFun={this.changeArr} />
+            <List showlist={this.state.arr} />
+          </div>
+        )
+      }
+    }
+
+    class Add extends React.Component{
+      constructor() {
+        super()
+
+        this.addFun = this.addFun.bind(this)
+      }
+      // 获取到input里的value ,通过某种方式间接修改父组件里的状态
+      addFun() {
+        // input里的value
+        // this.refs.myInput.value
+        this.props.changeFun(this.refs.myInput.value)
+        this.refs.myInput.value = ''
+      }
+
+      render() {
+        return (
+          <div>
+            <input type="text" ref="myInput" />  
+            <button onClick={this.addFun}>添加</button>
+          </div>
+        )
+      }
+    }
+
+    class List extends React.Component{
+      constructor() {
+        super()
+      }
+      render() {
+        // this.props.showlist
+        let { showlist } = this.props
+        return (
+          <ul>
+            {
+              showlist.map((value, index) => {
+                return (
+                  <li key={index}>{value}</li>
+                )
+              })
+            }  
+          </ul>
+        )
+      }
+    }
+
+    ReactDOM.render(<Main/>, document.getElementById('app'))
+  
+  </script>
+
+</body>
+</html>

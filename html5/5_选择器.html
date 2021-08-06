@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper" class="content">123</div>
+  <p class="content">hello</p>
+  <div>567890</div>
+
+  <ul id="list1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+
+  <ul id="list2">
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+  </ul>
+
+  <script>
+    var oDiv = document.getElementById('wrapper')
+    var oDiv1 = document.getElementsByTagName('div')[0]
+    var oDiv2 = document.getElementsByClassName('content')[0]
+
+    /*
+      querySelector 获取元素（只返回第一个满足条件的元素）
+      根据id查询 #id名
+      根据class查询 .class名
+      根据标签查询 标签名
+    */
+
+    var oDiv3 = document.querySelector('#wrapper')
+    console.log(oDiv3)
+    // var oDiv4 = document.querySelector('.content')
+    // console.log(oDiv4)
+    // var oDiv5 = document.querySelector('div')
+    // console.log(oDiv5)
+
+    /*
+      querySelectorAll 查找所有满足条件的元素
+      返回一个类数组（nodelist）不是真正的数组 没有数组自带的方法
+      只有一个length属性 表示这个类数组的长度
+
+      根据id查询 #id名
+      根据class查询 .class名
+      根据标签查询 标签名
+    */
+    var aLi = document.querySelectorAll('li')
+    console.log(aLi)
+    for(var i=0; i<aLi.length; i++){
+      aLi[i].onclick = function(){
+        console.log(this.innerText)
+      }
+    }
+
+    var oUl = document.querySelector('#list2')
+    var a1 = oUl.querySelectorAll('li')
+    console.log(a1)
+
+    /*
+      dom对象下 也支持 querySelector、querySelectorAll方法
+    */
+
+
+  </script>
+</body>
+</html>

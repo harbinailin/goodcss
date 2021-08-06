@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    audio 音频
+      src 插入文件的地址
+      controls 是否要显示音频控件
+      autoplay 是否循环播放
+      loop 是否循环播放
+   -->
+  <!-- <audio src="./song.mp3" controls autoplay loop></audio> -->
+
+  <!-- 
+    source 插入不同格式的音频文件
+    达到不同浏览器的兼容
+   -->
+  <!-- <audio>
+    <source src="song.mp3" type="audio/mp3" />
+    <source src="song.ogg" type="audio/ogg" />
+  </audio> -->
+
+  <!-- 
+    video 插入视频文件
+    controls 显示视频相关控件
+    autoplay 是否自动播放
+    width height 设置视频文件的尺寸
+    loop 是否循环播放
+   -->
+  <video src="./mx.mp4" controls autoplay width="300" height="200" loop></video>
+
+  <!-- 
+    可以兼容不同的浏览器 支持多种格式的视频文件
+   -->
+  <video>
+    <source src="movie.mp4" type="video/mp4" />
+    <source src="movie.ogg" type="video/ogg" />
+    <source src="movie.webm" type="video/webm" />
+  </video>
+</body>
+</html>

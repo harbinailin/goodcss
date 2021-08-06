@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 被挂载的元素 -->
+  <div id="app"></div>
+
+  <!-- 用来编译jsx语法 -->
+  <script src="./babel.min.js"></script>
+  <!-- react核心库，用来管理组件和状态 -->
+  <script src="./react.development.js"></script>
+  <!-- 依赖react.js 用来操作渲染dom的 ！！！必须放在react.js后面 -->
+  <script src="./react-dom.development.js"></script>
+
+  <!-- 
+      react定义组件
+        1.所有组件都要显示在页面中
+        2.组件名字首字母必须大写，否则会认为是html标签会报错
+        3.class组件必须继承React.Component
+        4.class组件必须要有render
+        5.（class组件要写constructor）
+   -->
+
+  <script type="text/babel">
+    /**
+     * class组件（有状态组件）
+     * class关键字定义 组件名首字母大写
+     * class组件可以定义状态，有一系列的钩子函数
+     * 通过this.props获取引用组件传的参数
+     */
+
+    class Com extends React.Component{
+      // 定义状态
+      constructor() {
+        super()
+      }
+
+      // 定义html
+      render() {
+        return (
+          <div>
+            <p>lovecoding</p>  
+            <p>姓名: {this.props.name}</p>
+            <p>身高: {this.props.obj.height}</p>
+            <p>体重: {this.props.obj.weight}</p>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Com name="zs" obj={{
+        height: '190cm',
+        weight: '80kg'
+      }}/>,
+      document.getElementById('app')
+    )
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    // jsx语法中用{}插入表达式/变量 
+    // 例子中style的{{}}，外层的{}表示里面要插入表达式/变量 里层的{}表示是一个对象
+    let str = 'lovecoding'
+    let a = 10
+    let b = 5
+    let _style = {
+      color: '#ff0036',
+      // 之前通过连接符表示的属性都需要转成驼峰式写法
+      fontSize: '30px'
+    }
+    let oRoot = document.querySelector('#app')
+    ReactDOM.render(
+      <div>
+        <p style={_style}>{str}</p>
+        <p style={{
+          fontSize: '40px',
+          background: 'green'
+        }}>{ a+b }</p>
+      </div>,
+      oRoot
+    )
+  
+  </script>
+</body>
+</html>

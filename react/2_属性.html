@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #title {
+      color: red;
+    }
+    .subtitle{
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <!-- 
+      属性
+        class -> className
+        for -> htmlFor
+      jsx语法
+        1.必须要有一个唯一的父元素
+        2.单标签必须闭合
+        3.标签名必须小写
+   -->
+  <script type="text/babel">
+    let oRoot = document.getElementById('app')
+
+    ReactDOM.render(
+      <div>
+        <h1 id="title" className="subtitle">hello world</h1>
+        <label htmlFor="name">姓名：</label>
+        <input id="name" type="text" />
+      </div>,
+      oRoot
+    )
+
+
+  </script>
+</body>
+</html>

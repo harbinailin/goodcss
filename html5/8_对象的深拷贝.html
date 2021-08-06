@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var person = {
+      name: 'zs',
+      age: 18,
+      school: {
+        name: 'heida',
+        count: 10000
+      }
+    }
+    // 封装深克隆方法
+    function deepClone(obj){
+      // 定义一个空对象 用于接收克隆后的结果
+      var tmp =  {}
+      // 循环对象中的每一项
+      for(key in obj){
+        // 判断一下当前对象的属性值是基本数据类型还是引用数据类型
+        if(typeof(obj[key]) == 'object' ) {
+          // 引用数据类型 递归调用函数本身 在实现一次深克隆的过程
+          tmp[key] = deepClone(obj[key])
+        } else {
+          //  基本数据类型直接复制
+          tmp[key] = obj[key]
+        }
+      }
+      return tmp
+    }
+
+    var p1 = deepClone(person)
+    console.log(p1)
+    p1.school.count = 9999
+    console.log(p1)
+    console.log(person)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 
+      cookie 设置本地存储
+      存储的大小为4K 默认有效期是当前会话窗口内有效
+      可以通过expires设置过期时间
+    */
+    document.cookie = "name='zs'"
+    var date = new Date()
+    date.setDate(date.getDate()+1)
+    document.cookie = "password='123';expires="+date.toUTCString()
+
+    console.log(document.cookie)
+
+    // 设置cookie方法
+    function setCookie(key,value,expires){
+      var date = new Date()
+      date.setDate(date.getDate()+expires)
+      document.cookie = key + '=' + value + ';expires=' + date.toUTCString()
+    }
+    setCookie('chanel','abc',2)
+
+    // 获取cookie方法
+    function getCookie(key){
+      var cookie = document.cookie // "name='zs'; password='123'; chanel=abc"
+      var arr = cookie.split(';') // ["name='zs'"," password='123"," chanel=abc"]
+      for(var i=0; i<arr.length; i++){
+        var tmp = arr[i].split('=') // "name='zs'" => ['name','zs']
+        // trim() 去掉字符串前后的空格 ' abc ' => 'abc'
+        if(tmp[0].trim() === key) {
+          return tmp[1]
+        }
+      }
+    }
+    console.log(getCookie('password'))
+
+    function delCookie(key) {
+      var date = new Date()
+      date.setDate(date.getDate()-1)
+      // 设置过期时间为当天之前的任何一天即可
+      document.cookie = key + '=null;expires='+date.toUTCString()
+    }
+    delCookie('password')
+
+  </script>
+</body>
+</html>

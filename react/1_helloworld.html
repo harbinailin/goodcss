@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 被挂载的元素 -->
+  <div id="app"></div>
+
+  <!-- 用来编译jsx语法 -->
+  <script src="./babel.min.js"></script>
+  <!-- react核心库，用来管理组件和状态 -->
+  <script src="./react.development.js"></script>
+  <!-- 依赖react.js 用来操作渲染dom的 ！！！必须放在react.js后面 -->
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    /**
+     * 第一个参数 是一个html片段
+     * 第二个参数 是挂载的元素 使用js原生的方法获取
+     */
+    ReactDOM.render(
+      <h1>hello world</h1>,
+      document.getElementById('app')
+    )
+  
+  </script>
+
+</body>
+</html>

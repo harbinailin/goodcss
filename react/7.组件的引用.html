@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    /**
+     * ref表示引用
+     *  在父组件引用子组件的时候可以通过给子组件定义ref属性来引用
+     *  在父组件需要调用子组件的方法时可以通过this.refs.xxx来找到对应的子组件 
+     */
+    // 组件里的状态只能在组件内部直接修改！！！！！！
+    class Parent extends React.Component{
+      constructor() {
+        super()
+        
+        this.addFun = this.addFun.bind(this)
+
+        // 创建一个ref的实例
+        this.input1 = React.createRef()
+      }
+
+      addFun() {
+        // 修改子组件的count
+        // console.log(this.refs.childCom.state.count)
+        let { childCom, myInput } = this.refs
+        // 虽然可以实现修改子组件的state，但是不允许这样写！！！！！！
+        // childCom.setState({
+        //   count: childCom.state.count+1
+        // })
+
+        // 可以在父组件中调用子组件的方法去修改子组件的state
+        // input里的value是string类型的，注意需要number时进行转换
+        childCom.add(myInput.value*1)
+
+        // this.input1.current 返回的是我们需要的dom元素
+        console.log(this.input1.current.value)
+      }
+
+      render() {
+        return (
+          <div>
+            <h1>父组件</h1>  
+            <input ref="myInput" type="text" />
+            <button onClick={this.addFun}>点击后子组件count+1</button>
+            <Child ref="childCom" />
+            {/* 给元素定义ref属性（对应的值是在构造函数里定的ref的实例） */}
+            <input type="text" ref={this.input1} />
+          </div>
+        )
+      }
+    }
+
+    class Child extends React.Component {
+      constructor() {
+        super()
+
+        this.state = {
+          count: 0
+        }
+
+        this.add = this.add.bind(this)
+      }
+
+      add(data) {
+        this.setState({
+          count: this.state.count+data
+        })
+      }
+
+      render() {
+        return (
+          <div>
+            <h3>子组件</h3>  
+            <p>count: {this.state.count}</p>
+            <button onClick={this.add}>点击count+1</button>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<Parent/>, document.getElementById('app'))
+  
+  </script>
+</body>
+</html>

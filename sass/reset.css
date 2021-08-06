@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-align: none;
+}
+
+body {
+  font-size: 14px;
+  background: #eee;
+}

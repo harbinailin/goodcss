@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    class Main extends React.Component{
+      constructor() {
+        super()
+
+        this.state = {
+          isShow: false
+        }
+
+        this.getCode = this.getCode.bind(this)
+        
+      }
+
+      getCode() {
+        this.setState({
+          isShow: !this.state.isShow
+        })
+      }
+
+      render() {
+        return (
+          <div>
+            <button onClick={this.getCode}>点击获取验证码</button>  
+            {
+              this.state.isShow ? <Clock number={10} stop={this.getCode} /> : null
+            }
+            
+          </div>
+        )
+      }
+    }
+
+    class Clock extends React.Component{
+      constructor() {
+        super()
+
+        this.state = {
+          num: -1
+        }
+      }
+
+      // 会在每次调用render之前调用，需要返回一个对象来修改state 如果不需要修改需要返回null
+      static getDerivedStateFromProps(nextProps, nextState) {
+        console.log(nextProps, nextState)
+        if (nextState.num == -1) {
+          return {
+            num: nextProps.number
+          }
+        } else {
+          return null
+        }
+      }
+
+      // 组件挂载之后立即调用，首次渲染才会触发
+      // 在这个钩子函数里可以去获取页面中需要的数据
+      componentDidMount() {
+        console.log('------componentDidMount------')
+
+        this.timer = setInterval(() => {
+          console.log('setInterval')
+          this.setState({
+            num: this.state.num-1
+          })
+        }, 1000)
+      }
+
+      // 组件是否要更新 需要返回一个boolean
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log(nextProps, nextState)
+        if (nextState.num <=0) {
+          this.props.stop()
+          return false
+        } else {
+          return true
+        }
+      }
+
+      // 组件更新后调用，首次渲染不会调用，只要组件更新就会触发当前钩子函数
+      componentDidUpdate() {
+        console.log('------componentDidUpdate------')
+      }
+
+      // 组件卸载或销毁之前调用
+      componentWillUnmount() {
+        console.log('------componentWillUnmount------')
+        clearInterval(this.timer)
+      }
+
+      render() {
+        console.log('------render------')
+        return (
+          <div>
+            <p>{this.state.num}秒之后重新获取验证码</p>  
+          </div>
+        )
+      }
+    }
+
+
+    ReactDOM.render(<Main/>, document.getElementById('app'))
+  
+  
+  </script>
+</body>
+</html>

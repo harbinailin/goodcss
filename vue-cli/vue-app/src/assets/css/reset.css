@@ -1,0 +1,135 @@
+/*CSS Reset*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+hgroup,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* 仅根据font-size属性决定字体大小。 */
+    font-size-adjust: none;
+    /* 切换横竖屏或者用户自己通过浏览器设置的话，可以改变字体的大小 */
+    -webkit-text-size-adjust: 100%!important;
+    /* 禁止长按弹出系统菜单 */
+    -webkit-touch-callout: none;
+}
+body {
+    font-family: "PingFangSC-Regular","Microsoft Yahei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #000;
+    background-color: #f8f8f8;
+    /* 禁止用户选中文字 */
+    -webkit-user-select: none;
+    /* 切换横竖屏或者用户自己通过浏览器设置的话，可以改变字体的大小 */
+    -webkit-text-size-adjust: 100%;
+    /* 去除android下a/button/input标签被点击时产生的边框 & 去除ios下a标签被点击时产生的半透明灰色背景 */
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: 0;
+}
+
+button {
+    /* button在iOS有个默认背景 */
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+}
+
+a {
+    /* 禁止长按弹出系统菜单 */
+    -webkit-touch-callout: none;
+    text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+    /* 标签被点击时产生的边框 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+em,
+i {
+    font-style: normal;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <script type="text/babel">
+    class Main extends React.Component {
+      constructor() {
+        super()
+
+        // 状态
+        this.state = {
+          str: 'hello',
+          count: 0,
+          arr: [1,2,3],
+          isShow: true
+        }
+
+        this.change = this.change.bind(this)
+      }
+      change() {
+        // 不能直接修改状态，而是需要通过setState方法修改
+        let arr1 = [...this.state.arr]
+        arr1.push(4)
+        this.setState({
+          count: this.state.count + 1,
+          arr: arr1
+        })
+        console.log(this.state.count)
+      }
+
+      // 必须要写的
+      render() {
+        return(
+          <div>
+            <h4>{this.state.str}</h4>  
+            <p>count: {this.state.count}</p>
+            <button onClick={this.change}>click</button>
+            <ul>
+              {
+                this.state.arr.map((value, index) => {
+                  return (
+                    <li key={index}>{value}</li>
+                  )
+                })
+              }
+              
+            </ul>
+            {
+              this.state.isShow ? <p>hello world</p> : null
+            }
+            
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<Main />, document.getElementById('app'))
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="./babel.min.js"></script>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>
+
+  <!-- 
+      引起组件重新渲染的方式
+        1.setState
+        2.props发生了变化
+        3.this.forceUpdate() 强制渲染（render方法就会重新执行）
+   -->
+
+  <script type="text/babel">
+    class Parent extends React.Component{
+      constructor() {
+        super()
+
+        this.state = {
+          count: 1
+        }
+
+        this.num = 123
+
+        this.change = this.change.bind(this)
+        this.fun = this.fun.bind(this)
+      }
+
+      change() {
+        // 值可以修改，但是render不会重新执行->组件不会重新渲染
+        // this.state.count++
+        // console.log(this.state.count)
+
+        this.setState({
+          count: this.state.count+1
+        })
+      }
+
+      fun(){
+        this.num++
+        // 强制渲染
+        this.forceUpdate()
+        console.log(this.num)
+      }
+
+      render() {
+        console.log('父组件渲染了')
+        return(
+          <div>
+            <h1>父组件</h1>  
+            <p>count: {this.state.count}</p>
+            <button onClick={this.change}>change</button>
+            <p>num: {this.num}</p>
+            <button onClick={this.fun}>change num</button>
+
+            {
+              // <Child number={this.state.count} />
+            }
+            
+          </div>
+        )
+      }
+    }
+
+
+    class Child extends React.Component{
+      constructor() {
+        super()
+      }
+
+      render() {
+        console.log('子组件渲染了')
+
+        return(
+          <div>
+            <h3>子组件</h3>
+            <p>{this.props.number}</p>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<Parent/>, document.getElementById('app'))
+  
+  </script>
+</body>
+</html>
