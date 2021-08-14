@@ -2,6 +2,9 @@
 //导入Node中的path模块，用于操作文件路径
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const extry =require('./config/entry_webpack.js')
+const CopyWebpackPlugin= require('copy-webpack-plugin')
 module.exports = {
 
     //配置入口文件
@@ -12,7 +15,8 @@ module.exports = {
         //出口文件的路径
         path: path.resolve(__dirname,'dist'),
         //出口(打包后）文件的命名 一般与入口文件保持一致
-        filename:'[name].js'
+        filename:'[name].js',
+        assetModuleFilename:'images/[hash][ext][query]'
     },
     module:{
         rules:[{
@@ -21,16 +25,37 @@ module.exports = {
             //use:['style-loader','css-loader'],
             use:[
               MiniCssExtractPlugin.loader,
-              'css-loader'
+              'css-loader',
+              'postcss-loader'
             ]
 
         },{
           test:/\.scss$/,
-          use:[MiniCssExtractPlugin.loader,
+          use:[
+            MiniCssExtractPlugin.loader,
           'css-loader',
-        'sass-loader']
-        }]
-
+          'sass-loader'
+        ]
+        },{
+          test:/\.(png|jpg|gif)$/,
+          type:'asset',
+          parser:{
+            dataUrlCondition:{
+              maxSize:8*1024
+            }
+          }
+        },{
+          test:/\.js$/,
+          use:[
+            {
+              loader:'babel-loader',
+              options:{
+                presets:['@babel/preset-env']
+              }
+            }
+          ],exclude:/node_modules/
+        }
+      ]
     },
     plugins:[
         new HtmlWebpackPlugin({
@@ -42,7 +67,17 @@ module.exports = {
             hash:true,
             //配置要打包的html文件
             template:'./src/index.html'
+        }),
+        new MiniCssExtractPlugin({
+          filename:'css/[name].css'
+        }),
+        new CopyWebpackPlugin({
+          patterns:[{
+            form:__dirname+'/src/pubilc',
+            to :'./public'
+          }]
         })
+
     ],
     //devserver 配置服务热更新
     devServer:{

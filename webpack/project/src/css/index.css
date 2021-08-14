@@ -1,5 +1,8 @@
 div{
     width: 100px;
     height: 200px;
-    background-image: url("../images/link.webp");
+    background:url(../images/link\(1\).jpg);
+}
+::placeholder{
+    color: red;
 }
