@@ -1,0 +1,24 @@
+00:00:04.243421 VirtualBox GUI VM Selector Window 6.1.4 r136177 win.amd64 (Feb 18 2020 17:19:29) release log
+00:00:04.243427 Log opened 2021-10-20T14:24:45.878302400Z
+00:00:04.243429 Build Type: release
+00:00:04.243440 OS Product: Windows 10
+00:00:04.243443 OS Release: 10.0.19042
+00:00:04.243444 OS Service Pack: 
+00:00:04.315846 DMI Product Name: Inspiron 7590
+00:00:04.330824 DMI Product Version: 
+00:00:04.330858 Firmware type: UEFI
+00:00:04.331631 Secure Boot: VERR_PRIVILEGE_NOT_HELD
+00:00:04.331681 Host RAM: 32548MB (31.7GB) total, 26864MB (26.2GB) available
+00:00:04.331694 Executable: C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
+00:00:04.331695 Process ID: 10332
+00:00:04.331697 Package type: WINDOWS_64BITS_GENERIC
+00:00:04.331955 Qt version: 5.6.2
+00:00:04.714122 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:06.944569 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:03:24.834680 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:04:01.097665 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:04:01.198073 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:04:19.274123 2D support test succeeded
+00:04:29.809737 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:04:29.834783 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:06:33.797639 GUI: UIMediumEnumerator: Medium-enumeration finished!

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="1.0.0.1001"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30120" 
+		IDS="360fasttransfer"
+    	Show="1"	
+		ExcludeSystem=""
+		GroupID="5"
+		New="0"
+    	Name="360闪传" 
+    	Description="文件跨屏传输，方便又安全" 
+    	IconPath="AdvanceTools_360fasttransfer_10_52.png" 
+		IconPath_32="AdvanceTools_360fasttransfer_10_32.png" 
+        AppPath="Utils\360FastTransfer.exe"
+ 		Param="" 	
+		InstallType="1"
+		Pdown32="http://update.360safe.com/v3/adv360fasttransfer.cab"
+		Pdown64="http://update.360safe.com/v3/adv360fasttransfer.cab"
+		CHKFile="Utils\360FastTransfer.exe;"
+		CHKDataFile="Config\newui\themes\default\theme_360FastTransfer.xml;Config\newui\themes\default\360fasttransfer\360FastTransfer_theme.ui;"			
+		Order="351"
+		UninstallType="3"
+        UninstallExe="Utils\360FastTransfer.exe"
+        UninstallArg="/Uninstall"
+		UninstallFile="Utils\360FastTransfer.exe;Config\newui\themes\default\theme_360FastTransfer.xml;Config\newui\themes\default\360fasttransfer\360FastTransfer_theme.ui;"
+		Recommand="0"
+        MyTool="0"
+    />
+  </ToolsList>
+  
+</AdvTools><!--360skin ver="11.0.0.1011" crc=""-->

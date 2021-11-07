@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="11.0.0.1001"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30130" 
+		IDS="360DuplicateFile"
+    	Show="1"	
+		ExcludeSystem="Window9x;WindowMe;Window2000;"
+		GroupID="3"
+		New="1"
+    	Name="查找重复文件" 
+    	Description="一键查找并清理重复文件" 
+    	IconPath="AdvanceTools_360DuplicateFile_10_52.png" 
+		IconPath_32="AdvanceTools_360DuplicateFile_10_32.png" 
+        AppPath="Utils\360DuplicateFile.exe"
+ 		Param="" 	
+		InstallType="1"
+		Pdown32="http://update.360safe.com/v3/adv360DuplicateFile.cab"
+		Pdown64="http://update.360safe.com/v3/adv360DuplicateFile.cab"
+		CHKFile="Utils\360DuplicateFile.exe;"
+		CHKDataFile="Config\newui\themes\default\theme_DuplicateFile.xml;Config\newui\themes\default\DuplicateFile\DuplicateFile_theme.ui;Utils\DuplicateCfg.xml;"			
+		Order="110"
+		UninstallType="2"
+		UninstallFile="Utils\360DuplicateFile.exe;Config\newui\themes\default\theme_DuplicateFile.xml;Config\newui\themes\default\DuplicateFile\DuplicateFile_theme.ui;Utils\DuplicateCfg.xml;"
+		Recommand="0"
+        MyTool="0"
+    />
+  </ToolsList>
+  
+</AdvTools><!--360skin ver="11.0.0.1001" crc=""-->

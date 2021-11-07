@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="1.0.0.1001"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30122" 
+		IDS="360winrebackup"
+    	Show="1"	
+		ExcludeSystem="Window2003;WindowXP;WindowsVista;Server;"
+		GroupID="3"
+		New="1"
+    	Name="系统备份还原" 
+    	Description="一键备份还原系统，方便安全" 
+    	IconPath="AdvanceTools_360winrebackup_10_52.png" 
+		IconPath_32="AdvanceTools_360winrebackup_10_32.png" 
+        AppPath="Utils\WinreBackup\360WinREBackup.exe"
+ 		Param="" 	
+		InstallType="1"
+		Pdown32="http://update.360safe.com/v3/adv360winrebackup.cab"
+		Pdown64="http://update.360safe.com/v3/adv360winrebackup.cab"
+		CHKFile="Utils\WinreBackup\360WinREBackup.exe;"
+		CHKDataFile="Config\newui\themes\default\360winrebackup\360winrebackup_theme.ui;"			
+		Order="6"
+		UninstallType="3"
+		UninstallExe="Utils\WinreBackup\360WinREBackup.exe"
+		UninstallArg="/d"
+		UninstallFile="Config\newui\themes\default\360winrebackup\360winrebackup_theme.ui;Utils\WinreBackup\360WinREBackup64.exe;Utils\WinreBackup\360WinREBackup.exe;"
+		UninstDelCfgSect="360winrebackup_theme.ui;360WinREBackup64.exe;360WinREBackup.exe;"
+		Recommand="0"
+        MyTool="0"
+    />
+  </ToolsList>
+</AdvTools><!--360skin ver="11.0.0.1011" crc=""-->

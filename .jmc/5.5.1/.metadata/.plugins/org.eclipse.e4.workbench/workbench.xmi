@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_rq7cYSjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_rq7cYijhEeu-jJuki8oaqg" bindingContexts="_rq7caCjhEeu-jJuki8oaqg">
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
+  <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+  <tags>ModelMigrationProcessor.001</tags>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_rq7cYijhEeu-jJuki8oaqg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_sOxJQCjhEeu-jJuki8oaqg" label="%trimmedwindow.label.eclipseSDK" x="32" y="32" width="1400" height="850">
+    <persistedState key="coolBarVisible" value="true"/>
+    <persistedState key="perspectiveBarVisible" value="true"/>
+    <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
+    <persistedState key="aggregateWorkingSetId"/>
+    <tags>topLevel</tags>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_sOxJQCjhEeu-jJuki8oaqg" selectedElement="_sOxJQijhEeu-jJuki8oaqg" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_sOxJQSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.ide.perspectivestack" visible="false" containerData="7500" selectedElement="_sXYSsCjhEeu-jJuki8oaqg">
+        <tags>Minimized</tags>
+        <tags>MinimizedByZoom</tags>
+        <children xsi:type="advanced:Perspective" xmi:id="_sXYSsCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.idesupport.StandardPerspective" selectedElement="_sXYSsSjhEeu-jJuki8oaqg" label="Mission Control" iconURI="platform:/plugin/com.jrockit.mc.ui/icons/mission_control.gif">
+          <tags>persp.viewSC:com.jrockit.mc.browser.views.JVMBrowserView</tags>
+          <tags>persp.viewSC:com.jrockit.mc.components.ui.design.view.DesignView</tags>
+          <tags>persp.viewSC:com.jrockit.mc.flightrecorder.ui.views.types.EventTypesView</tags>
+          <tags>persp.viewSC:org.eclipse.ui.views.PropertySheet</tags>
+          <tags>persp.viewSC:org.eclipse.ui.views.ProgressView</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_sXYSsSjhEeu-jJuki8oaqg" selectedElement="_sXYSsijhEeu-jJuki8oaqg" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_sXYSsijhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.idesupport.tallFolder" containerData="2200" selectedElement="_sXYSsyjhEeu-jJuki8oaqg">
+              <tags>newtablook</tags>
+              <children xsi:type="advanced:Placeholder" xmi:id="_sXYSsyjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.views.JVMBrowserView" ref="_sXUBQCjhEeu-jJuki8oaqg">
+                <tags>NoClose</tags>
+              </children>
+              <children xsi:type="advanced:Placeholder" xmi:id="_sXYStCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.components.ui.design.view.DesignView" toBeRendered="false" ref="_sXXEkCjhEeu-jJuki8oaqg"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_sXYStSjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.flightrecorder.ui.views.types.EventTypesView" ref="_sXXroCjhEeu-jJuki8oaqg">
+                <tags>NoClose</tags>
+              </children>
+            </children>
+            <children xsi:type="advanced:Placeholder" xmi:id="_sXYStijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.editorss" containerData="7800" ref="_sXK3UCjhEeu-jJuki8oaqg"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_sOxJQijhEeu-jJuki8oaqg" elementId="stickyFolderRight" containerData="2500" selectedElement="_sOxJRCjhEeu-jJuki8oaqg">
+        <tags>active</tags>
+        <tags>Maximized</tags>
+        <children xsi:type="advanced:Placeholder" xmi:id="_sOxJQyjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.HelpView" toBeRendered="false" ref="_sOv7ICjhEeu-jJuki8oaqg"/>
+        <children xsi:type="advanced:Placeholder" xmi:id="_sOxJRCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.internal.introview" ref="_sOwiMCjhEeu-jJuki8oaqg"/>
+      </children>
+    </children>
+    <sharedElements xsi:type="basic:Part" xmi:id="_sOv7ICjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.HelpView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x5e2e;&#x52a9;" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:&#x5e2e;&#x52a9;</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_sOwiMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.internal.introview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x6b22;&#x8fce;&#x4f7f;&#x7528;" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view>&#xD;&#xA;&lt;presentation currentPage=&quot;root&quot; restore=&quot;true&quot;/>&#xD;&#xA;&lt;standbyPart/>&#xD;&#xA;&lt;/view>"/>
+      <tags>View</tags>
+      <tags>categoryTag:&#x5e38;&#x89c4;</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
+      <menus xmi:id="_snH-4CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.internal.introview">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_snH-4SjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.internal.introview"/>
+    </sharedElements>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_sXK3UCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.editorss">
+      <children xsi:type="basic:PartStack" xmi:id="_sXPv0CjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>newtablook</tags>
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+      </children>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_sXUBQCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.views.JVMBrowserView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="JVM &#x6d4f;&#x89c8;&#x5668;" iconURI="platform:/plugin/com.jrockit.mc.browser/icons/mission_control.gif" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view UseTreeLayout=&quot;false&quot;/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Mission Control</tags>
+      <menus xmi:id="_sdh-ACjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.views.JVMBrowserView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_sdh-ASjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.views.JVMBrowserView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_sXXEkCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.components.ui.design.view.DesignView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x8bbe;&#x8ba1;&#x5668; (&#x4e0d;&#x53d7;&#x652f;&#x6301;)" iconURI="platform:/plugin/com.jrockit.mc.components.ui/icons/design.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:Mission Control</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_sXXroCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.flightrecorder.ui.views.types.EventTypesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="&#x4e8b;&#x4ef6;&#x7c7b;&#x578b;" iconURI="platform:/plugin/com.jrockit.mc.flightrecorder.ui/icons/event-selector-16.png" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:Mission Control</tags>
+    </sharedElements>
+    <trimBars xmi:id="_rq7cYyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.ui.workbench" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_sScIUCjhEeu-jJuki8oaqg" elementId="additions" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_sScIUSjhEeu-jJuki8oaqg" elementId="additions" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_65dmoCjiEeucOrcrwyAi5g" elementId="com.jrockit.mc.browser.toolbar.connection">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_sScvYCjhEeu-jJuki8oaqg" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>stretch</tags>
+        <tags>SHOW_RESTORE_MENU</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_rq7cZCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.trim.status" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_sTLvMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.StatusLine" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_sUWM0CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.HeapStatus" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_sVjtwCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.ProgressBar" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_rq7cZSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Left">
+      <children xsi:type="menu:ToolControl" xmi:id="_s0JHMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.ide.perspectivestack(minimized)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_rq7cZijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right"/>
+  </children>
+  <bindingTables xmi:id="_rq7cZyjhEeu-jJuki8oaqg" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_rq7caCjhEeu-jJuki8oaqg">
+    <bindings xmi:id="_rseUgyjhEeu-jJuki8oaqg" keySequence="CTRL+X" command="_rrzmPCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUhyjhEeu-jJuki8oaqg" keySequence="CTRL+Y" command="_rr0NPSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUiijhEeu-jJuki8oaqg" keySequence="ALT+/" command="_rry_JCjhEeu-jJuki8oaqg">
+      <tags>locale:zh</tags>
+    </bindings>
+    <bindings xmi:id="_rseUiyjhEeu-jJuki8oaqg" keySequence="CTRL+Z" command="_rrzmNijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslCMijhEeu-jJuki8oaqg" keySequence="CTRL+A" command="_rrzmJCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslCMyjhEeu-jJuki8oaqg" keySequence="CTRL+C" command="_rryYBSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslCNCjhEeu-jJuki8oaqg" keySequence="ALT+PAGE_UP" command="_rr0NTSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslpQijhEeu-jJuki8oaqg" keySequence="ALT+PAGE_DOWN" command="_rrzmMyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslpRCjhEeu-jJuki8oaqg" keySequence="SHIFT+INSERT" command="_rrzmPSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoFgCjhEeu-jJuki8oaqg" keySequence="CTRL+V" command="_rrzmPSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoFgSjhEeu-jJuki8oaqg" keySequence="CTRL+INSERT" command="_rryYBSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoskijhEeu-jJuki8oaqg" keySequence="CTRL+F10" command="_rr0NVCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsosoCjhEeu-jJuki8oaqg" keySequence="SHIFT+DEL" command="_rrzmPCjhEeu-jJuki8oaqg"/>
+  </bindingTables>
+  <bindingTables xmi:id="_rsTVYCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.window" bindingContext="_rq7caSjhEeu-jJuki8oaqg">
+    <bindings xmi:id="_rseUgCjhEeu-jJuki8oaqg" keySequence="CTRL+F7" command="_rry_ECjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUgSjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+W" command="_rrzmOijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUgijhEeu-jJuki8oaqg" keySequence="CTRL+W" command="_rr0NRijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUhCjhEeu-jJuki8oaqg" keySequence="ALT+CR" command="_rrxw9yjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUhSjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+NUMPAD_DIVIDE" command="_rry_HCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUhijhEeu-jJuki8oaqg" keySequence="CTRL+F6" command="_rry_FijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUiCjhEeu-jJuki8oaqg" keySequence="CTRL+," command="_rr0NMyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUiSjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+F8" command="_rry_FyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rseUjCjhEeu-jJuki8oaqg" keySequence="F5" command="_rr0NWijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslCMCjhEeu-jJuki8oaqg" keySequence="F2" command="_rr0NNCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslCMSjhEeu-jJuki8oaqg" keySequence="ALT+ARROW_LEFT" command="_rr0NWCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslpQCjhEeu-jJuki8oaqg" keySequence="CTRL+E" command="_rrzmLijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslpQSjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+E" command="_rrzmMSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rslpQyjhEeu-jJuki8oaqg" keySequence="CTRL+F" command="_rryYBCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQUCjhEeu-jJuki8oaqg" keySequence="ALT+ARROW_RIGHT" command="_rr0NQyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQUSjhEeu-jJuki8oaqg" keySequence="CTRL+O" command="_rr0NXCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQUijhEeu-jJuki8oaqg" keySequence="CTRL+1" command="_rr0NVyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQUyjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+F7" command="_rry_KCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQVCjhEeu-jJuki8oaqg" keySequence="CTRL+N" command="_rr0NQCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQVSjhEeu-jJuki8oaqg" keySequence="CTRL+M" command="_rry_HijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQVijhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+F4" command="_rrzmOijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQVyjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+S" command="_rrxw9CjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQWCjhEeu-jJuki8oaqg" keySequence="CTRL+P" command="_rr0NPijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQWSjhEeu-jJuki8oaqg" keySequence="CTRL+F8" command="_rr0NXSjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsmQWijhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+F6" command="_rryYAijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoskCjhEeu-jJuki8oaqg" keySequence="CTRL+SHIFT+NUMPAD_MULTIPLY" command="_rrxw8yjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoskSjhEeu-jJuki8oaqg" keySequence="ALT+SHIFT+F7" command="_rrzmPyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoskyjhEeu-jJuki8oaqg" keySequence="CTRL+F4" command="_rr0NRijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoslCjhEeu-jJuki8oaqg" keySequence="CTRL+S" command="_rrxw-SjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoslSjhEeu-jJuki8oaqg" keySequence="F12" command="_rry_JijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoslijhEeu-jJuki8oaqg" keySequence="DEL" command="_rry_GyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsoslyjhEeu-jJuki8oaqg" keySequence="CTRL+." command="_rrzmQCjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsosmCjhEeu-jJuki8oaqg" keySequence="ALT+-" command="_rry_JyjhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsosmSjhEeu-jJuki8oaqg" keySequence="ALT+F7" command="_rrzmPijhEeu-jJuki8oaqg"/>
+    <bindings xmi:id="_rsosmijhEeu-jJuki8oaqg" keySequence="CTRL+{" command="_rry_GCjhEeu-jJuki8oaqg">
+      <parameters xmi:id="_rsosmyjhEeu-jJuki8oaqg" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="false"/>
+    </bindings>
+    <bindings xmi:id="_rsosnCjhEeu-jJuki8oaqg" keySequence="ALT+SHIFT+?" command="_rry_EijhEeu-jJuki8oaqg">
+      <tags>locale:zh</tags>
+    </bindings>
+    <bindings xmi:id="_rsosnSjhEeu-jJuki8oaqg" keySequence="CTRL+_" command="_rry_GCjhEeu-jJuki8oaqg">
+      <parameters xmi:id="_rsosnijhEeu-jJuki8oaqg" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="true"/>
+    </bindings>
+    <bindings xmi:id="_rsosnyjhEeu-jJuki8oaqg" keySequence="ALT+?" command="_rry_EijhEeu-jJuki8oaqg">
+      <tags>locale:zh</tags>
+    </bindings>
+  </bindingTables>
+  <rootContext xmi:id="_rq7caCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="&#x5728;&#x5bf9;&#x8bdd;&#x6846;&#x548c;&#x7a97;&#x53e3;&#x4e2d;" description="&#x5bf9;&#x8bdd;&#x6846;&#x6216;&#x7a97;&#x53e3;&#x662f;&#x6253;&#x5f00;&#x7684;">
+    <children xmi:id="_rq7caSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="&#x5728;&#x7a97;&#x53e3;&#x4e2d;" description="&#x7a97;&#x53e3;&#x662f;&#x6253;&#x5f00;&#x7684;">
+      <children xmi:id="_rq7caijhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
+      <children xmi:id="_rr00QSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.textEditorScope" name="&#x7f16;&#x8f91;&#x6587;&#x672c;" description="&#x7f16;&#x8f91;&#x6587;&#x672c;&#x4e0a;&#x4e0b;&#x6587;"/>
+    </children>
+    <children xmi:id="_rq7cayjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="&#x5728;&#x5bf9;&#x8bdd;&#x6846;&#x4e2d;" description="&#x5bf9;&#x8bdd;&#x6846;&#x662f;&#x6253;&#x5f00;&#x7684;"/>
+  </rootContext>
+  <rootContext xmi:id="_rr00QCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.workbenchMenu" name="&#x5de5;&#x4f5c;&#x53f0;&#x83dc;&#x5355;" description="&#x5f53;&#x6ca1;&#x6709;&#x5de5;&#x4f5c;&#x53f0;&#x7684;&#x65f6;&#x5019;&#x7a97;&#x53e3;&#x662f;&#x6d3b;&#x52a8;&#x7684;"/>
+  <rootContext xmi:id="_rr00QijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.contexts.actionSet" name="&#x52a8;&#x4f5c;&#x8bbe;&#x7f6e;" description="&#x4e0a;&#x5c42;&#x83dc;&#x5355;&#x52a8;&#x4f5c;&#x8bbe;&#x7f6e;"/>
+  <descriptors xmi:id="_rwpp4CjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
+    <tags>Editor</tags>
+  </descriptors>
+  <descriptors xmi:id="_rwq4ACjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.views.JVMBrowserView" label="JVM &#x6d4f;&#x89c8;&#x5668;" iconURI="platform:/plugin/com.jrockit.mc.browser/icons/mission_control.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Mission Control</tags>
+  </descriptors>
+  <descriptors xmi:id="_rw_oICjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.components.ui.design.view.DesignView" label="&#x8bbe;&#x8ba1;&#x5668; (&#x4e0d;&#x53d7;&#x652f;&#x6301;)" iconURI="platform:/plugin/com.jrockit.mc.components.ui/icons/design.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Mission Control</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxGV0CjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.flightrecorder.ui.views.types.EventTypesView" label="&#x4e8b;&#x4ef6;&#x7c7b;&#x578b;" iconURI="platform:/plugin/com.jrockit.mc.flightrecorder.ui/icons/event-selector-16.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Mission Control</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxKAMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.ProgressView" label="&#x8fdb;&#x5ea6;&#x67e5;&#x770b;" iconURI="platform:/plugin/com.jrockit.mc.rcp.application/icons/pview.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:&#x5e38;&#x89c4;</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxMccCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.rcp.application.commands.CommandView" label="Commands" iconURI="platform:/plugin/com.jrockit.mc.rcp.application/icons/command-output-16.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Mission Control</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxO4sCjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.HelpView" label="&#x5e2e;&#x52a9;" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:&#x5e2e;&#x52a9;</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxTxMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.internal.introview" label="&#x6b22;&#x8fce;" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:&#x5e38;&#x89c4;</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxVmYCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.PropertySheet" label="&#x5c5e;&#x6027;" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" allowMultiple="true" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:&#x5e38;&#x89c4;</tags>
+  </descriptors>
+  <descriptors xmi:id="_rxZ30CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.ContentOutline" label="&#x5927;&#x7eb2;" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.png" category="org.eclipse.e4.secondaryNavigationStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:&#x5e38;&#x89c4;</tags>
+  </descriptors>
+  <commands xmi:id="_rrxw8CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.pinEditor" commandName="&#x9501;&#x5b9a;&#x7f16;&#x8f91;&#x5668;" description="&#x9501;&#x5b9a;&#x5f53;&#x524d;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw8SjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.nextTab" commandName="&#x4e0b;&#x4e00;&#x4e2a;&#x6807;&#x7b7e;" description="&#x5207;&#x6362;&#x5230;&#x4e0b;&#x4e00;&#x4e2a;&#x6807;&#x7b7e;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw8ijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.quickAccess" commandName="&#x5feb;&#x901f;&#x8bbf;&#x95ee;" description="&#x5feb;&#x901f;&#x8bbf;&#x95ee;&#x7528;&#x6237;&#x754c;&#x9762;&#x5143;&#x7d20;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw8yjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.expandAll" commandName="&#x5168;&#x90e8;&#x5c55;&#x5f00;" description="&#x5c55;&#x5f00;&#x5f53;&#x524d;&#x6811;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw9CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.saveAll" commandName="&#x4fdd;&#x5b58;&#x5168;&#x90e8;" description="&#x4fdd;&#x5b58;&#x6240;&#x6709;&#x5f53;&#x524d;&#x5185;&#x5bb9;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw9SjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.showKeyAssist" commandName="&#x663e;&#x793a;&#x952e;&#x8f85;&#x52a9;" description="&#x663e;&#x793a;&#x952e;&#x8f85;&#x52a9;&#x5bf9;&#x8bdd;&#x6846;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw9ijhEeu-jJuki8oaqg" elementId="com.jrockit.mc.flightrecorder.controlpanel.ui.openTemplateManager" commandName="&#x98de;&#x884c;&#x8bb0;&#x5f55;&#x6a21;&#x677f;&#x7ba1;&#x7406;&#x5668;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw9yjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.properties" commandName="&#x5c5e;&#x6027;" description="&#x663e;&#x793a;&#x6240;&#x9009;&#x9879;&#x7684;&#x5c5e;&#x6027;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw-CjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.closeOthers" commandName="&#x5173;&#x95ed;&#x5176;&#x4ed6;" description="&#x5173;&#x95ed;&#x9664;&#x6d3b;&#x52a8;&#x7f16;&#x8f91;&#x5668;&#x5916;&#x7684;&#x6240;&#x6709;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrxw-SjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.save" commandName="&#x4fdd;&#x5b58;" description="&#x4fdd;&#x5b58;&#x5f53;&#x524d;&#x5185;&#x5bb9;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rryYACjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.preferences" commandName="&#x9996;&#x9009;&#x9879;" description="&#x6253;&#x5f00;&#x201c;&#x9996;&#x9009;&#x9879;&#x201d;&#x5bf9;&#x8bdd;&#x6846;" category="_rrtfhijhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rryYASjhEeu-jJuki8oaqg" elementId="preferencePageId" name="&#x9996;&#x9009;&#x9879;&#x9875;&#x9762;"/>
+  </commands>
+  <commands xmi:id="_rryYAijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.previousEditor" commandName="&#x4e0a;&#x4e00;&#x4e2a;&#x7f16;&#x8f91;&#x5668;" description="&#x5207;&#x6362;&#x81f3;&#x4e0a;&#x4e00;&#x4e2a;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rryYAyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.activeContextInfo" commandName="&#x663e;&#x793a; activeContext &#x4fe1;&#x606f;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rryYBCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.findReplace" commandName="&#x67e5;&#x627e;&#x5e76;&#x66ff;&#x6362;" description="&#x67e5;&#x627e;&#x5e76;&#x66ff;&#x6362;&#x6587;&#x672c;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rryYBSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.copy" commandName="&#x590d;&#x5236;" description="&#x5c06;&#x9009;&#x62e9;&#x7684;&#x5185;&#x5bb9;&#x590d;&#x5236;&#x5230;&#x526a;&#x8d34;&#x677f;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_ECjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.nextView" commandName="&#x4e0b;&#x4e00;&#x4e2a;&#x89c6;&#x56fe;" description="&#x5207;&#x6362;&#x81f3;&#x4e0b;&#x4e00;&#x4e2a;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_ESjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.tipsAndTricksAction" commandName="&#x63d0;&#x793a;&#x548c;&#x6280;&#x5de7;" description="&#x6253;&#x5f00;&#x63d0;&#x793a;&#x548c;&#x6280;&#x5de7;&#x5e2e;&#x52a9;&#x9875;&#x9762;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_EijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.text.contentAssist.contextInformation" commandName="&#x4e0a;&#x4e0b;&#x6587;&#x4fe1;&#x606f;" description="&#x663e;&#x793a;&#x4e0a;&#x4e0b;&#x6587;&#x4fe1;&#x606f;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_EyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.properties.NewPropertySheetCommand" commandName="&#x5c5e;&#x6027;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_FCjhEeu-jJuki8oaqg" elementId="org.eclipse.equinox.p2.ui.sdk.installationDetails" commandName="&#x5b89;&#x88c5;&#x8be6;&#x7ec6;&#x4fe1;&#x606f;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_FSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.saveAs" commandName="&#x53e6;&#x5b58;&#x4e3a;" description="&#x5c06;&#x5f53;&#x524d;&#x5185;&#x5bb9;&#x4fdd;&#x5b58;&#x81f3;&#x53e6;&#x4e00;&#x4e2a;&#x4f4d;&#x7f6e;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_FijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.nextEditor" commandName="&#x4e0b;&#x4e00;&#x4e2a;&#x7f16;&#x8f91;&#x5668;" description="&#x5207;&#x6362;&#x81f3;&#x4e0b;&#x4e00;&#x4e2a;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_FyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.previousPerspective" commandName="&#x4e0a;&#x4e00;&#x4e2a;&#x900f;&#x89c6;&#x56fe;" description="&#x5207;&#x6362;&#x81f3;&#x4e0a;&#x4e00;&#x4e2a;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_GCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.splitEditor" commandName="&#x5207;&#x6362;&#x5206;&#x5272;&#x7f16;&#x8f91;&#x5668;" description="&#x5206;&#x5272;&#x6216;&#x5408;&#x5e76;&#x5f53;&#x524d;&#x6d3b;&#x52a8;&#x7f16;&#x8f91;&#x5668;." category="_rrtfhijhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rry_GSjhEeu-jJuki8oaqg" elementId="Splitter.isHorizontal" name="&#x65b9;&#x4f4d;" optional="false"/>
+  </commands>
+  <commands xmi:id="_rry_GijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.helpContents" commandName="&#x5e2e;&#x52a9;&#x5185;&#x5bb9;" description="&#x6253;&#x5f00;&#x5e2e;&#x52a9;&#x5185;&#x5bb9;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_GyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.delete" commandName="&#x5220;&#x9664;" description="&#x5220;&#x9664;&#x9009;&#x62e9;&#x7684;&#x5185;&#x5bb9;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_HCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.collapseAll" commandName="&#x5168;&#x90e8;&#x6298;&#x53e0;" description="&#x6298;&#x53e0;&#x5f53;&#x524d;&#x6811;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_HSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.goInto" commandName="&#x8f6c;&#x81f3;" description="&#x6d4f;&#x89c8;&#x81f3;&#x6240;&#x9009;&#x62e9;&#x9879;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_HijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.maximizePart" commandName="&#x5c06;&#x6d3b;&#x52a8;&#x89c6;&#x56fe;&#x6216;&#x7f16;&#x8f91;&#x5668;&#x6700;&#x5927;&#x5316;" description="&#x5207;&#x6362;&#x6d3b;&#x52a8;&#x89c6;&#x56fe;&#x6216;&#x7f16;&#x8f91;&#x5668;&#x7684;&#x6700;&#x5927;&#x5316;&#xff0f;&#x590d;&#x539f;&#x72b6;&#x6001;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_HyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.lockToolBar" commandName="&#x9501;&#x5b9a;&#x5de5;&#x5177;&#x680f;" description="&#x9501;&#x5b9a;&#x5de5;&#x5177;&#x680f;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_ICjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.exit" commandName="&#x9000;&#x51fa;" description="&#x9000;&#x51fa;&#x5e94;&#x7528;&#x7a0b;&#x5e8f;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_ISjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.newEditor" commandName="&#x65b0;&#x5efa;&#x7f16;&#x8f91;&#x5668;" description="&#x5bf9;&#x6d3b;&#x52a8;&#x7f16;&#x8f91;&#x5668;&#x7684;&#x8f93;&#x5165;&#x6253;&#x5f00;&#x53e6;&#x4e00;&#x4e2a;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_IijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.minimizePart" commandName="&#x5c06;&#x6d3b;&#x52a8;&#x89c6;&#x56fe;&#x6216;&#x7f16;&#x8f91;&#x5668;&#x6700;&#x5c0f;&#x5316;" description="&#x5c06;&#x6d3b;&#x52a8;&#x89c6;&#x56fe;&#x6216;&#x7f16;&#x8f91;&#x5668;&#x6700;&#x5c0f;&#x5316;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_IyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.addBookmark" commandName="&#x6dfb;&#x52a0;&#x4e66;&#x7b7e;" description="&#x6dfb;&#x52a0;&#x4e66;&#x7b7e;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_JCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.text.contentAssist.proposals" commandName="&#x5185;&#x5bb9;&#x8f85;&#x52a9;" description="&#x5185;&#x5bb9;&#x8f85;&#x52a9;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_JSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.up" commandName="&#x5411;&#x4e0a;" description="&#x6d4f;&#x89c8;&#x81f3;&#x4e0a;&#x4e00;&#x5c42;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_JijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.activateEditor" commandName="&#x6fc0;&#x6d3b;&#x7f16;&#x8f91;&#x5668;" description="&#x6fc0;&#x6d3b;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_JyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.showSystemMenu" commandName="&#x663e;&#x793a;&#x7cfb;&#x7edf;&#x83dc;&#x5355;" description="&#x663e;&#x793a;&#x7cfb;&#x7edf;&#x83dc;&#x5355;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_KCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.previousView" commandName="&#x4e0a;&#x4e00;&#x4e2a;&#x89c6;&#x56fe;" description="&#x5207;&#x6362;&#x81f3;&#x4e0a;&#x4e00;&#x4e2a;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rry_KSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.revert" commandName="&#x8fd8;&#x539f;" description="&#x8fd8;&#x539f;&#x81f3;&#x4e0a;&#x6b21;&#x4fdd;&#x5b58;&#x7684;&#x72b6;&#x6001;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmICjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.showView" commandName="&#x663e;&#x793a;&#x89c6;&#x56fe;" description="&#x663e;&#x793a;&#x7279;&#x5b9a;&#x89c6;&#x56fe;" category="_rrtfgCjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rrzmISjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.showView.viewId" name="&#x89c6;&#x56fe;"/>
+    <parameters xmi:id="_rrzmIijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.showView.secondaryId" name="&#x8f85;&#x52a9; id"/>
+    <parameters xmi:id="_rrzmIyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.views.showView.makeFast" name="&#x4f5c;&#x4e3a;&#x5feb;&#x901f;&#x89c6;&#x56fe;"/>
+  </commands>
+  <commands xmi:id="_rrzmJCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.selectAll" commandName="&#x5168;&#x90e8;&#x9009;&#x4e2d;" description="&#x5168;&#x90e8;&#x9009;&#x4e2d;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmJSjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.ignoreMissingPlaceholders" commandName="Do not warn of missing documentation" description="Sets the help preferences to no longer report a warning about the current set of missing documents." category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmJijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.savePerspective" commandName="&#x5c06;&#x900f;&#x89c6;&#x56fe;&#x53e6;&#x5b58;&#x4e3a;" description="&#x4fdd;&#x5b58;&#x5f53;&#x524d;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmJyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.move" commandName="&#x79fb;&#x52a8;..." description="&#x79fb;&#x52a8;&#x6240;&#x9009;&#x9879;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmKCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.import" commandName="&#x5bfc;&#x5165;" description="&#x5bfc;&#x5165;" category="_rrtfhSjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rrzmKSjhEeu-jJuki8oaqg" elementId="importWizardId" name="&#x5bfc;&#x5165;&#x5411;&#x5bfc;"/>
+  </commands>
+  <commands xmi:id="_rrzmKijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.perspectives.showPerspective" commandName="&#x663e;&#x793a;&#x900f;&#x89c6;&#x56fe;" description="&#x663e;&#x793a;&#x7279;&#x5b9a;&#x900f;&#x89c6;&#x56fe;" category="_rrtfgSjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rrzmKyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="&#x53c2;&#x6570;"/>
+    <parameters xmi:id="_rrzmLCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.perspectives.showPerspective.newWindow" name="&#x5728;&#x65b0;&#x7a97;&#x53e3;"/>
+  </commands>
+  <commands xmi:id="_rrzmLSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.linkWithEditor" commandName="&#x5173;&#x8054;&#x7f16;&#x8f91;&#x5668;&#x94fe;&#x63a5;" description="&#x5c06;&#x89c6;&#x56fe;&#x7684;&#x9009;&#x62e9;&#x9879;&#x4e0e;&#x5f53;&#x524d;&#x6d3b;&#x52a8;&#x7f16;&#x8f91;&#x5668;&#x7684;&#x9009;&#x62e9;&#x9879;&#x76f8;&#x5173;&#x8054;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmLijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.openEditorDropDown" commandName="&#x5feb;&#x901f;&#x5207;&#x6362;&#x7f16;&#x8f91;&#x5668;" description="&#x6253;&#x5f00;&#x7f16;&#x8f91;&#x5668;&#x4e0b;&#x62c9;&#x5217;&#x8868;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmLyjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.copysettings.indent.for.structure.command" commandName="&#x7ed3;&#x6784;&#x7f29;&#x8fdb;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmMCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.copysettings.column.headers" commandName="&#x590d;&#x5236;&#x5217;&#x6807;&#x9898;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmMSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.switchToEditor" commandName="&#x5207;&#x6362;&#x81f3;&#x7f16;&#x8f91;&#x5668;" description="&#x5207;&#x6362;&#x81f3;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmMijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.dynamicHelp" commandName="&#x52a8;&#x6001;&#x5e2e;&#x52a9;" description="&#x6253;&#x5f00;&#x52a8;&#x6001;&#x5e2e;&#x52a9;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmMyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.nextSubTab" commandName="&#x4e0b;&#x4e00;&#x4e2a;&#x5b50;&#x6807;&#x7b7e;" description="&#x5207;&#x6362;&#x5230;&#x4e0b;&#x4e00;&#x5b50;&#x6807;&#x7b7e;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmNCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.copysettings.raw" commandName="&#x590d;&#x5236;&#x539f;&#x59cb;&#x9879;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmNSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.resetPerspective" commandName="&#x590d;&#x4f4d;&#x900f;&#x89c6;&#x56fe;" description="&#x5c06;&#x5f53;&#x524d;&#x900f;&#x89c6;&#x56fe;&#x590d;&#x4f4d;&#x4e3a;&#x5176;&#x7f3a;&#x7701;&#x72b6;&#x6001;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmNijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.undo" commandName="&#x64a4;&#x9500;" description="&#x64a4;&#x9500;&#x4e0a;&#x4e00;&#x6b21;&#x64cd;&#x4f5c;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmNyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.closePart" commandName="&#x5173;&#x95ed;&#x90e8;&#x5206;" description="&#x5173;&#x95ed;&#x6d3b;&#x52a8;&#x7684;&#x5de5;&#x4f5c;&#x53f0;&#x90e8;&#x5206;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmOCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.installationDialog" commandName="&#x5b89;&#x88c5;&#x4fe1;&#x606f;" description="&#x6253;&#x5f00;&#x5b89;&#x88c5;&#x5bf9;&#x8bdd;&#x6846;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmOSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.back" commandName="&#x8fd4;&#x56de;" description="&#x5411;&#x540e;&#x6d4f;&#x89c8;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmOijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.closeAll" commandName="&#x5168;&#x90e8;&#x5173;&#x95ed;" description="&#x5173;&#x95ed;&#x6240;&#x6709;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmOyjhEeu-jJuki8oaqg" elementId="org.eclipse.equinox.p2.ui.sdk.update" commandName="&#x68c0;&#x67e5;&#x66f4;&#x65b0;(U)" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmPCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.cut" commandName="&#x526a;&#x5207;" description="&#x5c06;&#x9009;&#x62e9;&#x7684;&#x5185;&#x5bb9;&#x526a;&#x5207;&#x5230;&#x526a;&#x8d34;&#x677f;&#x4e2d;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmPSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.paste" commandName="&#x7c98;&#x8d34;" description="&#x4ece;&#x526a;&#x8d34;&#x677f;&#x4e2d;&#x7c98;&#x8d34;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmPijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.part.nextPage" commandName="&#x4e0b;&#x4e00;&#x9875;" description="&#x5207;&#x6362;&#x81f3;&#x4e0b;&#x4e00;&#x4e2a;&#x9875;&#x9762;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmPyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.part.previousPage" commandName="&#x524d;&#x4e00;&#x9875;" description="&#x5207;&#x6362;&#x81f3;&#x4e0a;&#x4e00;&#x4e2a;&#x9875;&#x9762;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rrzmQCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.next" commandName="&#x4e0b;&#x4e00;&#x6b65;" description="&#x6d4f;&#x89c8;&#x81f3;&#x4e0b;&#x4e00;&#x9879;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NMCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.closePerspective" commandName="&#x5173;&#x95ed;&#x900f;&#x89c6;&#x56fe;" description="&#x5173;&#x95ed;&#x5f53;&#x524d;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NMSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.closePerspective.perspectiveId" name="&#x900f;&#x89c6;&#x56fe;&#x6807;&#x8bc6;"/>
+  </commands>
+  <commands xmi:id="_rr0NMijhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.copysettings.ascsv" commandName="&#x6309; CSV &#x590d;&#x5236;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NMyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.previous" commandName="&#x4e0a;&#x4e00;&#x6b65;" description="&#x6d4f;&#x89c8;&#x81f3;&#x4e0a;&#x4e00;&#x9879;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NNCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.rename" commandName="&#x91cd;&#x547d;&#x540d;" description="&#x91cd;&#x547d;&#x540d;&#x6240;&#x9009;&#x9879;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NNSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.browser.openBundleResource" commandName="&#x5728;&#x6d4f;&#x89c8;&#x5668;&#x4e2d;&#x6253;&#x5f00;&#x8d44;&#x6e90;" description="&#x4f7f;&#x7528;&#x9ed8;&#x8ba4;&#x7684; web &#x6d4f;&#x89c8;&#x5668;&#x6253;&#x5f00;&#x4e00;&#x4e2a;&#x8d44;&#x6e90;bundle" category="_rrtfhijhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NNijhEeu-jJuki8oaqg" elementId="plugin" name="&#x63d2;&#x4ef6;"/>
+    <parameters xmi:id="_rr0NNyjhEeu-jJuki8oaqg" elementId="path" name="&#x8def;&#x5f84;"/>
+  </commands>
+  <commands xmi:id="_rr0NOCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.copysettings.only.visible" commandName="&#x590d;&#x5236;&#x53ef;&#x89c1;&#x9879;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NOSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.export" commandName="&#x5bfc;&#x51fa;" description="&#x5bfc;&#x51fa;" category="_rrtfhSjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NOijhEeu-jJuki8oaqg" elementId="exportWizardId" name="&#x5bfc;&#x51fa;&#x5411;&#x5bfc;"/>
+  </commands>
+  <commands xmi:id="_rr0NOyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.aboutAction" commandName="&#x5173;&#x4e8e;" description="&#x6253;&#x5f00;&#x201c;&#x5173;&#x4e8e;&#x201d;&#x5bf9;&#x8bdd;&#x6846;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NPCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.closeAllSaved" commandName="&#x5173;&#x95ed;&#x6240;&#x6709;&#x5df2;&#x4fdd;&#x5b58;&#x7684;" description="&#x5173;&#x95ed;&#x6240;&#x6709;&#x5df2;&#x4fdd;&#x5b58;&#x7684;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NPSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.edit.redo" commandName="&#x91cd;&#x505a;" description="&#x91cd;&#x505a;&#x4e0a;&#x4e00;&#x4e2a;&#x64cd;&#x4f5c;" category="_rrtfhCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NPijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.print" commandName="&#x6253;&#x5370;" description="&#x6253;&#x5370;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NPyjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.closeTray" commandName="&#x5173;&#x95ed;&#x7528;&#x6237;&#x5e2e;&#x52a9;&#x6258;&#x76d8;" description="&#x5173;&#x95ed;&#x5305;&#x542b;&#x4e0a;&#x4e0b;&#x6587;&#x5e2e;&#x52a9;&#x4fe1;&#x606f;&#x548c;&#x5907;&#x5fd8;&#x5355;&#x7684;&#x7528;&#x6237;&#x5e2e;&#x52a9;&#x6258;&#x76d8;&#x3002;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NQCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.newWizard" commandName="&#x65b0;&#x5efa;" description="&#x6253;&#x5f00;&#x201c;&#x65b0;&#x5efa;&#x9879;&#x201d;&#x5411;&#x5bfc;" category="_rrtfhSjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NQSjhEeu-jJuki8oaqg" elementId="newWizardId" name="&#x201c;&#x65b0;&#x5efa;&#x201d;&#x5411;&#x5bfc;"/>
+  </commands>
+  <commands xmi:id="_rr0NQijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.newWindow" commandName="&#x65b0;&#x5efa;&#x7a97;&#x53e3;" description="&#x6253;&#x5f00;&#x53e6;&#x4e00;&#x4e2a;&#x7a97;&#x53e3;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NQyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.forwardHistory" commandName="&#x524d;&#x79fb;&#x5386;&#x53f2;&#x8bb0;&#x5f55;" description="&#x5728;&#x7f16;&#x8f91;&#x5668;&#x5bfc;&#x822a;&#x5386;&#x53f2;&#x8bb0;&#x5f55;&#x4e2d;&#x5411;&#x524d;&#x79fb;&#x52a8;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NRCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.spy" commandName="&#x663e;&#x793a;&#x8d21;&#x732e;&#x63d2;&#x4ef6;" description="&#x4e3a;&#x5f53;&#x524d;&#x9009;&#x5b9a;&#x7684;&#x5143;&#x7d20;&#x663e;&#x793a;&#x8d21;&#x732e;&#x4fe1;&#x606f;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NRSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.helpSearch" commandName="&#x5e2e;&#x52a9;&#x641c;&#x7d22;" description="&#x6253;&#x5f00;&#x5e2e;&#x52a9;&#x641c;&#x7d22;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NRijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.close" commandName="&#x5173;&#x95ed;" description="&#x5173;&#x95ed;&#x6d3b;&#x52a8;&#x7684;&#x7f16;&#x8f91;&#x5668;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NRyjhEeu-jJuki8oaqg" elementId="org.eclipse.equinox.p2.ui.sdk.install" commandName="&#x5b89;&#x88c5;&#x65b0;&#x8f6f;&#x4ef6;(S)..." category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NSCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.restartWorkbench" commandName="&#x91cd;&#x65b0;&#x542f;&#x52a8;" description="&#x91cd;&#x65b0;&#x542f;&#x52a8;&#x5de5;&#x4f5c;&#x53f0;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NSSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.customizePerspective" commandName="&#x5b9a;&#x5236;&#x900f;&#x89c6;&#x56fe;" description="&#x5b9a;&#x5236;&#x5f53;&#x524d;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NSijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.quickStartAction" commandName="&#x6b22;&#x8fce;" description="&#x663e;&#x793a;&#x4f9b;&#x5165;&#x95e8;&#x7528;&#x6237;&#x4f7f;&#x7528;&#x7684;&#x5e2e;&#x52a9;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NSyjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.ui.formpage.default.command" commandName="name" category="_rrtfhyjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NTCjhEeu-jJuki8oaqg" elementId="formpage" name="name"/>
+  </commands>
+  <commands xmi:id="_rr0NTSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.previousSubTab" commandName="&#x524d;&#x4e00;&#x5b50;&#x6807;&#x7b7e;" description="&#x5207;&#x6362;&#x5230;&#x524d;&#x5b50;&#x6807;&#x7b7e;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NTijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.hideShowEditors" commandName="&#x5207;&#x6362;&#x7f16;&#x8f91;&#x533a;&#x53ef;&#x89c1;&#x6027;" description="&#x5207;&#x6362;&#x7f16;&#x8f91;&#x533a;&#x57df;&#x7684;&#x53ef;&#x89c1;&#x6027;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NTyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.showIn" commandName="&#x663e;&#x793a;&#x4f4d;&#x7f6e;" category="_rrtfgyjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NUCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.showIn.targetId" name="&#x663e;&#x793a;&#x5230;&#x76ee;&#x6807;id" optional="false"/>
+  </commands>
+  <commands xmi:id="_rr0NUSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.help.displayHelp" commandName="&#x663e;&#x793a;&#x5e2e;&#x52a9;" description="&#x663e;&#x793a;&#x5e2e;&#x52a9;&#x4e3b;&#x9898;" category="_rrtfiCjhEeu-jJuki8oaqg">
+    <parameters xmi:id="_rr0NUijhEeu-jJuki8oaqg" elementId="href" name="&#x5e2e;&#x52a9;&#x4e3b;&#x9898;&#x8d85;&#x94fe;&#x63a5;"/>
+  </commands>
+  <commands xmi:id="_rr0NUyjhEeu-jJuki8oaqg" elementId="org.eclipse.help.ui.indexcommand" commandName="&#x7d22;&#x5f15;" description="&#x663e;&#x793a;&#x5173;&#x952e;&#x5b57;&#x7d22;&#x5f15;" category="_rrtfiCjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NVCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.showViewMenu" commandName="&#x663e;&#x793a;&#x89c6;&#x56fe;&#x83dc;&#x5355;" description="&#x663e;&#x793a;&#x89c6;&#x56fe;&#x83dc;&#x5355;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NVSjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.browser.command.connection" commandName="&#x8fde;&#x63a5;..." category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NVijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.showContextMenu" commandName="&#x663e;&#x793a;&#x4e0a;&#x4e0b;&#x6587;&#x83dc;&#x5355;" description="&#x663e;&#x793a;&#x4e0a;&#x4e0b;&#x6587;&#x83dc;&#x5355;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NVyjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.rcp.application.commands.shellview" commandName="View Shell" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NWCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.backwardHistory" commandName="&#x540e;&#x9000;&#x5386;&#x53f2;&#x8bb0;&#x5f55;" description="&#x5728;&#x7f16;&#x8f91;&#x5668;&#x5bfc;&#x822a;&#x5386;&#x53f2;&#x8bb0;&#x5f55;&#x4e2d;&#x5411;&#x540e;&#x79fb;&#x52a8;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NWSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.previousTab" commandName="&#x524d;&#x4e00;&#x4e2a;&#x6807;&#x7b7e;" description="&#x5207;&#x6362;&#x5230;&#x524d;&#x4e00;&#x4e2a;&#x6807;&#x7b7e;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NWijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.file.refresh" commandName="&#x5237;&#x65b0;" description="&#x5237;&#x65b0;&#x6240;&#x9009;&#x9879;" category="_rrtfhSjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NWyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.navigate.forward" commandName="&#x524d;&#x8fdb;" description="&#x5411;&#x524d;&#x6d4f;&#x89c8;" category="_rrtfgyjhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NXCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.rcp.application.file.open" commandName="&#x6253;&#x5f00;&#x6587;&#x4ef6;..." description="&#x6253;&#x5f00;&#x6587;&#x4ef6;" category="_rrtfgijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NXSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.nextPerspective" commandName="&#x4e0b;&#x4e00;&#x4e2a;&#x900f;&#x89c6;&#x56fe;" description="&#x5207;&#x6362;&#x81f3;&#x4e0b;&#x4e00;&#x4e2a;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NXijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.window.closeAllPerspectives" commandName="&#x5173;&#x95ed;&#x6240;&#x6709;&#x900f;&#x89c6;&#x56fe;" description="&#x5173;&#x95ed;&#x6240;&#x6709;&#x6253;&#x5f00;&#x7684;&#x900f;&#x89c6;&#x56fe;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NXyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="&#x5207;&#x6362;&#x5de5;&#x5177;&#x680f;&#x53ef;&#x89c1;&#x6027;" description="&#x5207;&#x6362;&#x5de5;&#x5177;&#x680f;&#x53ef;&#x89c1;&#x6027;" category="_rrtfhijhEeu-jJuki8oaqg"/>
+  <commands xmi:id="_rr0NYCjhEeu-jJuki8oaqg" elementId="com.jrockit.mc.alert.showalerts" commandName="&#x9884;&#x8b66;" category="_rrtfhyjhEeu-jJuki8oaqg"/>
+  <addons xmi:id="_rq7cbCjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_rq7cbSjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_rq7cbijhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_rq7cbyjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.workbench.commands.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_rq7ccCjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_rq7ccSjhEeu-jJuki8oaqg" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_rq7ccijhEeu-jJuki8oaqg" elementId="Cleanup Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon"/>
+  <addons xmi:id="_rq7ccyjhEeu-jJuki8oaqg" elementId="DnD Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.dndaddon.DnDAddon"/>
+  <addons xmi:id="_rq7cdCjhEeu-jJuki8oaqg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
+  <addons xmi:id="_rq7cdSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_rrGbgCjhEeu-jJuki8oaqg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
+  <categories xmi:id="_rrtfgCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.views" name="&#x89c6;&#x56fe;" description="&#x6253;&#x5f00;&#x89c6;&#x56fe;&#x7684;&#x547d;&#x4ee4;"/>
+  <categories xmi:id="_rrtfgSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.perspectives" name="&#x900f;&#x89c6;&#x56fe;" description="&#x6253;&#x5f00;&#x900f;&#x89c6;&#x56fe;&#x7684;&#x547d;&#x4ee4;"/>
+  <categories xmi:id="_rrtfgijhEeu-jJuki8oaqg" elementId="com.jrockit.mc.rcp.application.file" name="Mission Control &#x6587;&#x4ef6;&#x547d;&#x4ee4;" description="Mission Control &#x6587;&#x4ef6;&#x547d;&#x4ee4;"/>
+  <categories xmi:id="_rrtfgyjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.navigate" name="&#x5bfc;&#x822a;"/>
+  <categories xmi:id="_rrtfhCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.edit" name="&#x7f16;&#x8f91;"/>
+  <categories xmi:id="_rrtfhSjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.file" name="&#x6587;&#x4ef6;"/>
+  <categories xmi:id="_rrtfhijhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.window" name="&#x7a97;&#x53e3;"/>
+  <categories xmi:id="_rrtfhyjhEeu-jJuki8oaqg" elementId="org.eclipse.core.commands.categories.autogenerated" name="&#x53d6;&#x6d88;&#x5206;&#x7c7b;" description="&#x547d;&#x4ee4;&#x662f;&#x81ea;&#x52a8;&#x751f;&#x6210;&#x7684;&#xff0c;&#x6216;&#x8005;&#x6ca1;&#x6709;&#x5206;&#x7c7b;"/>
+  <categories xmi:id="_rrtfiCjhEeu-jJuki8oaqg" elementId="org.eclipse.ui.category.help" name="&#x5e2e;&#x52a9;"/>
+</application:Application>

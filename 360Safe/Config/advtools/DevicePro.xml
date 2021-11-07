@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="12.0.0.1011"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30125" 
+		IDS="DevicePro"
+    	Show="1"	
+		ExcludeSystem="Window9x;WindowMe;Window2000;Window2003;"
+		GroupID="1"
+		New="1"
+    	Name="变形虫防护" 
+    	Description="拦截BadUSB设备恶意操作" 
+    	IconPath="AdvanceTools_DevicePro_10_42.png" 
+		IconPath_32="AdvanceTools_DevicePro_10_32.png" 
+        AppPath="Safemon\DevicePro.exe"	
+		InstallType="1"
+		Pdown32="http://update.360safe.com/v3/advDevicePro.cab"
+		Pdown64="http://update.360safe.com/v3/advDevicePro.cab"
+		CHKFile="Safemon\DevicePro.exe;safemon\DevicePro64.exe"
+		CHKDataFile="Config\newui\themes\default\DevicePro\DevicePro_theme.ui;Config\newui\themes\default\theme_DevicePro.xml"	
+		Order="6"
+		UninstallType="3"
+        UninstallExe="Safemon\DevicePro.exe"
+        UninstallArg="/unist"
+        UninstallFile="Safemon\DevicePro.exe;Safemon\DevicePro64.exe;Config\newui\themes\default\DevicePro\DevicePro_theme.ui;Config\newui\themes\default\theme_DevicePro.xml;"
+		UninstDelCfgSect="DevicePro.exe;DevicePro64.exe;DevicePro_theme.ui;theme_DevicePro.xml"
+		Recommand="0"
+		RecommandOrder="0"
+		MyTool="1"
+    />
+  </ToolsList>
+</AdvTools><!--360skin ver="12.0.0.1011" crc=""-->

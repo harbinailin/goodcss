@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="11.0.0.1001"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30124" 
+		IDS="NSAScan"
+    	Show="1"	
+		ExcludeSystem=""
+		GroupID="6"
+    	Name="NSA免疫工具" 
+    	Description="防御勒索病毒，保卫文件安全" 
+    	IconPath="AdvanceTools_NSAScan_10_52.png" 
+		IconPath_32="AdvanceTools_NSAScan_10_32.png"
+        AppPath="Utils\NSAScan.exe"	
+		Pdown32="http://update.360safe.com/v3/advnsatool.cab"
+        Pdown64="http://update.360safe.com/v3/advnsatool.cab"
+		InstallType="1"
+ 		InstallSilentParam=""
+		InstallParam=""
+		InstallPath=""		
+		RegAppPathRoot=""
+		RegAppPathKey=""
+		RegAppPathName=""
+		RegAppName=""
+ 		CHKFile="Utils\NSAScan.exe;modules\360safeupu.exe;modules\360safeupv.exe;"
+		CHKDataFile="Utils\Themes\NSAScan.ui;Utils\Themes\theme_NSAScan.xml;"
+		Order="640" 
+		UninstallType="2" 
+		UninstallFile="Utils\NSAScan.exe;Utils\Themes\NSAScan.ui;Utils\Themes\theme_NSAScan.xml;modules\360safeupu.exe;modules\360safeupv.exe;"
+		Recommand=""
+		RecommandOrder=""
+        MyTool="0"
+    />
+  </ToolsList>  
+</AdvTools>
+<!--360skin ver="11.0.0.1031" crc=""-->

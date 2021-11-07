@@ -1,0 +1,98 @@
+;-------------------------------------------------------------------------
+; 360LanProtect.INF
+;
+; Copyright (c) www.360.cn
+;-------------------------------------------------------------------------
+[version]
+Signature   	= "$Windows NT$"
+Class     	= NetService
+ClassGUID  	= {4D36E974-E325-11CE-BFC1-08002BE10318}
+Provider    	= %Msft%
+DriverVer	= 01/01/2011,1.0.0.0
+CatalogFile 	= 360LanProtect_x64.cat
+
+[Manufacturer]
+%Msft%=MSFT,NTx86,NTia64,NTamd64
+
+[MSFT.NTx86]
+%NdisLwf_Desc%=Install,360LanProtect
+
+[MSFT.NTia64]
+%NdisLwf_Desc%=Install,360LanProtect
+
+[MSFT.NTamd64]
+%NdisLwf_Desc%=Install,360LanProtect
+
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0x40000
+NetCfgInstanceId="{F4529E62-7A5B-4a05-AE42-76F016A42AF7}"
+Copyfiles = 360LanProtect.copyfiles.sys
+
+[SourceDisksNames]
+1=%NdisLwf_Desc%,"",,
+
+[SourceDisksFiles]
+360LanProtect_x64.sys=1
+
+[DestinationDirs]
+360LanProtect.copyfiles.sys=12
+
+[360LanProtect.copyfiles.sys]
+"360LanProtect.sys","360LanProtect_x64.sys",,2
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+HKR, Ndi,Service,,"360LanProtect"
+HKR, Ndi,CoServices,0x00010000,"360LanProtect"
+HKR, Ndi,HelpText,,%NdisLwf_HelpText%
+HKR, Ndi,FilterClass,, compression
+HKR, Ndi,FilterType,0x00010001,0x00000002
+HKR, Ndi\Interfaces,UpperRange,,"noupper"
+HKR, Ndi\Interfaces,LowerRange,,"nolower"
+HKR, Ndi\Interfaces,FilterMediaTypes,,"ethernet"
+HKR, Ndi,FilterRunType,0x00010001,1                ;this filter must run before any protocol can bind to the below miniport 
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=360LanProtect,,NdisLwf_Service_Inst
+
+[NdisLwf_Service_Inst]
+DisplayName     = %NdisLwf_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 2 ;SERVICE_AUTO_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\360LanProtect.sys
+LoadOrderGroup  = NDIS
+Description     = %NdisLwf_Desc%
+AddReg          = Common.Params.reg
+
+[Install.Remove.Services]
+DelService=360LanProtect,0x200
+
+[Common.Params.reg]
+
+HKR, FilterDriverParams\DriverParam, 		ParamDesc, 	, "Driverparam for lwf"
+HKR, FilterDriverParams\DriverParam, 		default, 	, "5"
+HKR, FilterDriverParams\DriverParam, 		type, 		, "int"
+
+HKR, FilterAdapterParams\AdapterParam, 		ParamDesc, 	, "Adapterparam for lwf"
+HKR, FilterAdapterParams\AdapterParam, 		default, 	, "10"
+HKR, FilterAdapterParams\AdapterParam, 		type, 		, "int"
+
+[Strings]
+Msft = "360局域网防护驱动程序"
+NdisLwf_Desc = "360局域网防护驱动程序"
+NdisLwf_HelpText = "360局域网防护驱动程序"
+
+
+
+
+

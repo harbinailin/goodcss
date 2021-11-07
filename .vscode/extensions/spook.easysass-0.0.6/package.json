@@ -1,0 +1,90 @@
+{
+	"name": "easysass",
+	"displayName": "Easy Sass",
+	"description": "Built-in, easy to use Sass compiler",
+	"icon": "icon.png",
+	"galleryBanner": {
+		"theme": "light"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wojciechsura/easysass.git"
+	},
+	"version": "0.0.6",
+	"publisher": "spook",
+	"homepage": "http://spooksoft.pl",
+	"engines": {
+		"vscode": "^1.10.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "EasySass configuration",
+			"properties": {
+				"easysass.compileAfterSave": {
+					"type": "boolean",
+					"default": true,
+					"description": "Automatically compile SASS/SCSS file after saving"
+				},
+				"easysass.formats": {
+					"type": "array",
+					"default": [
+						{
+							"format": "expanded",
+							"extension": ".css"
+						},
+						{
+							"format": "compressed",
+							"extension": ".min.css"
+						}
+					],
+					"description": "Define format(s) for outputted css files. Use \"nested\", \"expanded\", \"compact\" or \"compressed\" as a format."
+				},
+				"easysass.excludeRegex": {
+					"type": "string",
+					"default": "",
+					"description": "Regular expression for filenames (excluding path) excluded from building. Leave empty to disable."
+				},
+				"easysass.targetDir": {
+					"type": "string",
+					"default": "",
+					"description": "Target directory for generated files. If relative, will be based on currently opened folder in VS Code."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "easysass.compileAll",
+				"title": "Compile all SCSS/SASS files in the project"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"replace-ext": "latest"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "52f99a84-2c68-4475-886d-4fae276f4ca6",
+		"publisherId": "d20d1d1d-3a75-47fa-b351-3e11190a8ef9",
+		"publisherDisplayName": "Wojciech Sura",
+		"installedTimestamp": 1628222399426
+	}
+}

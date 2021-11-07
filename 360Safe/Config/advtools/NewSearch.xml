@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="1.0.0.1001"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	 id="30310"
+		 IDS="NewSearch"
+		 Show="1" 
+		 ExcludeSystem="Windows2000;"
+		 GroupID="5"
+		 New="1"
+		 Name="极速搜索" 
+		 Description="工作学习吃瓜，更快搜索" 
+		 IconPath="AdvanceTools_NewSearch_10_52.png"
+		 IconPath_32="AdvanceTools_NewSearch_10_32.png"
+		 AppPath="SoftMgr\NewSearch\NewSearchLite.exe" 
+		 Param="/newsearch_start" 
+		 StartDir="SoftMgr\NewSearch"
+		 InstallType="1"
+		 Pdown32="http://update.360safe.com/v3/NewSearch.cab"
+		 Pdown64="http://update.360safe.com/v3/NewSearch.cab"
+		 CHKFile="SoftMgr\NewSearch\NewSearchLite.exe;SoftMgr\NewSearch\NSCore.dll" 
+		 CHKDataFile="SoftMgr\NewSearch\Skin\NSearchMain.uiz;SoftMgr\NewSearch\Skin\NewAnimPend.uiz" 
+		 Order="0"
+		 SystemTool="0"
+		 UninstallType="3"
+		 UninstallExe="SoftMgr\NewSearch\NewSearchLite.exe"
+		 UninstallArg="/newsearch_uninstall"
+		 MyTool="1"
+    />
+  </ToolsList>
+</AdvTools><!--360skin ver="1.0.0.1001" crc=""-->

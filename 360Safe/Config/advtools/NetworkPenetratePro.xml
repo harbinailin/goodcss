@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<AdvTools>	 
+  <CommonInfo XmlVer="12.0.0.1011"/>
+  <ToolsList>
+   	<ToolsInfo 
+    	id="30126" 
+		IDS="NetworkPenetratePro"
+    	Show="1"	
+		ExcludeSystem="Window9x;WindowMe;Window2000;Window2003;"
+		GroupID="1"
+		New="1"
+    	Name="横向渗透防护" 
+    	Description="防止内网渗透攻击" 
+    	IconPath="AdvanceTools_NetworkPenetratePro_10_42.png" 
+		IconPath_32="AdvanceTools_NetworkPenetratePro_10_32.png" 
+        AppPath="Safemon\NetworkPenetratePro.exe"	
+		InstallType="1"
+		Pdown32="http://update.360safe.com/v3/advNetworkPenetratePro.cab"
+		Pdown64="http://update.360safe.com/v3/advNetworkPenetratePro.cab"
+		CHKFile="Safemon\NetworkPenetratePro.exe"
+		CHKDataFile="Config\newui\themes\default\NetworkPenetratePro\NetworkPenetratePro_theme.ui"	
+		Order="7"
+		UninstallType="2"
+        UninstallFile="Safemon\NetworkPenetratePro.exe;Config\newui\themes\default\NetworkPenetratePro\NetworkPenetratePro_theme.ui"
+		UninstDelCfgSect="NetworkPenetratePro.exe;NetworkPenetratePro_theme.ui"
+		Recommand="0"
+		RecommandOrder="0"
+		MyTool="1"
+    />
+  </ToolsList>
+</AdvTools><!--360skin ver="12.0.0.1011" crc=""-->

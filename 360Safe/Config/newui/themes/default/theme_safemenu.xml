@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<themes>
+	<window>
+	</window>
+	<button>
+	</button>
+	<picture>
+	</picture>
+	<combobox>
+	</combobox>
+	<text>
+	</text>
+	<progress>
+	</progress>
+	<tabpage>
+	</tabpage>
+	<rich_list>
+		<safemenu_list>
+			<canvas normal="0xfffafafa"/>
+			<border normal="0xfffafafa" width="0" gridline="0xfffafafa"/>
+			<select outer="0xfffafafa" inner="0xfffafafa" start="0xfffafafa" end="0xfffafafa"/>
+			<hover outer="0xffe1e1e1" inner="0xffe1e1e1" start="0xffe1e1e1" end="0xffe1e1e1"/>
+			<sub_select start="0x00000000" end="0x00000000"/>
+			<vscroll_theme scrollbar_theme=""/>
+			<hscroll_theme scrollbar_theme=""/>
+		</safemenu_list>
+	</rich_list>
+	<static>
+		<safemenu_item_text>
+			<canvas normal="0xffffffff"/>
+			<border normal="0xff000000" width="1"/>
+			<font face="微软雅黑" color="0x00000000" size="9" bold="0" italic="0" underline="0"/>
+			<caption normal="0xff000000" hot="0xff000000" selected="0xff000000" link_color="0xff000000"/>
+		</safemenu_item_text>
+		<safemenu_item_hover_text>
+			<canvas normal="0xffffffff"/>
+			<border normal="0xff000000" width="1"/>
+			<font face="微软雅黑" color="0x00ffffff" size="9" bold="0" italic="0" underline="0"/>
+			<caption normal="0xffffffff" hot="0xffffffff" selected="0xffffffff" link_color="0xffffffff"/>
+		</safemenu_item_hover_text>
+	</static>
+	<scrollbar>
+	</scrollbar>
+	<panel>
+		<graylineEx>
+			<canvas normal="0xffb0b0b0" radius="0" angle="90"/>
+			<border normal="0xffc3c3c3" width="1" inner="0xffffffff" hot="0xbaadf00d" selected="0xbaadf00d"/>
+		</graylineEx>
+	</panel>
+	<slider>
+	</slider>
+	<splitter>
+	</splitter>
+	<spin>
+	</spin>
+</themes>
