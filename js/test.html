@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //判断数据类型方法一：typeof
+        // console.log(typeof 123);
+        // console.log(typeof "123");
+        // console.log(typeof true);
+        // console.log(typeof undefined);
+        // console.log(typeof function fun(){});
+        // console.log(typeof null);
+        // console.log(typeof [1,2,3]);
+        // console.log(typeof {name:"ailin"});
+
+        // //判断数据类型方法2：instanceof
+        // let num = new Number(123);
+        // console.log(num instanceof Number);//true
+        // let str = new String("abc");
+        // console.log(str instanceof String);//true
+        // let boo = new Boolean(true);
+        // console.log(boo instanceof Boolean);//true
+        // // let und = new undefined;//报错因为Undefined没有constructor属性，不能被new
+        // // console.log(und instanceof undefined);
+        // // let nul = new null;//报错因为null没有constructor属性不能被new
+        // // console.log(nul instanceof null);
+        // var arr = new Array();
+        // console.log(arr instanceof Array);//true
+        // var fun = new function(){}
+        // console.log(fun instanceof function(){});//false
+        // var obj = new Object;
+        // console.log(obj instanceof Object);//true
+
+        // //判断数据类型方法3：constructor属性
+        // console.log((123).constructor===Number);//true
+        // console.log("abc".constructor===String);//true
+        // console.log(true.constructor===Boolean);//true
+        // console.log([1,2,3].constructor===Array);//true
+        // console.log(function(){}.constructor===Function);//true
+        // console.log({name:"ailin",age:20}.constructor===Object);//true
+        // console.log(new Date().constructor===Date);//true
+
+        // //constructor指向改变
+        // function Person(){}
+        // Person.prototype={
+        //     name:"ailin",
+        //     age:20,
+        //     say(){
+        //         console.log("hi");
+        //     }
+        // }
+        // var Teacher = new  Person();
+        // console.log(Teacher instanceof Person);//true
+        // console.log(Teacher.constructor==Person);//false
+
+        // //判断数据类型方法4：Object.prototype.toString.call
+        // let num=1;
+        // console.log(Object.prototype.toString.call(num));
+        // let str="abc";
+        // console.log(Object.prototype.toString.call(str));
+        // let boo=true;
+        // console.log(Object.prototype.toString.call(boo));
+        // let und=undefined;
+        // console.log(Object.prototype.toString.call(und));
+        // var fun=function(){}
+        // console.log(Object.prototype.toString.call(fun));
+        // var arr=Array();
+        // console.log(Object.prototype.toString.call(arr));
+        // var obj =Object();
+        // console.log(Object.prototype.toString.call(obj));
+
+        //编写一个函数判断所有数据类型
+        function _typeof(item){
+            let res=Object.prototype.toString.call(item);
+            res = res.split(" ")[1];
+            res=res.substr(0,res.length-1);
+            return res;
+        }
+        console.log(_typeof(123));
+        console.log(_typeof("abc"));
+        console.log(_typeof(true));
+        console.log(_typeof(null));
+        console.log(_typeof(undefined));
+        var fun=function(){}
+        console.log(_typeof(fun));
+        var arr=[1,2,3]
+        console.log(_typeof(arr));
+        var obj ={
+            name:ailin,
+            age:20
+        }
+        console.log(_typeof(obj));
+    </script>
+</body>
+</html>
