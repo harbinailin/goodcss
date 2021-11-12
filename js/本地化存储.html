@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //localStorage
+        //setItem key&value
+        localStorage.setItem('姓名', '二琳');
+        localStorage.setItem('性别', '女');
+        localStorage.setItem('学号', 20191527);
+        //getItem
+        localStorage.getItem('姓名');
+        localStorage.getItem('性别');
+        localStorage.getItem('学号');
+        //removeItem
+        localStorage.removeItem('性别');
+        //clear
+        localStorage.clear();
+
+        //sessionStorage
+        //setItem key&value
+        sessionStorage.setItem('早饭', '包子');
+        sessionStorage.setItem('价格', 5);
+        sessionStorage.setItem('数量', 2);
+        //getItem
+        sessionStorage.getItem('早饭');
+        sessionStorage.getItem('价格');
+        sessionStorage.getItem('数量');
+        //removeItem
+        sessionStorage.removeItem('数量');
+        //clear
+        sessionStorage.clear();
+
+        //cookie
+        //setCookie
+        var setCookie = function (key, value, day) {
+            var str = key + "=" + value;//拼接字符串 键名对于键值
+            if (day) {//判断是否设置cookie时间限制
+                var now = new Date();//获取当前天
+                now.setDate(now.getDate() + day);//加上传入的day，设置失效天数；
+                str += "; expires=" + now;//拼接字符串设置失效时间
+            }
+            document.cookie = str;//如果没有设置时间，直接插入cookie中
+        }
+        setCookie('cookie1', 255, 0);
+        //getCookie
+        var getCookie = function (key) {
+            var arr = document.cookie.split('; ');//正常控制台输出的cookie是个字符串，我们需要将其变成数组
+            for (var i = 0; i < arr.length; i++) {
+                var keys = arr[i].split('=');//将数组中的值  键名，键值分开插入新的数组
+                if (keys[0] == key) {//判断键名是否与我请求的cookie值相同
+                    return keys[1];//相同返回键名对应的键值
+                }
+
+            }
+        }
+        console.log(getCookie('cookie1'));
+        //delCookie
+        var delCookie = function (key) {
+            setCookie(key, '', -1);//将value设置为null,事件就过期了
+        }
+        delCookie('cookie1');
+    </script>
+</body>
+
+</html>
