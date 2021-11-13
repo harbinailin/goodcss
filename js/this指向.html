@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //第一题
+        // window.name = "bd"
+        // class A {
+        //     constructor() {
+        //         this.name = "123"
+        //     }
+        //     //原型上的方法
+        //     getA() {
+        //         console.log(this);//undefined
+        //         return this.name + 1//报错，因为this已经是Undefined了，undefined.name就会报错了
+        //     }
+        // }
+        // let a = new A();
+        // let funcA = a.getA//并没有执行，要执行的话要加括号，只赋值了函数体
+        // console.log(funcA());
+        // //严格模式
+        // 'use strict'
+        // function foo(){
+        //     console.log(this);
+        // }
+        // foo();
+        // // 在普通函数执行的时候this默认指向window；
+        // // 在严格模式下，this禁止指向window，es6的类中默认开启严格模式，this指向undefined
+
+
+        // //第二题
+        // //在ES6中，const和let定义的变量不再window下，但是var定义的变量在window下。
+        // //如果要想show2中的this.a=2需要把const变成var
+        // //var a=1; 结果就是2 window 1 1 window 1
+        // const a=1;
+        // const obj={
+        //     a:2,
+        //     show1:function(){
+        //         console.log(this.a);//2
+        //     },
+        //     show2:()=>{
+        //         // this在箭头函数函数中的指向是指向当前函数定义的部分，this在这个箭头函数中没有定义的部分，就在window的作用域下，this指向window。
+        //         console.log(this);//this指向window
+        //         console.log(this.a);//window没有a这个属性，所以显示undefined
+        //     }
+        // }
+        // obj.show1();//2
+        // obj.show2();//window undefined
+        // const func1=obj.show1;
+        // const func2=obj.show2;
+        // func1();//undefined
+        // func2();//window undefined
+
+
+        
+        //第三题
+        function Foo() {
+            Foo.a = function () {
+                console.log(1);;
+            }
+            this.a = function () {
+                console.log(2);;
+            }
+        }
+        Foo.prototype.a = function () {
+            console.log(3);
+        }
+        Foo.a = function () {
+            console.log(4);
+        }
+        Foo.a();//不是标准构造函数的调用方法 函数是一种特殊的对象类型，这个就是调用函数Foo对象下的a方法 所以结果是4
+        let obj = new Foo();
+        obj.a();//2 
+        //2 3同时有效，为啥是2不是3呢？
+        //原型链查找顺序是现在当前的构造函数中寻找，当前的构造函数中没有再向其关联的函数中寻找知道找到Object，Object再没有就是Undefined了
+        Foo.a();//1
+        //为啥是1呢？函数顺序顺序执行过程中，没有被调用的函数体是没有被执行的；所以在第一个Foo.a();的时候调用的还是4那部分的函数体，但是当执行到 let obj = new Foo();时，就覆盖了4那部分的函数，所以第二个Foo.a();就调用了1那部分的函数,
+        //原型方法、原型对象、对象下的方法
+    </script>
+</body>
+
+</html>
