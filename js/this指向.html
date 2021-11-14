@@ -59,30 +59,106 @@
         // func2();//window undefined
 
 
-        
-        //第三题
-        function Foo() {
-            Foo.a = function () {
-                console.log(1);;
+
+        // //第三题
+        // function Foo() {
+        //     Foo.a = function () {
+        //         console.log(1);;
+        //     }
+        //     this.a = function () {
+        //         console.log(2);;
+        //     }
+        // }
+        // Foo.prototype.a = function () {
+        //     console.log(3);
+        // }
+        // Foo.a = function () {
+        //     console.log(4);
+        // }
+        // Foo.a();//不是标准构造函数的调用方法 函数是一种特殊的对象类型，这个就是调用函数Foo对象下的a方法 所以结果是4
+        // let obj = new Foo();
+        // obj.a();//2 
+        // //2 3同时有效，为啥是2不是3呢？
+        // //原型链查找顺序是现在当前的构造函数中寻找，当前的构造函数中没有再向其关联的函数中寻找知道找到Object，Object再没有就是Undefined了
+        // Foo.a();//1
+        // //为啥是1呢？函数顺序顺序执行过程中，没有被调用的函数体是没有被执行的；所以在第一个Foo.a();的时候调用的还是4那部分的函数体，但是当执行到 let obj = new Foo();时，就覆盖了4那部分的函数，所以第二个Foo.a();就调用了1那部分的函数,
+        // //原型方法、原型对象、对象下的方法
+
+
+
+        // //第四题
+        // var o = {
+        //     f1: function () {
+        //         console.log(this);//object
+        //         var f2 = function () {
+        //             console.log(this);//window
+        //         }();
+        //     }
+        // }
+        // o.f1();
+
+        // //改变this指向 使用call方法
+        // var o = {
+        //     f1: function () {
+        //         console.log(this);//object:f1
+        //         var f2 = function () {
+        //             console.log(this);
+        //         }.call(this);//使用call方法改变this指向,this这次就指向object:f1
+        //     }
+        // }
+        // o.f1();
+
+
+
+        // //第五题
+        // window.a = 20; 
+        // var obj = {
+        //     a: 30,
+        //     add: function () {
+        //         this.a += 1
+        //         console.log(this);
+        //         console.log(this.a);
+        //     }
+        // }
+        // //obj.add();这个调用了当前对象下的add方法，所以this指向当前对象，当前对象是obj，所以第一个console.log输出的是obj,第二个console.log输出的是obj.a=31
+        // obj.add();
+        // //我们var了一个方法，把obj.add的方法体给了foo,foo();就相当于window.foo();所以第一个this指向window，this.a就是window.a=20+1=21
+        // var foo = obj.add;
+        // foo();
+
+
+
+        // //第六题
+        // window.name = "ByteDance";
+        // function A() {
+        //     this.name = 123
+        // }
+        // A.prototype.getA = function () {
+        //     console.log(this);//window
+        //     return this.name + 1;//这个this指向// ByteDance1
+        // }
+        // let a = new A();//已经实例化对象
+        // let funcA = a.getA;//把函数赋给funcA
+        // //this指向在调用的时候确定
+        // //funcA();
+        // console.log(funcA());
+
+
+        //第七题   
+        var number = 1;
+        var obj = {
+            number: 2,
+            getNum: function () {
+                var number = 6;//局部变量，不指向window
+                return this.number;//this指向window
+                //return number;// 6 6 6 6
             }
-            this.a = function () {
-                console.log(2);;
-            }
         }
-        Foo.prototype.a = function () {
-            console.log(3);
-        }
-        Foo.a = function () {
-            console.log(4);
-        }
-        Foo.a();//不是标准构造函数的调用方法 函数是一种特殊的对象类型，这个就是调用函数Foo对象下的a方法 所以结果是4
-        let obj = new Foo();
-        obj.a();//2 
-        //2 3同时有效，为啥是2不是3呢？
-        //原型链查找顺序是现在当前的构造函数中寻找，当前的构造函数中没有再向其关联的函数中寻找知道找到Object，Object再没有就是Undefined了
-        Foo.a();//1
-        //为啥是1呢？函数顺序顺序执行过程中，没有被调用的函数体是没有被执行的；所以在第一个Foo.a();的时候调用的还是4那部分的函数体，但是当执行到 let obj = new Foo();时，就覆盖了4那部分的函数，所以第二个Foo.a();就调用了1那部分的函数,
-        //原型方法、原型对象、对象下的方法
+        var getNum = obj.getNum;
+        console.log(getNum());//1
+        console.log(obj.getNum());//2 this指向Object：this.number=2
+        console.log(obj.getNum.call());//1 this指向window call指向当前作用域下的对象
+        console.log(obj.getNum.call({ number: 7 }));//7
     </script>
 </body>
 

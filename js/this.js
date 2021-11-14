@@ -52,3 +52,60 @@ Foo.a();
 let obj=new Foo();
 obj.a();
 Foo.a();
+
+//第四题
+var o={
+    f1:function(){
+        console.log(this);
+        var f2=function(){
+            console.log(this);
+        }();
+     }
+}
+o.f1();
+
+
+
+//第五题
+window.a=20;
+var obj={
+    a:30,
+    add:function(){
+        this.a+=1
+        console.log(this);
+        console.log(this.a);
+    }
+}
+obj.add();
+var foo=obj.add;
+foo();
+
+
+//第六题
+window.name="ByteDance";
+function a(){
+    this.name=123
+}
+A.prototype.getA=function(){
+    console.log(this);
+    return this.name+1;
+}
+let a=new A();
+let funcA=a.getA;
+funcA();
+
+
+//第七题
+var number=1;
+var obj={
+    number:2,
+    getNum:function(){
+        var number=6;
+        return this.number;
+    }
+}
+var getNum=obj.getNum;
+console.log(getNum());
+console.log(obj.getNum());
+console.log(obj.getNum.call());
+console.log(obj.getNum.call({number:7}));
