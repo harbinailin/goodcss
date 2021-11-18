@@ -20,31 +20,39 @@
         //     console.log("settimeout");
         // })
         // console.log("test end...");
+        // //先执行promise内部的代码，遇到异步任务将异步任务扔到异步队列里，先处理同步任务；
+        // //异步任务有：then setTimeout 异步任务队列中先执行微任务，再执行宏任务
+        // //执行顺序： promise start...->test end...->promise->settimeout
+        
 
-
-
+        
         // //第二题
         // async function async1(){
         //     console.log("async1 start");
         //     await async2();
-        //     console.log("async1 end");
+        //     //await后面是个异步方法
+        //     console.log("async1 end");//异步1
         // }
         // async function async2(){
         //     console.log("async2");
         // }
+        // //函数定义的时候不执行，但是在函数调用的时候函数体内部的代码才会执行。
         // console.log("script start");
+        // //定时函数
         // setTimeout(function(){
-        //     console.log("settimeout");
-        // },0)
+        //     console.log("settimeout");//异步3
+        // },0)//宏任务后执行
         // async1();
         // new Promise(function(resolve){
         //     console.log("promise1");
         //     resolve();
         //     console.log("promise3");
         // }).then(function(){
-        //     console.log("promise2");
+        //     console.log("promise2");//异步2
         // })
         // console.log("script end");
+        // //async 可以单独使用 但是await要和async搭配使用 async和await是一对多的关系，即一个async可以有多个await
+        // //async和await是promise的语法糖,比promise语法更简洁更好用。
 
 
 
@@ -52,10 +60,10 @@
         //第三题
         var promise=new Promise(resolve=>{
             console.log(1);
-            resolve()
+            resolve()//异步
         })
         setTimeout(()=>{
-            console.log(2);
+            console.log(2);//异步 最后一个setTimeout
         })
         promise.then(()=>{
             console.log(3);
@@ -63,7 +71,7 @@
         var promise2=getPromise();
         async function getPromise(){
             console.log(5);
-            await promise;
+            await promise;//await 一个promise对象  异步 promise.then
             console.log(6);
         }
         console.log(8);
