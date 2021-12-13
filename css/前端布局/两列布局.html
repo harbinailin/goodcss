@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端布局</title>
+    <style>
+        /* 左侧定宽右侧自适应
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+        }
+        .left{
+            background-color: pink;
+            float: left;
+            width: 100px;
+            height: 300px;
+        }
+        .right{
+            background-color: purple;
+            margin-left: 100px;
+            height: 300px;
+        } */
+        /* 使用float+overflow
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+        }
+        .left{
+            background-color: pink;
+            float: left;
+            width: 100px;
+            height: 300px;
+        }
+        .right{
+            background-color: purple;
+            overflow: hidden;
+            height: 300px;
+        } */
+        /* 使用table实现
+        .parent{
+            height: 300px;
+            background-color: antiquewhite;
+            display: table;
+            table-layout: fixed;
+            width: 1000px;
+        }
+        .left{
+            background-color: pink;
+            width: 100px;
+            height: 300px;
+            display: table-cell;
+        }
+        .right{
+            background-color: purple;
+            height: 300px;
+            display:table-cell;
+        } */
+        /* 利用flex实现
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+            display: flex;
+        }
+        .left{
+            background-color: pink;
+            width: 100px;
+            height: 300px;
+        }
+        .right{
+            background-color: purple;
+            height: 300px;
+            flex: 1;
+        }
+ */
+
+
+        /* 右侧定宽，左侧自适应 */
+        /* 利用float+margin实现
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+        }
+        .left{
+            background-color: pink;
+            margin-right: -100px;
+            width: 100%;
+            float: left;
+            height: 300px;
+        }
+        .right{
+            background-color: purple;
+            height: 300px;
+            float: right;
+            width: 100px;
+        } */
+        /* 使用table实现
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+            display: table;
+            table-layout: fixed;
+        }
+        .left{
+            background-color: pink;
+            height: 300px;
+            display: table-cell;
+        }
+        .right{
+            background-color: purple;
+            height: 300px;
+            width: 100px;
+            display: table-cell;
+        } */
+        /* 使用flex实现
+        .parent{
+            height: 300px;
+            width: 1000px;
+            background-color: antiquewhite;
+            display: flex;
+        }
+        .left{
+            background-color: pink;
+            height: 300px;
+            flex: 1;
+        }
+        .right{
+            background-color: purple;
+            height: 300px;
+            width: 100px;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

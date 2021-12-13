@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端布局</title>
+    <style>
+        /* 利用margin+float实现
+        .left{
+            width: 200px;
+            height: 300px;
+            background-color: plum;
+            float: left;
+        }
+        .right{
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+            float: right;
+        }
+        .center{
+            margin: 0 200px;
+            height: 300px;
+            background-color: salmon;
+        } */
+        /* 利用table实现
+        .parent{
+            width:100%;
+            display: table;
+            table-layout: fixed;
+        }
+        .left{
+            display: table-cell;
+            width: 200px;
+            height: 300px;
+            background-color: plum;
+        }
+        .right{
+            display: table-cell;
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        .center{
+            display: table-cell;
+            height: 300px;
+            background-color: salmon;
+        } */
+
+        /* 利用flex实现 */
+        .parent{
+            display: flex;
+        }
+        .left{
+            width: 200px;
+            height: 300px;
+            background-color: plum;
+        }
+        .right{
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        .center{
+            flex: 1;
+            height: 300px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 利用float+margin实现
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div> -->
+    <div class="parent">
+        <div class="left"></div>  
+        <div class="center"></div>
+        <div class="right"></div>
+      
+    </div>
+</body>
+
+</html>

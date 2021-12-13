@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三列布局</title>
+    <style>
+        /* right、center定宽，right自适应 */
+        /* 使用float+margin
+        .parent{
+            background-color: rebeccapurple;
+            height: 300px;
+            width: 1000px;
+        }
+        .left{
+            background-color: plum;
+            height: 300px;
+            float: left;
+            width: 200px;
+        }
+        .center{
+            background-color: salmon;
+            height: 300px;
+            float: left;
+            width: 200px;
+        }
+        .right{
+            background-color: skyblue;
+            height: 300px;
+            margin-left: 400px;
+        } */
+
+        /* 使用float+overflow实现
+        .parent{
+            background-color: rebeccapurple;
+            height: 300px;
+            width: 1000px;
+        }
+        .left{
+            background-color: plum;
+            height: 300px;
+            float: left;
+            width: 200px;
+        }
+        .center{
+            background-color: salmon;
+            height: 300px;
+            float: left;
+            width: 200px;
+        }
+        .right{
+            background-color: skyblue;
+            height: 300px;
+            overflow: hidden;
+        } */
+
+        /* 使用table实现
+        .parent{
+            background-color: rebeccapurple;
+            height: 300px;
+            width: 1000px;
+            display: table;
+            table-layout: fixed;
+        }
+        .left{
+            background-color: plum;
+            height: 300px;
+            display: table-cell;
+            width: 200px;
+        }
+        .center{
+            background-color: salmon;
+            height: 300px;
+            display: table-cell;
+            width: 200px;
+        }
+        .right{
+            background-color: skyblue;
+            height: 300px;
+            display: table-cell;
+        } */
+        /* 使用flex实现
+        .parent{
+            background-color: rebeccapurple;
+            height: 300px;
+            width: 1000px;
+            display: flex;
+        }
+        .left{
+            background-color: plum;
+            height: 300px;
+            width: 200px;
+        }
+        .center{
+            background-color: salmon;
+            height: 300px;
+            width: 200px;
+        }
+        .right{
+            background-color: skyblue;
+            height: 300px;
+            flex:1;
+        } */
+
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
