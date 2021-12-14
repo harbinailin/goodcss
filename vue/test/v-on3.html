@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止事件冒泡</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        #div1{
+            width: 900px;height: 900px;background: aqua;
+        }
+        #div2{
+            width: 600px;height: 600px;background: brown;
+        }
+        #div3{
+            width: 300px;height: 300px;background: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-on:click="div1Click" id="div1">
+            <div v-on:click.stop="div2Click" id="div2">
+                <div v-on:click="div3Click" id="div3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            methods:{
+                div1Click(){
+                    console.log("div1click");
+                },
+                div2Click(){
+                    console.log("div2click");
+                },
+                div3Click(){
+                    console.log("div3click");
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

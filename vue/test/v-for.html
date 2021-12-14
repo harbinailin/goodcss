@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="val in arr">{{val}}</li>
+            <li v-bind:class="vals.name" v-for="vals in person">{{vals.name}}--{{vals.age}}</li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                arr:[1,2,3,4,5,6,7,8,9],
+                person:[
+                    {
+                        name:"a",
+                        age:18
+                    },
+                    {
+                        name:"b",
+                        age:19
+                    },
+                    {
+                        name:"c",
+                        age:20
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
