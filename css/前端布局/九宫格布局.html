@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九宫格布局</title>
+    <!-- 利用table实现
+    <style>
+        .parent{
+            background-color: skyblue;
+            display: table;
+            table-layout: fixed;
+            width: 300px;
+        }
+        .row{
+            background-color: aqua;
+            display: table-row;
+        }
+        .item{
+            background-color: antiquewhite;
+            display: table-cell;
+            width: 33.3%;
+            height: 100px;
+        }
+    </style> -->
+    <!-- 使用flex实现 -->
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            height: 100px;
+            display: flex;
+        }
+
+        .item {
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="row">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
